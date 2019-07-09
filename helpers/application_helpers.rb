@@ -21,4 +21,9 @@ module ApplicationHelpers
     parts << part
     parts.compact.reverse.join(options[:join_with])
   end
+
+  def body_class
+    parts = [current_page.path.sub(/\.html$/, '')]
+    parts.compact.join(' ')
+  end
 end

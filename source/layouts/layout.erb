@@ -15,9 +15,11 @@
     <!-- Other -->
     <%= partial "partials/analytics" %>
   </head>
-  <body>
-    <main role="main">
+  <body class="<%= body_class %>">
+    <%= partial "partials/header" %>
+    <main>
       <%= yield %>
     </main>
+    <%= partial "partials/footer" %>
   </body>
 </html>

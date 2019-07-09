@@ -1,0 +1,205 @@
+body {
+  a {
+    text-decoration: none;
+  }
+}
+
+header,
+footer {
+  @include grid-container;
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: $header-color;
+  div.col-left {
+    @include grid-column(10);
+  }
+  div.col-right {
+    @include grid-column(2);
+    text-align: right;
+    margin: 10px 0;
+  }
+  a {
+    color: $header-link-color;
+    &:hover { color: $header-link-hover-color; }
+  }
+  ul#menu {
+    @include inline-block-list(0);
+    margin-right: 0 !important;
+    li {
+      margin-left: 50px;
+      &:first-child {
+        margin-left: 0;
+      }
+      a {
+        display: inline-block;
+        margin-top: 8px;
+      }
+      a.button {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+footer {
+  border-top: 2px solid #eee;
+  padding: 50px 0;
+  font-size: 82%;
+  color: $footer-color;
+  section {
+    @include grid-column(12);
+  }
+  a {
+    color: $footer-link-color;
+    &:hover { color: $footer-link-hover-color; }
+  }
+  ul {
+    @include inline-list;
+    li:first-child:before {
+      content: none;
+      margin-right: 0;
+    }
+    li:before {
+      content: "\00b7";
+      margin: 0 8px 0 4px;
+    }
+  }
+}
+
+
+section#splash {
+  @include grid-container;
+  background-color: $light-gray;
+  .row {
+    @include grid-column(12);
+    line-height: 0;
+  }
+}
+
+section#content {
+  @include grid-container;
+  margin: 0 auto;
+  max-width: $max-width;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  .row {
+    @include grid-column(12);
+    text-align: center;
+    padding: 0;
+    margin: 50px 0;
+  }
+  .row.hr {
+    margin: 0;
+  }
+}
+
+section#demonstration {
+  @include grid-container;
+  margin: 0 auto;
+  max-width: $max-width;
+  border-top: 2px solid #eee;
+  padding: 50px 0;
+  text-align: center;
+  div.col-left {
+    @include grid-column(12);
+    h5 {
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 0.72em;
+    }
+  }
+  div.col-right {
+    @include grid-column(12);
+    .button {
+      margin-top: 1em;
+    }
+  }
+}
+
+h1 {
+  font-size: 2em;
+}
+
+hr {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  height: 0;
+  width: 5%;
+  max-height: 0;
+  font-size: 1px;
+  line-height: 0;
+  clear: both;
+  border: none;
+  border-top: 2px solid #eee;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+
+// Page overrides
+
+body.index {
+  section#splash {
+    background-color: #7eb6cd;
+    padding-top: 40px;
+  }
+  .row {
+    text-align: center;
+  }
+}
+
+
+// Responsive
+
+/* Small screens (default) */
+@include grid-media($small-screen-grid) {
+  section#content .row {
+    padding: 0 10%;
+  }
+}
+
+/* Medium screens (>= 992px) */
+@include grid-media($medium-screen-grid) {
+  section#content .row {
+    padding: 0 20%;
+  }
+  section#demonstration {
+    div.col-left {
+      @include grid-column(6);
+      text-align: left;
+    }
+    div.col-right {
+      @include grid-column(6);
+      text-align: right;
+    }
+  }
+  header {
+    div.col-left {
+      @include grid-column(6);
+    }
+    div.col-right {
+      @include grid-column(6);
+    }
+  }
+}
+
+/* Large screens (>= 1250px) */
+@include grid-media($large-screen-grid) {
+  section#content .row {
+    padding: 0 25%;
+  }
+}
+
+/* Print */
+@include grid-media($print-only-grid) {
+}

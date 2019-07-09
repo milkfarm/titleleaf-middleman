@@ -17,10 +17,14 @@ $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$red: #fe5e5a;
+$bright-red: #fe1b16;
+$white: #fff;
+$black: #000;
 
 // Font Colors
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-font-color: $black;
+$action-color: $red;
 
 // Border
 $base-border-color: $light-gray;
@@ -38,3 +42,37 @@ $focus-outline-offset: 2px;
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+// Custom
+$neat-grid: (
+  columns: 12,
+  gutter: 20px,
+);
+
+$large-screen-grid: (
+  media: "(min-width: 1250px)",
+);
+
+$medium-screen-grid: (
+  media: "(min-width: 992px)",
+);
+
+$small-screen-grid: (
+  media: "(min-width:10px)",
+);
+
+$print-only-grid: (
+  media: "print",
+);
+
+$link-color: $action-color;
+$link-hover-color: $bright-red;
+$secondary-link-color: $medium-gray;
+$secondary-link-hover-color: $bright-red;
+$header-color: $base-font-color;
+$header-link-color: $base-font-color;
+$header-link-hover-color: $bright-red;
+$footer-color: $medium-gray;
+$footer-link-color: $medium-gray;
+$footer-link-hover-color: $bright-red;
+$max-width: 1280px;
