@@ -25,28 +25,28 @@ title: Contact
       <form name="contact" method="POST" data-netlify="true">
 
         <div class="field">
-          <label class="placeholder-fallback" for="contact_name">Name *</label>
-          <input class="text" id="contact_name" name="contact[name]" placeholder="Name" required="required" size="30" type="text">
+          <label for="contact_name" class="required">Name</label>
+          <input class="text" id="contact_name" name="name" placeholder="Name" required="required" size="30" type="text">
         </div>
 
         <div class="field">
-          <label class="placeholder-fallback" for="contact_email">Email *</label>
-          <input class="text email" id="contact_email" name="contact[email]" placeholder="Email" required="required" size="30" type="email">
+          <label for="contact_email" class="required">Email</label>
+          <input class="text email" id="contact_email" name="email" placeholder="Email" required="required" size="30" type="email">
         </div>
 
         <div class="field">
-          <label class="placeholder-fallback" for="contact_phone">Phone</label>
-          <input class="text phone" id="contact_phone" name="contact[phone]" placeholder="Phone" size="30" type="text">
+          <label for="contact_phone">Phone</label>
+          <input class="text phone" id="contact_phone" name="phone" placeholder="Phone" size="30" type="text">
         </div>
 
         <div class="field">
-          <label class="placeholder-fallback" for="contact_message">Message *</label>
-          <textarea cols="40" id="contact_message" name="contact[message]" placeholder="Message" required="required" rows="10"></textarea>
+          <label for="contact_message" class="required">Message</label>
+          <textarea cols="40" id="contact_message" name="message" placeholder="Message" required="required" rows="10"></textarea>
         </div>
 
         <div class="actions">
-          <input class="button" name="commit" type="submit" value="Send message">
-          <a href="/privacy-policy.html" id="privacy_link" style="padding-left: 1em; font-size: 80%;">We value your privacy</a>
+          <button type="submit">Send message</button>
+          <a href="/privacy-policy.html" style="padding-left: 1em; font-size: 80%;">We value your privacy</a>
         </div>
 
       </form>
