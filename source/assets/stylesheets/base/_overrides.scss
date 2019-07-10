@@ -2,6 +2,7 @@ body {
   a {
     text-decoration: none;
   }
+  font-size: 18px;
 }
 
 header,
@@ -37,10 +38,9 @@ header {
       }
       a {
         display: inline-block;
-        margin-top: 8px;
       }
       a.button {
-        margin-top: 0;
+        padding: 0.3em 1.5em 0.4em 1.5em;
       }
     }
   }
