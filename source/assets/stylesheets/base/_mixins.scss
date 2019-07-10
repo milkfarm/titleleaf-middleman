@@ -1,22 +1,3 @@
-/* Hide text by moving out of viewport */
-@mixin hide-text {
-  $approximate_em_value: 12px / 1em;
-  $wider_than_any_screen: -9999em;
-  text-indent: $wider_than_any_screen * $approximate_em_value;
-  overflow: hidden;
-  text-align: left;
-}
-
-/* Replace text with image */
-@mixin replace-text($img, $x: 50%, $y: 50%) {
-  @include hide-text;
-  background: {
-    image: image-url($img);
-    repeat: no-repeat;
-    position: $x $y;
-  }
-}
-
 /* Inline List */
 @mixin inline-list {
   list-style-type: none;
@@ -39,20 +20,5 @@
   }
   & li {
     margin: 0 $space 0 0;
-  }
-}
-
-/* Navigation List */
-@mixin navigation-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  > li {
-    display: block;
-    float: left;
-    &:last-child {
-      margin-right: 0;
-    }
   }
 }
