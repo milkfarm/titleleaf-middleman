@@ -1,13 +1,13 @@
 <header>
   <div class="col-left">
-    <a href="/"><%= image_tag 'logo.png', alt: data.config.company_name %></a>
+    <%= link_to image_tag('logo.png', alt: data.config.company_name), '/index.html' %>
   </div>
   <div class="col-right">
     <ul id="menu">
       <li><%= link_to 'Features', '/features.html' %></li>
-      <li><%= link_to 'Pricing', '/pricing.html' %></li>
+      <li><%= link_to 'Pricing', '#' %></li>
       <li><%= link_to 'Guide', 'http://guide.titleleaf.com' %></li>
-      <li><%= link_to 'Contact', '/contact.html', class: 'button small' %></li>
+      <li><%= link_to 'Contact', '#', class: 'button small' %></li>
     </ul>
   </div>
 </header>

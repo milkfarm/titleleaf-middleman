@@ -4,7 +4,7 @@
     <p>And then tinker with a live installation by yourself.</p>
   </div>
   <div class="col-right">
-    <a href="/contact" class="button secondary" style="margin:0;">Request a demonstration →</a>
+    <%= link_to 'Request a demonstration →', '#', class: 'button secondary', style: 'margin:0;' %>
   </div>
 </section>
 
@@ -12,11 +12,11 @@
   <section>
     <p>
       © 2019 TitleLeaf.
-      Created by <a href="http://propulsion.co">propulsion</a>.
+      Created by <%= link_to 'propulsion', 'http://propulsion.co' %>.
     </p>
     <ul>
-      <li><a href="/terms-of-service">Terms</a></li>
-      <li><a href="/contact/privacy-policy">Privacy</a></li>
+      <li><%= link_to 'Terms', '#' %></li>
+      <li><%= link_to 'Privacy', '#' %></li>
     </ul>
   </section>
 </footer>
