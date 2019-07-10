@@ -1,0 +1,30 @@
+body.examples {
+
+  section#content {
+    border-top: 2px solid #eee;
+    .row {
+      text-align: center;
+    }
+    ul {
+      @include inline-block-list(0);
+      li {
+        padding: 1em;
+      }
+    }
+    img {
+      width: 280px;
+    }
+  }
+
+
+  // Responsive
+
+  @include grid-media($large-screen-grid) {
+    section#content {
+      img {
+        width: 372px;
+      }
+    }
+  }
+
+}
