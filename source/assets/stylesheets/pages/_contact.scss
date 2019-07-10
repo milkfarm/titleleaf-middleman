@@ -1,0 +1,32 @@
+body.contact {
+
+  section#splash {
+    background-color: #f2ac52;
+    border-bottom: 1px solid lighten(#ae84a7, 30%);
+  }
+  section#content {
+    .item {
+      text-align: left;
+    }
+  }
+
+
+  // Responsive
+
+  @include grid-media($medium-screen-grid) {
+    section#splash {
+      .col-left {
+        @include grid-column(4);
+      }
+      .col-right {
+        @include grid-column(8);
+      }
+    }
+    section#content {
+      .item {
+        @include grid-column(4);
+      }
+    }
+  }
+
+}

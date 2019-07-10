@@ -1,0 +1,56 @@
+---
+title: Contact
+---
+
+<section id="splash">
+  <div class="row">
+    <div class="col-left">
+      <h1>Contact</h1>
+      <p>
+        Interested in improving your online business?
+        Intrigued by the TitleLeaf platform?
+        Get in touch with us by submitting the form below.
+      </p>
+    </div>
+    <div class="col-right" style="line-height: 0;">
+      <%= image_tag 'splash-contact.png' %>
+    </div>
+  </div>
+</section>
+
+<section id="content">
+  <div class="row">
+    <div class="col-left">
+
+      <form name="contact" method="POST" data-netlify="true">
+
+        <div class="field">
+          <label class="placeholder-fallback" for="contact_name">Name *</label>
+          <input class="text" id="contact_name" name="contact[name]" placeholder="Name" required="required" size="30" type="text">
+        </div>
+
+        <div class="field">
+          <label class="placeholder-fallback" for="contact_email">Email *</label>
+          <input class="text email" id="contact_email" name="contact[email]" placeholder="Email" required="required" size="30" type="email">
+        </div>
+
+        <div class="field">
+          <label class="placeholder-fallback" for="contact_phone">Phone</label>
+          <input class="text phone" id="contact_phone" name="contact[phone]" placeholder="Phone" size="30" type="text">
+        </div>
+
+        <div class="field">
+          <label class="placeholder-fallback" for="contact_message">Message *</label>
+          <textarea cols="40" id="contact_message" name="contact[message]" placeholder="Message" required="required" rows="10"></textarea>
+        </div>
+
+        <div class="actions">
+          <input class="button" name="commit" type="submit" value="Send message">
+          <a href="/privacy-policy.html" id="privacy_link" style="padding-left: 1em; font-size: 80%;">We value your privacy</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</section>
