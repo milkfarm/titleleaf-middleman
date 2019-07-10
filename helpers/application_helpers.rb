@@ -23,7 +23,11 @@ module ApplicationHelpers
   end
 
   def body_class
-    parts = [current_page.path.sub(/\.html$/, '')]
+    parts = [current_page_name]
     parts.compact.join(' ')
+  end
+
+  def current_page_name
+    current_page.path.sub(/\.html$/, '')
   end
 end
