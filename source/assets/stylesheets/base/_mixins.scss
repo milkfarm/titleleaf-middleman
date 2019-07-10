@@ -22,3 +22,20 @@
     margin: 0 $space 0 0;
   }
 }
+
+/* List with Font Awesome bullets */
+@mixin list-awesome($icon, $width, $color) {
+  list-style-type: none;
+  li {
+    padding-left: $width;
+    &:before {
+      content: $icon;
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 900;
+      display: inline-block;
+      width: $width;
+      margin-left: -$width;
+      color: $color;
+    }
+  }
+}

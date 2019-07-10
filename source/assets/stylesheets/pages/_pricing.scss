@@ -1,0 +1,91 @@
+body.pricing,
+body.more-pricing {
+
+  section#splash {
+    background-color: #acca81;
+    border-bottom: 1px solid lighten(#ae84a7, 30%);
+  }
+  section#content {
+    .col-full {
+      text-align: left;
+    }
+    ul.checked {
+      @include list-awesome("\f336", 1.5em, $light-green);
+    }
+  }
+
+  small {
+    font-size: 60%;
+  }
+
+  .pricing-table {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0 0 2em 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+    }
+    li {
+      border-bottom: 1px solid #eee;
+      padding: 20px;
+      text-align: center;
+    }
+    .price {
+      background-color: #f6f6f6;
+      padding: 0.8em 1em;
+      text-align: center;
+      color: #333;
+      font-size: 1.8em;
+    }
+    .title {
+      background-color: #333;
+      padding: 0.8em 1em;
+      text-align: center;
+      color: #eee;
+      font-weight: normal;
+      font-size: 0.9em;
+    }
+    .description {
+      background-color: #fff;
+      padding: 0.8em;
+      text-align: center;
+      color: #777;
+      font-size: 0.8em;
+      font-weight: normal;
+      line-height: 1.4;
+      border-bottom: dotted 1px #ddd;
+    }
+    .bullet-item {
+      background-color: #fff;
+      padding: 0.8em;
+      text-align: center;
+      color: #333;
+      font-size: 0.8em;
+      font-weight: normal;
+      border-bottom: dotted 1px #ddd;
+    }
+  }
+
+
+  // Responsive
+
+  @include grid-media($medium-screen-grid) {
+    section#splash {
+      .col-left {
+        @include grid-column(4);
+      }
+      .col-right {
+        @include grid-column(8);
+      }
+    }
+    section#content {
+      .item {
+        @include grid-column(4);
+      }
+    }
+  }
+
+}

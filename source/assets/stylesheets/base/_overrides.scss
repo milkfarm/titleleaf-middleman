@@ -12,6 +12,17 @@ footer {
   max-width: $max-width;
 }
 
+.col-left,
+.col-right,
+.col-full,
+.item {
+  @include grid-column(12);
+}
+.col-left,
+.col-right {
+  text-align: left;
+}
+
 header {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -82,11 +93,6 @@ section#splash {
     padding-top: 60px;
   }
   .col-left,
-  .col-right,
-  .item {
-    @include grid-column(12);
-  }
-  .col-left,
   .col-right {
     text-align: left;
   }
@@ -120,7 +126,6 @@ section#demonstration {
   padding: 50px 0;
   text-align: center;
   .col-left {
-    @include grid-column(12);
     h5 {
       margin-bottom: 0;
     }
@@ -129,7 +134,6 @@ section#demonstration {
     }
   }
   .col-right {
-    @include grid-column(12);
     .button {
       margin-top: 1em;
     }
@@ -178,22 +182,17 @@ hr {
 
 /* Medium screens (>= 992px) */
 @include grid-media($medium-screen-grid) {
-  section#demonstration {
-    .col-left {
-      @include grid-column(6);
-      text-align: left;
-    }
-    .col-right {
-      @include grid-column(6);
-      text-align: right;
-    }
+  .col-left,
+  .col-right {
+    @include grid-column(6);
   }
-  header {
-    .col-left {
-      @include grid-column(6);
-    }
+  header .col-left,
+  header .col-right {
+    @include grid-column(6);
+  }
+  section#demonstration {
     .col-right {
-      @include grid-column(6);
+      text-align: right;
     }
   }
 }

@@ -54,3 +54,8 @@ $_button-secondary-color-hover: $white;
     background-color: $_button-secondary-background-color-hover;
   }
 }
+
+.button.small {
+  font-size: 85%;
+  padding: .3em 1em .5em 1em;
+}
