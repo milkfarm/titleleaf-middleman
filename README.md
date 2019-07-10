@@ -29,3 +29,5 @@ Thank you to [thoughtbot, inc](http://thoughtbot.com) for funding and maintainin
 ## License
 
 The TitleLeaf Website may be redistributed under the terms specified in the [license](LICENSE.md).
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3ba752c5-11ba-49e6-8d1c-4c9181348509/deploy-status)](https://app.netlify.com/sites/titleleaf/deploys)
