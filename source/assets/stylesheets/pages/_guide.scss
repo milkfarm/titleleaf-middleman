@@ -1,3 +1,12 @@
+body.guide_simple {
+  section#content {
+    .row {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
+
 body.guide {
 
   .container {
@@ -17,6 +26,9 @@ body.guide {
     .row {
       @include grid-collapse;
       text-align: left;
+    }
+    .row.title {
+      margin-top: 20px;
     }
     .item {
     }
