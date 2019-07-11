@@ -23,6 +23,20 @@
   }
 }
 
+/* Inline Block List */
+@mixin navigation-list {
+  position: absolute;
+  right: 0;
+  top: 0;
+  list-style-type: none;
+  &,
+  & li {
+    //margin: 0;
+    //padding: 0;
+    display: block;
+  }
+}
+
 /* List with Font Awesome bullets */
 @mixin list-awesome($icon, $width, $color) {
   list-style-type: none;

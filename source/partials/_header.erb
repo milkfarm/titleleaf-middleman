@@ -4,7 +4,12 @@
   </div>
   <div class="col-right">
     <ul id="menu">
-      <li><%= link_to 'Features', '/features.html' %></li>
+      <li class="toggler">
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </li>
+      <li class="separator"><%= link_to 'Features', '/features.html' %></li>
       <li><%= link_to 'Pricing', '/pricing.html' %></li>
       <li><%= link_to 'Guide', 'http://guide.titleleaf.com' %></li>
       <li><%= link_to 'Contact', '/contact.html', class: 'button' %></li>

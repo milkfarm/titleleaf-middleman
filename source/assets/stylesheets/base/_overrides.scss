@@ -40,19 +40,35 @@ header {
     &:hover { color: $header-link-hover-color; }
   }
   ul#menu {
-    @include inline-block-list(0);
-    margin-right: 0 !important;
+    @include navigation-list;
+    background-color: transparent;
+    margin: 20px 20px 0 20px;
+    padding: 0 20px 20px 20px;
     li {
-      margin-left: 50px;
-      &:first-child {
-        margin-left: 0;
-      }
-      a {
-        display: inline-block;
-      }
+      line-height: 2em;
       a.button {
-        padding: 0.3em 1.5em 0.4em 1.5em;
+        line-height: 1.2em;
+        padding: 9px 28px 13px 28px;
       }
+      &:last-child {
+        margin-top: 15px;
+      }
+    }
+    li.separator {
+      margin-top: 5px;
+      padding-top: 10px;
+    }
+  }
+  ul#menu .fa-bars:before {
+    content: "\f0c9";
+  }
+  ul#menu.active {
+    background-color: #efefef;
+    li {
+      display: block;
+    }
+    .fa-bars:before {
+      content: "\f00d";
     }
   }
 }
@@ -81,7 +97,6 @@ footer {
     }
   }
 }
-
 
 section#splash {
   background-color: $light-gray;
@@ -173,6 +188,13 @@ hr {
   text-align: center !important;
 }
 
+/* Show toggler (aka hamburger) by default */
+ul#menu li:not(:first-child) {
+  display: none;
+}
+ul#menu li.toggler {
+  display: block;
+}
 
 // Responsive
 
@@ -186,13 +208,47 @@ hr {
   .col-right {
     @include grid-column(6);
   }
-  header .col-left,
+  header .col-left {
+    @include grid-column(4);
+  }
   header .col-right {
-    @include grid-column(6);
+    @include grid-column(8);
   }
   section#demonstration {
     .col-right {
       text-align: right;
+    }
+  }
+  ul#menu li:not(:first-child) {
+    display: inline-block;
+  }
+  ul#menu li.toggler {
+    display: none;
+  }
+  /* Hide toggler (aka hamburger) on larger screens */
+  header ul#menu {
+    position: relative;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    li {
+      line-height: 1.2em;
+      margin-left: 50px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-top: 0;
+      }
+      a.button {
+        padding: 9px 28px 13px 28px;
+      }
+    }
+    li.border {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
     }
   }
 }
