@@ -6,7 +6,6 @@ body.guide {
 
   section#sidebar {
     @include grid-column(3);
-    background-color: #fafafa;
     .col-full {
       width: calc(100%);
       margin: 0;
@@ -28,6 +27,7 @@ body.guide {
   }
 
   .accordion {
+    margin-top: 40px;
     margin-bottom: 0;
 
     &:before, &:after {
@@ -48,22 +48,17 @@ body.guide {
       margin-bottom: 0 !important;
     }
 
-    dd.active > a {
-      background: #f2f2f2;
-    }
-
     dd > a {
-      background: #fafafa;
       color: $dark-gray;
-      padding: 10px 20px;
+      padding: 10px 0;
       display: block;
       font-size: 12px;
       text-transform: uppercase;
+      &:hover {
+        color: $link-hover-color;
+      }
     }
 
-    dd > a:hover {
-      background: #ededed;
-    }
 
     dd > .content {
       display: none;
@@ -72,7 +67,6 @@ body.guide {
 
     dd > .content.active {
       display: block;
-      background: #f2f2f2;
     }
 
     ul {
@@ -87,9 +81,9 @@ body.guide {
         list-style-image: url(/assets/images/box.gif);
         a {
           display: block;
-          padding: 5px 20px;
+          padding: 5px 0;
           &:hover {
-            background-color: #eaeaea;
+            color: darken($link-hover-color, 30%);
           }
         }
       }
