@@ -55,7 +55,16 @@ $_button-secondary-color-hover: $white;
   }
 }
 
+.button.subdue {
+  color: $dark-gray;
+  background-color: lighten($light-gray, 5%);
+  &:hover {
+    color: $black;
+    background-color: darken($light-gray, 5%);
+  }
+}
+
 .button.small {
   font-size: 85%;
-  padding: .3em 1em .5em 1em;
+  padding: .4em 1em .5em 1em;
 }

@@ -5,6 +5,7 @@ body {
   font-size: 18px;
 }
 
+.container,
 header,
 footer {
   @include grid-container;
@@ -63,7 +64,7 @@ header {
     content: "\f0c9";
   }
   ul#menu.active {
-    background-color: #efefef;
+    background-color: #fafafa;
     li {
       display: block;
     }
@@ -182,6 +183,10 @@ hr {
   clear: both;
   border: none;
   border-top: 2px solid #eee;
+}
+
+hr.full {
+  width: 96%;
 }
 
 .text-center {
