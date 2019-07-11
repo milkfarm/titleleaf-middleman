@@ -1,0 +1,30 @@
+---
+title: Compose tag link
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: compose-tag-link
+---
+
+<p>After tagging products, you'll often want to compose a link to said products. Such a link can be included in a custom page or an email sent to potential customers.</p>
+<p>In the following formulas, <em>LABEL</em>, <em>TAG</em> and <em>DOMAIN</em> must be replaced with the appropriate values.</p>
+
+<h3>Textile markup</h3>
+<p>For use in custom pages only (not emails).</p>
+<pre><code>"LABEL":/products/tag/TAG
+</code>
+</pre>
+<p>Or:</p>
+<pre><code>"LABEL":/products/search_results?search%5Btags_name_in%5D=TAG
+</code>
+</pre>
+
+<h3>HTML markup</h3>
+<p>For use in custom pages and emails.</p>
+<pre><code>&lt;a href="http://DOMAIN/products/tag/TAG"&gt;LABEL&lt;/a&gt;
+</code>
+</pre>
+<p>Or:</p>
+<pre><code>&lt;a href="http://DOMAIN/products/search_results?search%5Btags_name_in%5D=TAG"&gt;LABEL&lt;/a&gt;
+</code>
+</pre>

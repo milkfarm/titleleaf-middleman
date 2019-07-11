@@ -1,0 +1,17 @@
+---
+title: FTP ingestion rules
+layout: guide_simple
+parent: guide
+category: ingestions
+slug: ftp-ingestion-rules
+---
+
+<p>General FTP rules for the ingestion account:</p>
+<ul>
+<li>Do not create directories</li>
+<li>Do not compress files (eg, no zips, tars, gzips, etc) except for layout files</li>
+<li>Follow the <a href="/guides/ingestions/ftp-file-naming-convention.html">naming conventions</a>
+</li>
+</ul>
+
+<p>Note: The root directory of the FTP account is <a href="/guides/ingestions/ftp-ingestion-schedule.html">processed on regular basis</a>. If your files do not appear in the ingestion list after a processing cycle, check the <em>failed</em> directory of the FTP account.</p>

@@ -1,0 +1,38 @@
+---
+title: Ingest product format data
+layout: guide_simple
+parent: guide
+category: ingestions
+slug: ingest-product-format-data
+---
+
+<ol>
+<li>
+<p>Create a new Google Doc spreadsheet using the <a href="https://docs.google.com/spreadsheet/ccc?key=0ApnSLzCVc941dExiWmVjVDRNWjdZUXh4N3BTS1VHQkE&amp;usp=sharing">product formats template</a> file (See menu item: File &gt; Make a Copy…). Name the new file as you deem necessary, but omit spaces (e.g., product_formats-YYYYMMDD where YYYYMMDD is today's date).</p>
+<p><img src="http://guide.titleleaf.com/uploads/google-file-menu-make-a-copy.png" alt="Google Doc: File menu, Make a copy" /></p>
+</li>
+
+<li>
+<p>Assign new isbns to the new product formats. They will be placed in the "isbn" column of the new file.</p>
+</li>
+
+<li>
+<p>Copy/paste data from the pre-existing product format into new product formats file. The pre-existing format ISBN should be pasted into the "associated isbn" column. Notes:  </p>
+<ul style="margin-bottom:20px">
+<li>If the release date is in the future, then the status must be set to <em>NYP</em>
+</li>
+<li>Remove blank rows from the bottom of the file</li>
+<li>Avoid carriage returns in description and annotation fields</li>
+</ul>
+</li>
+
+<li>
+<p>When the new file is complete, <a href="/guides/other/download-google-doc-as-csv.html">download the data as a CSV file</a> to your local machine. Follow the same naming convention as in step 1, but add a ".csv" extension (e.g., product_formats-YYYYMMDD.csv).</p>
+</li>
+
+<li>
+<p>Create a new ingestion through the website admin. Be certain to select <strong>Product Formats</strong> from the "Type" drop-down menu.</p>
+<p><img src="http://guide.titleleaf.com/uploads/titleleaf-ingestion-new-select-type.png" alt="New ingestion, select type" /></p>
+</li>
+
+</ol>

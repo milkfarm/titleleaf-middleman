@@ -1,0 +1,137 @@
+---
+title: Page variables
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: page-variables
+---
+
+<p><a href="/guides/web-content/create-a-page.html">Custom pages</a> can contain variables that are replaced with values when the page is presented to a visitor.</p>
+
+<p>Variables are designated in the page body using the following syntax:</p>
+
+<pre><code class="language-html" data-lang="html">{{ VARIABLE_NAME }}
+</code>
+</pre>
+
+<p>The table below lists all acceptable variables names:</p>
+<table>
+<tbody>
+<tr>
+  <th>Variable Name</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td>app_name *</td>
+  <td>The name used in email subject line</td>
+</tr>
+<tr>
+  <td>app_url *</td>
+  <td>The url used in email body</td>
+</tr>
+<tr>
+  <td>company_name</td>
+  <td>The company name</td>
+</tr>
+<tr>
+  <td>phone</td>
+  <td>The phone number</td>
+</tr>
+<tr>
+  <td>fax</td>
+  <td>The fax number</td>
+</tr>
+<tr>
+  <td>tax_id</td>
+  <td>The Tax ID</td>
+</tr>
+<tr>
+  <td>suite</td>
+  <td>The suite line of the corporate address</td>
+</tr>
+<tr>
+  <td>street</td>
+  <td>The street line of the corporate address</td>
+</tr>
+<tr>
+  <td>city</td>
+  <td>The city of the corporate address</td>
+</tr>
+<tr>
+  <td>state</td>
+  <td>The state for the corporate address</td>
+</tr>
+<tr>
+  <td>zip</td>
+  <td>The ZIP for the corporate address</td>
+</tr>
+<tr>
+  <td>country</td>
+  <td>The country for the corporate address</td>
+</tr>
+<tr>
+  <td>order_suite</td>
+  <td>The suite line of the ordering address</td>
+</tr>
+<tr>
+  <td>order_street</td>
+  <td>The street line of the ordering address</td>
+</tr>
+<tr>
+  <td>order_city</td>
+  <td>The city for the ordering address</td>
+</tr>
+<tr>
+  <td>order_state</td>
+  <td>The state for the ordering address</td>
+</tr>
+<tr>
+  <td>order_zip</td>
+  <td>The ZIP for the ordering address</td>
+</tr>
+<tr>
+  <td>order_country</td>
+  <td>The country for the ordering address</td>
+</tr>
+<tr>
+  <td>sales_email</td>
+  <td>The sales email address</td>
+</tr>
+<tr>
+  <td>support_email</td>
+  <td>The support email address</td>
+</tr>
+<tr>
+  <td>hosted_ebooks_trial_email</td>
+  <td>The hosted ebook trial email address</td>
+</tr>
+<tr>
+  <td>webmaster_email</td>
+  <td>The webmaster email address</td>
+</tr>
+<tr>
+  <td>onix_contact</td>
+  <td>The person to contact regarding ONIX</td>
+</tr>
+<tr>
+  <td>onix_email</td>
+  <td>The email address of the person to contact regarding ONIX</td>
+</tr>
+</tbody>
+</table>
+
+<p>* To change the value of these variables please contact TitleLeaf support. All other variables can be changed via the Admin UI.</p>
+
+<h3>Example</h3>
+
+<p>To display the company name defined in <a href="/guides/settings.html">Admin Settings</a>, use the following code:</p>
+
+<pre><code class="language-html" data-lang="html">Welcome to the {{ company_name }} website!
+</code>
+</pre>
+
+<p>Assuming <em>company_name</em> is defined as "Acme, Inc.", a visitor will be presented with the following:</p>
+
+<pre><code>Welcome to the Acme, Inc. website!
+</code>
+</pre>

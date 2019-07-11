@@ -1,0 +1,48 @@
+---
+title: Update CIP data
+layout: guide_simple
+parent: guide
+category: product-catalog
+slug: update-cip-data
+---
+
+<p>Cataloging-in-Publication (CIP) data originates from the Library of Congress. TitleLeaf has various product fields to hold the entirety or segments of that data.</p>
+
+<ul>
+
+<li>
+<strong>CIP</strong> - The entire Cataloging in Publication text <sup><a href="http://en.wikipedia.org/wiki/Cataloging_in_Publication">Ref</a>
+</sup>
+</li>
+
+<li>
+<strong>LCCN</strong> - Library of Congress Control Number <sup><a href="http://en.wikipedia.org/wiki/Library_of_Congress_Control_Number">Ref</a>
+</sup>
+</li>
+
+<li>
+<strong>LC Class</strong> - Library of Congress Classification <sup><a href="http://en.wikipedia.org/wiki/Library_of_Congress_Classification">Ref</a>
+</sup>
+</li>
+
+<li>
+<strong>Dewey</strong> - Dewey Decimal Classification <sup><a href="http://en.wikipedia.org/wiki/Dewey_Decimal_Classification">Ref</a>
+</sup>
+</li>
+
+<li>
+<strong>Annotation</strong> - A short description the book
+</li>
+
+</ul>
+
+<p>To update those fields, the publisher can:</p>
+
+<ul>
+<li>Enter the data through the web admin (this is probably the simplest solution if you only have a couple products to update)</li>
+<li>
+<p>Pull data from Loc.gov: Go to the product page, click the "Update from LOC" link in the right sidebar. This process updates the following fields: <em>LCCN</em>, <em>LC Class</em>, <em>Dewey</em>, and <em>Annotation</em>. To verify the data beforehand, click the "Library of Congress" link directly above the aforementioned link.</p>
+<p><img src="http://guide.titleleaf.com/uploads/missing.gif?1f6NCUL" /></p>
+</li>
+<li>Use a subset of the <em>products-default-template</em> or <em>cip-default-template</em> <a href="http://guide.titleleaf.com/ingestions/template-to-ingestion-type-table">template</a>. As with any template, you can delete any non-required columns that aren't relevant to your data set.</li>
+</ul>

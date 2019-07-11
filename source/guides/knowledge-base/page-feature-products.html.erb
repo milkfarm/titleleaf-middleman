@@ -1,0 +1,25 @@
+---
+title: Page feature products
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: page-feature-products
+---
+
+<p>
+  <a href="/guides/web-content/create-a-page.html">Custom pages</a> can contain
+  <a href="/guides/knowledge-base/page-variables.html">variables</a> that are replaced with values when the page is presented to a visitor.</p>
+
+<p>Custom pages can also contain logic to display data relevant to the <em>feature products</em>.</p>
+
+<p><img src="http://guide.titleleaf.com/uploads/titleleaf-page-edit-loop.png" alt="TitleLeaf: Edit page, loop" /></p>
+
+<p>Example:</p>
+
+<pre><code>{% for product in products %}
+&lt;div class="{% if forloop.last == true %}last{% endif %}" id="product_{{product.id}}"&gt;
+&lt;a href="{{product.url}}"&gt;&lt;img alt="Cover: {{product.name}}" class="composite" src="{{product.cover_url["s"]}}"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href="{{product.url}}"&gt;{{product.name}}&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+{% endfor %}</code>
+</pre>

@@ -1,0 +1,31 @@
+---
+title: How do I update prices?
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: how-do-i-update-prices
+---
+
+<p>If you would like to stage a price change on a specific, upcoming date, use the <a href="/guides/ingestions/ingest-price-change-data.html">Price Change module</a>. To affect a price change immediately, use the <em>product_formats</em> template.</p>
+
+<p><strong>Important:</strong> The <em>product_formats</em> template will not update the prices in a user's cart or quotes.</p>
+
+<h3>Do I need to complete ALL of the fields, or just ISBN and Price?</h3>
+
+<p>Assuming the product format already exists in the TitleLeaf database, you can limit the columns to the ISBN and the specific price fields in question. For example, if we only wanted to update the <em>price</em> field and not the <em>price_list</em> field, then our spreadsheet could be limited to the following columns:</p>
+
+<ul>
+<li>isbn</li>
+<li>price</li>
+</ul>
+
+<p>NB: You must <strong>delete</strong> the unused columns from the template, not simply leave the columns blank. If you leave the columns blank, TitleLeaf will assume you want to set those values to blank, overwriting any pre-existing values.</p>
+
+<h3>Can I leave a price cell blank if I don't want to change the value?</h3>
+
+<p>No, TitleLeaf interprets a blank cell value to mean that you want the value in TitleLeaf to be blank.</p>
+
+<h3>What "Ingestion Type" should I select when creating the new ingestion?</h3>
+
+<p>As a rule of thumb, the ingestion type should match the name of the template. So, in this case, select "Product Formats". When in doubt, refer to the TitleLeaf guide: <a href="/guides/ingestions/template-to-ingestion-type-table.html">Template to ingestion type</a>.</p>
+ 

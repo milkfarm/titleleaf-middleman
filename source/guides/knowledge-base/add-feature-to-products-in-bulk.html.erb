@@ -1,0 +1,47 @@
+---
+title: Add feature to products in bulk
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: add-feature-to-products-in-bulk
+---
+
+<p>To assign an acceptable feature value to products in bulk, follow the procedure below. In this example, we will be assigning the <em>Reviewed</em> feature value to the products.</p>
+
+<ol>
+
+  <li>
+    <p><a href="/guides/product-catalog/package-assets.html">Package</a> all print products using "Default" template.</p>
+  </li>
+
+  <li>
+    <p>After opening the downloaded package file in a spreadsheet application (Recommended: Google Docs), delete the product rows that do not need the <em>Reviewed</em> feature.</p>
+  </li>
+
+  <li>
+    <p>Delete all columns except for "product_id" and "features". Note: It is <strong>critical</strong> that the "features" column contain all previously assigned features. If not, those values will be lost.</p>
+  </li>
+
+  <li>
+    <p>Rename the "product_id" column to "id".</p>
+  </li>
+
+  <li>
+    <p>Add a column named "feature1".</p>
+  </li>
+
+  <li>
+    <p>Populate the "feature1" column with "Reviewed" (or any other acceptable feature value).</p>
+  </li>
+
+  <li>
+    <p>Save the file in <a href="/guides/knowledge-base/download-google-doc-as-csv.html">CSV format</a>.</p>
+  </li>
+
+  <li>
+    <p>Ingest the CSV file into TitleLeaf using "Products Only" as the <a href="/guides/ingestions/template-to-ingestion-type-table.html">ingestion type</a>.</p>
+  </li>
+
+</ol>
+
+<p>Note: This procedure is also applicable to <em>genres</em>. In such a case, the spreadsheet columns would be "id", "genres" and "genre1".</p>

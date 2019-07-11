@@ -1,0 +1,13 @@
+---
+title: How long does it take to ingest files uploaded to FTP site?
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: how-long-does-it-take-to-ingest-files-uploaded-to-ftp-site
+---
+
+<h3>Short Answer</h3>
+<p>The longest delay you could encounter in waiting for TitleLeaf to ingest files uploaded to your FTP account is 1 hour and fifteen minutes.</p>
+
+<h3>Long Answer</h3>
+<p>TitleLeaf scans your FTP account every hour on the half hour (e.g., 7:30, 8:30, etc). If files are encountered, the modification time is checked. If the file has not been modified within the last fifteen minutes, then the file is processed. If the file has been modified within the last fifteen minutes, then it is ignored. So, the longest delay would occur if you upload at 7:15; your file wouldn't be processed until 8:30 (an hour fifteen minute delay).</p>

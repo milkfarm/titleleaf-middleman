@@ -1,0 +1,37 @@
+---
+title: How do I embed a Scribd document in a headline?
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: how-do-i-embed-a-scribd-document-in-a-headline
+---
+
+<p>The exact code to <a href="https://support.scribd.com/hc/en-us/articles/210134766-Embedding">embed a Scribd document</a> changes from time-to-time. Currently, the following code works:</p>
+
+<pre><code>  &lt;iframe class="scribd_iframe_embed" 
+  src="SCRIBD-SRC" data-auto-height="false" 
+  data-aspect-ratio="0.778929188255613" 
+  scrolling="no" id="SCRIBD-ID" 
+  width="100%" height="600" frameborder="0"&gt;&lt;/iframe&gt;
+</code>
+</pre>
+
+<p>You'll need to enter your specific details in the <code>SCRIBD-SRC</code> and <code>SCRIBD-ID</code> placeholders. This information can be obtained from the Scribd site:</p>
+
+<ol>
+
+  <li>
+    <p>Locate the document on the Scribd site. Note the <em>embed</em> link:</p>
+    <p><img src="http://guide.titleleaf.com/uploads/scribd-embed-1.png" alt="Scribd embed, step 1" /></p>
+  </li>
+
+  <li>
+    <p>Click the <em>embed</em> link. We are interested in the <em>iframe</em> tag only. This is obtained by unchecking the <em>Include link</em> box:</p>
+    <p><img src="http://guide.titleleaf.com/uploads/scribd-embed-2.png" alt="Scribd embed, step 2" /></p>
+  </li>
+
+</ol>
+
+<p>Here's how the <code>embed code</code> looks fully implemented:</p>
+
+<iframe class="scribd_iframe_embed" src="//www.scribd.com/embeds/173423881/content?start_page=1&amp;view_mode=slideshow&amp;access_key=key-9gujjxvucg0q91po9ol&amp;show_recommendations=false" data-auto-height="false" data-aspect-ratio="0.778929188255613" scrolling="no" id="doc_76351" width="100%" height="600" frameborder="0"></iframe>

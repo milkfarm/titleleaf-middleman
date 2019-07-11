@@ -1,0 +1,36 @@
+---
+title: FTP portrait ingestion
+layout: guide_simple
+parent: guide
+category: ingestions
+slug: ftp-portrait-ingestion
+---
+
+<p>Portraits of contributors can be added to the database via the Contributor section of the admin website, via the Ingestion section of the admin website or via FTP. This document describes the latter. </p>
+
+<p>If you have yet to receive an FTP account for ingestion purposes (which is distinct from that for production purposes), please contact the <a href="mailto:info@titleleaf.com">info@titleleaf.com</a>.</p>
+
+<p>Please be aware of the general <a href="/guides/ingestions/ftp-ingestion-rules.html">FTP ingestion rules</a> before uploading.</p>
+
+<p>Image file specifications:</p>
+
+<ul>
+<li>JPG format</li>
+<li>RGB or grayscale colorspace</li>
+<li>Recommended dimensions: 100px x 100px, 72 dpi</li>
+</ul>
+
+<p>Image file naming convention:</p>
+
+<ul>
+<li>Name files by contributor's full name, reverse order (last name then first name, lowercase, extension = "_pic.jpg")</li>
+<li>Examples: 
+<ul>
+<li>Barbara Gowan =&gt; gowan_barbara_pic.jpg</li>
+<li>Kwame Alexander =&gt; alexander_kwame_pic.jpg</li>
+<li>Helen L. Wilbur =&gt; wilbur_helen_l_pic.jpg</li>
+</ul>
+</li>
+</ul>
+
+<p>Note: The root directory of the FTP account is <a href="/guides/ingestions/ftp-ingestion-schedule.html">processed on regular basis</a>. If your files do not appear in the ingestion list after a processing cycle, check the <em>failed</em> directory of the FTP account.</p>

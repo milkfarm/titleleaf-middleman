@@ -1,0 +1,21 @@
+---
+title: Compose keyword search results link
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: compose-keyword-search-results-link
+---
+
+<p>To compose a <em>keyword</em> link in a <a href="/guides/web-content/pages.html">custom page</a>, either of the two formulas below will work:</p>
+
+<h3>Textile markup</h3>
+<pre><code>"LABEL":/products/search_results?search%5Bq%5D=KEYWORD
+</code>
+</pre>
+
+<h3>HTML markup</h3>
+<pre><code>&lt;a href="/products/search_results?search%5Bq%5D=KEYWORD"&gt;LABEL&lt;/a&gt;
+</code>
+</pre>
+
+<p>In the above formulas, <em>KEYWORD</em> and <em>LABEL</em> should be replaced with your desired values. Upon saving the custom page, the markup will be presented as a link to the viewer. When a user clicks the links, they will be redirected to the search results page with products matching the specified keyword.</p>

@@ -1,0 +1,44 @@
+---
+title: Template notes
+layout: guide_simple
+parent: guide
+category: ingestions
+slug: template-notes
+---
+
+<h4>All Templates</h4>
+
+<ul>
+  <li>Column names must be as specified in the templates. If TitleLeaf does not recognize a column name, then the data will not be ingested.</li>
+  <li>The column order does not affect ingestion.</li>
+</ul>
+
+<h4>Template: products-default</h4>
+
+<ul>
+  <li>A title (see type column) can be assigned to multiple sets</li>
+  <li>A set (see type column) cannot be assigned to other sets</li>
+  <li>To assign a title to a set, the set row must precede the title row. In other words, the set must be defined (or it must pre-exist in the database) before it's used in columns set1, set2, set3</li>
+  <li>Both titles and sets can be assigned to a series/subseries</li>
+  <li>Be careful of non-ascii characters. Verify when copying from Excel to Google Doc.</li>
+  <li>Do not include " in dimensions</li>
+  <li>Do not put fractions in the dimensions column. Use decimals instead (8 1/4 =&gt; 8.25)</li>
+  <li>Format dates as YYYY-MM-DD. For example, August 1 2015 should be formatted by your spreadsheet application as "2015-08-01". 
+  </li>
+<li>Do not put "-" or "N/A" in fields (simply leave blank)</li>
+  <li>proprietary_id is for the product (not the product format)</li>
+  <li>unacceptable interest_level_min values: PK (use either P or K, for Preschool and Kindergarten respectively)</li>
+  <li>release_on is mandatory. it is the release date of the product format.</li>
+  <li>If release_on is in the future, then the status must be set to NYP.</li>
+  <li>available_on is optional. it is the earliest release date of all associated product formats.</li>
+  <li>unacceptable copyright: 0</li>
+  <li>unacceptable pages: 0</li>
+  <li>No need for title column if subtitle not included as well</li>
+  <li>Avoid duplicate categories (e.g., "Art" and "Arts")</li>
+  <li>Isbn columns (e.g., reinforced_book_isbn, pdf_isbn, etc) can be added or deleted. At least one isbn column is required. For each isbn column, a product format will be created if it doesn't already exist in the database. The format is dictated by the column name. The remaining product format values are the same for all formats as defined in the product template (e.g., each format will have the same price, copyright, pages, etc). To override these values, you must use the "product_formats-template" google doc.</li>
+  <li>Delete blank columns from the right end of the spreadsheet (i.e., columns without a header).</li>
+  <li>Delete blank rows rows from the bottom of the spreadsheet.</li>
+  <li>Avoid carriage returns in description and annotation.</li>
+  <li>Interest level max must be greater than or equal to interest level min</li>
+  <li>Unacceptable interest/reading level: 0</li>
+</ul>

@@ -1,0 +1,50 @@
+---
+title: In what order should BISACs be assigned?
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: in-what-order-should-bisacs-be-assigned
+---
+
+<p>Publishers should assign BISACs in order of increasing importance. The least important BISAC should be assigned first; the most important, last.
+
+</p>
+<p>Sample Data:</p>
+<table>
+<tbody><tr>
+<th>name</th>
+<th>isbn</th>
+<th>bisacs</th>
+</tr>
+<tr>
+<td>The Science of a Carve Turn</td>
+<td> 9781633625808 </td>
+<td>JNF051140; JNF054110; JNF054160</td>
+</tr>
+</tbody>
+</table>
+
+<p>After ingestion of the sample data, the BISACs appear in TitleLeaf (product page, bisac assignment section) in the following order:</p>
+<ul>
+<li><code>JUVENILE NONFICTION / Science &amp; Nature / Physics (JNF051140)</code>
+</li>
+<li><code>JUVENILE NONFICTION / Sports &amp; Recreation / Olympics (JNF054110)</code>
+</li>
+<li><code>JUVENILE NONFICTION / Sports &amp; Recreation / Winter Sports (JNF054160)</code>
+</li>
+</ul>
+
+<p>See screenshot:</p>
+<p><img src="https://www.evernote.com/l/AAYNITXgPNRLQ4T_8c6XI2IXTJI242db09AB/image.png" alt="Assigned BISACs" /></p>
+
+<p>The resultant ONIX feed illustrates the importance given to the last assignment:</p>
+<pre><code>&lt;BASICMainSubject&gt;JNF054160&lt;/BASICMainSubject&gt;
+&lt;Subject&gt;
+  &lt;SubjectSchemeIdentifier&gt;10&lt;/SubjectSchemeIdentifier&gt;
+  &lt;SubjectCode&gt;JNF051140&lt;/SubjectCode&gt;
+&lt;/Subject&gt;
+&lt;Subject&gt;
+  &lt;SubjectSchemeIdentifier&gt;10&lt;/SubjectSchemeIdentifier&gt;
+  &lt;SubjectCode&gt;JNF054110&lt;/SubjectCode&gt;
+&lt;/Subject&gt;</code>
+</pre>

@@ -1,0 +1,266 @@
+---
+title: Template change log
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: template-change-log
+---
+
+<style>
+  dl {
+    display: block;
+    margin: 0 0 1em 0;
+  }
+  dd {
+    margin-left:1em;
+    display: list-item;
+    list-style-type: disc;
+  }
+</style>
+
+<p>The TitleLeaf ingestion <a href="/guides/ingestions/template-to-ingestion-type-table.html">templates</a> change intermittently as the application itself evolves and improves. Before organizing data in a template and ingesting into TitleLeaf, please verify that you're using the most recent version of said template. Hover your cursor over the first column's header cell to identify the template version, as shown below.</p>
+
+<p><img src="http://guide.titleleaf.com/uploads/google-template-version.png" alt="Google doc template version" /></p>
+
+<p>For further information about template changes, see below:</p>
+
+<ul>
+  <li>
+    <a href="#products-default">products-default</a>
+  </li>
+  <li>
+    <a href="#products-default-with-multiple-formats">products-default-with-multiple-formats</a>
+  </li>
+  <li>
+    <a href="#products-only">products-only</a>
+  </li>
+  <li>
+    <a href="#product-formats">product-formats</a>
+  </li>
+  <li>
+    <a href="#series">series (previously termed <em>collections</em>)</a>
+  </li>
+  <li>
+    <a href="#categories">categories</a>
+  </li>
+  <li>
+    <a href="#contributors">contributors</a>
+  </li>
+</ul>
+
+<h2 id="products-default">products-default</h2>
+<dl>
+
+  <dt>Version 26 (July 15, 2018)</dt>
+  <dd>Add <code>announce_on</code> column. The field accepts a date which represents when a new product may be announced to the general public.</dd>
+  <dd>Add <code>preorder_on</code> column. The field accepts a date which represents when a retail ‘preorder’ can be placed in the market, where this is distinct from the public announcement date mentioned above.</dd>
+  <dd>Rename <code>first_published_on</code> column to <code>first_release_on</code>. This date should equal the earliest <code>release_on</code> value of the associated product formats. The column is being renamed to reinforce the relationship to the associated product formats and to maintain consistency with the series column of the same name.</dd>
+
+  <dt>Version 25 (March 25, 2018)</dt>
+  <dd>Add <code>brand</code> column. The field accepts a string which represents the <em>marketing brand</em> for the product format.</dd>
+  <dd>Add <code>recovery_level</code> column. The field accepts an integer which represents the <em>Reading Recovery Level</em> for the product.</dd>
+  <dd>Add <code>sample_front_pages</code> column. The field accepts an integer which represents the number of front pages to extract from the PDF ebook in order to create a sample excerpt for the product.</dd>
+  <dd>Add <code> sample_back_pages </code> column. The field accepts an integer which represents the number of back pages to extract from the PDF ebook in order to create a sample excerpt for the product.</dd>
+
+  <dt>Version 24 (August 25, 2017)</dt>
+  <dd>Add <code>detail_version</code> column. The field accepts a string which represents the <em>version number</em> for the ebook format. It is not applicable to print formats. It is intended to store the EPUB version number of a given product format (eg, EPUB version <em>3.0</em>).</dd>
+
+  <dt>Version 23 (February 26, 2017)</dt>
+  <dd>Rename <code>available_on</code> column to <code>first_published_on</code> to avoid confusion. This date should equal the earliest release date of the associated product formats.</dd>
+
+  <dt>Version 22 (October 21, 2016)</dt>
+  <dd>Change <code>graphics</code> column to accept multiple values if separated by a semi-colon. The acceptable values have changed to: <code>1-color illustrations; 2-color photographs; Full-color illustrations; Full-color photographs; Historical photographs</code>
+</dd>
+
+  <dt>Version 21 (October 13, 2016)</dt>
+  <dd>Add <code>duration</code> column. The field accepts an integer which represents the <em>runtime</em> for the product format.</dd>
+
+  <dt>Version 20 (September 29, 2016)</dt>
+  <dd>Rename <code>language</code> to <code>languages</code>. The field now accepts multiple values if separated by a semi-colon.</dd>
+  <dd>Rename <code>audience</code> to <code>audiences</code>. The field now accepts multiple values if separated by a semi-colon.</dd>
+
+  <dt>Version 19 (August 1, 2016)</dt>
+  <dd>Rename <code>spotlight_description</code> to <code>promotional_description</code> to match ONIX terms</dd>
+  <dd>Rename <code>carton_quantity</code> to <code>pack_quantity</code> to match ONIX terms</dd>
+
+  <dt>Version 18 (June 14, 2016)</dt>
+  <dd>Add <code>price_list_alt_user</code> column. Now both alternate List pricing and alternate S/L pricing can be defined. Previously S/L pricing was inferred.</dd>
+
+  <dt>Version 17 (February 7, 2016)</dt>
+  <dd>Designate <code>proprietary_id</code> as mandatory</dd>
+
+  <dt>Version 16</dt>
+  <dd>Replace <code>has_index</code> et al with <code>features</code>
+</dd>
+
+  <dt>Version 15</dt>
+  <dd>Add <em>Hi-Lo Format</em>, <em>Narrative Format</em> as acceptable options to <code>genre</code> columns</dd>
+
+  <dt>Version 14</dt>
+  <dd>Add <code>keywords</code> column</dd>
+
+  <dt>Version 13</dt>
+  <dd>Add <code>srcpoints</code> and <code>srcreadlevel</code> columns</dd>
+</dl>
+
+<h2 id="products-default-with-multiple-formats">products-default-with-multiple-formats</h2>
+<dl>
+
+  <dt>Version 26 (July 15, 2018)</dt>
+  <dd>Add <code>announce_on</code> column. The field accepts a date which represents when a new product may be announced to the general public.</dd>
+  <dd>Add <code>preorder_on</code> column. The field accepts a date which represents when a retail ‘preorder’ can be placed in the market, where this is distinct from the public announcement date mentioned above.</dd>
+  <dd>Rename <code>first_published_on</code> column to <code>first_release_on</code>. This date should equal the earliest <code>release_on</code> value of the associated product formats. The column is being renamed to reinforce the relationship to the associated product formats and to maintain consistency with the series column of the same name.</dd>
+
+  <dt>Version 25 (March 25, 2018)</dt>
+  <dd>Add <code>brand</code> column. The field accepts a string which represents the <em>marketing brand</em> for the product format.</dd>
+  <dd>Add <code>recovery_level</code> column. The field accepts an integer which represents the <em>Reading Recovery Level</em> for the product.</dd>
+  <dd>Add <code>sample_front_pages</code> column. The field accepts an integer which represents the number of front pages to extract from the PDF ebook in order to create a sample excerpt for the product.</dd>
+  <dd>Add <code> sample_back_pages </code> column. The field accepts an integer which represents the number of back pages to extract from the PDF ebook in order to create a sample excerpt for the product.</dd>
+
+  <dt>Version 24 (August 25, 2017)</dt>
+  <dd>Add <code>detail_version</code> column. The field accepts a string which represents the <em>version number</em> for the ebook format. It is not applicable to print formats. It is intended to store the EPUB version number of a given product format (eg, EPUB version <em>3.0</em>).</dd>
+
+  <dt>Version 23 (February 26, 2017)</dt>
+  <dd>Rename <code>available_on</code> column to <code>first_published_on</code> to avoid confusion. This date should equal the earliest release date of the associated product formats.</dd>
+
+  <dt>Version 22 (October 21, 2016)</dt>
+  <dd>Change <code>graphics</code> column to accept multiple values if separated by a semi-colon. The acceptable values have changed to: <code>1-color illustrations; 2-color photographs; Full-color illustrations; Full-color photographs; Historical photographs</code>
+</dd>
+
+  <dt>Version 21 (October 13, 2016)</dt>
+  <dd>Add <code>duration</code> column. The field accepts an integer which represents the <em>runtime</em> for the product format.</dd>
+
+  <dt>Version 20 (September 29, 2016)</dt>
+  <dd>Rename <code>language</code> to <code>languages</code>. The field now accepts multiple values if separated by a semi-colon.</dd>
+  <dd>Rename <code>audience</code> to <code>audiences</code>. The field now accepts multiple values if separated by a semi-colon.</dd>
+
+  <dt>Version 19 (August 1, 2016)</dt>
+  <dd>Rename <code>spotlight_description</code> to <code>promotional_description</code> to match ONIX terms</dd>
+  <dd>Rename <code>carton_quantity</code> to <code>pack_quantity</code> to match ONIX terms</dd>
+
+  <dt>Version 18 (June 14, 2016)</dt>
+  <dd>Add <code>price_list_alt_user</code> column. Now both alternate List pricing and alternate S/L pricing can be defined. Previously S/L pricing was inferred.</dd>
+
+  <dt>Version 17 (February 7, 2016)</dt>
+  <dd>Designate <code>proprietary_id</code> as mandatory</dd>
+
+  <dt>Version 16</dt>
+  <dd>Replace <code>has_index</code> et al with <code>features</code>
+</dd>
+
+  <dt>Version 15</dt>
+  <dd>Add <em>Hi-Lo Format</em>, <em>Narrative Format</em> as acceptable options to <code>genre</code> columns</dd>
+
+  <dt>Version 14</dt>
+  <dd>Add <code>keywords</code> column</dd>
+
+  <dt>Version 13</dt>
+  <dd>Add <code>srcpoints</code> and <code>srcreadlevel</code> columns</dd>
+</dl>
+
+<h2 id="products-only">products-only</h2>
+<dl>
+
+  <dt>Version 18 (March 25, 2018)</dt>
+  <dd>Add <code>recovery_level</code> column. The field accepts an integer which represents the <em>Reading Recovery Level</em> for the product.</dd>
+  <dd>Add <code>sample_front_pages</code> column. The field accepts an integer which represents the number of front pages to extract from the PDF ebook in order to create a sample excerpt for the product.</dd>
+  <dd>Add <code> sample_back_pages </code> column. The field accepts an integer which represents the number of back pages to extract from the PDF ebook in order to create a sample excerpt for the product.</dd>
+
+  <dt>Version 17 (February 26, 2017)</dt>
+  <dd>Rename <code>available_on</code> column to <code>first_published_on</code> to avoid confusion. This date should equal the earliest release date of the associated product formats.</dd>
+
+  <dt>Version 16 (October 21, 2016)</dt>
+  <dd>Change <code>graphics</code> column to accept multiple values if separated by a semi-colon. The acceptable values have changed to: <code>1-color illustrations; 2-color photographs; Full-color illustrations; Full-color photographs; Historical photographs</code>
+</dd>
+
+  <dt>Version 15 (September 29, 2016)</dt>
+  <dd>Rename <code>language</code> to <code>languages</code>. The field now accepts multiple values if separated by a semi-colon.</dd>
+  <dd>Rename <code>audience</code> to <code>audiences</code>. The field now accepts multiple values if separated by a semi-colon.</dd>
+
+  <dt>Version 14 (August 1, 2016)</dt>
+  <dd>Rename <code>spotlight_description</code> to <code>promotional_description</code> to match ONIX terms</dd>
+
+  <dt>Version 13 (February 7, 2016)</dt>
+  <dd>Designate <code>proprietary_id</code> as mandatory</dd>
+  <dd>Remove <code>series</code> and <code>subseries</code> columns (not supported by ingestion model)</dd>
+  <dd>Remove <code>publisher</code> column (not supported by ingestion model)</dd>
+  <dd>Remove <code>author</code> and <code>illustrator</code> columns (not supported by ingestion model)</dd>
+
+  <dt>Version 12</dt>
+  <dd>Replace <code>has_index</code> et al with <code>features</code>
+</dd>
+
+  <dt>Version 11</dt>
+  <dd>Add <em>Hi-Lo Format</em>, <em>Narrative Format</em> as acceptable options to <code>genre</code> columns</dd>
+
+  <dt>Version 10</dt>
+  <dd>Add <code>keywords</code> column</dd>
+
+  <dt>Version 9</dt>
+  <dd>Add <code>srcpoints</code> and <code>srcreadlevel</code> columns</dd>
+</dl>
+
+<h2 id="product-formats">product-formats</h2>
+<dl>
+
+  <dt>Version 15 (March 10, 2019)</dt>
+  <dd>Add <code>skip_distribution</code> column. The field accepts a boolean which represents if a product format should be distributed or not. This attribute is applicable to subscribers of the TitleLeaf Distribution module.</dd>
+
+  <dt>Version 14 (July 15, 2018)</dt>
+  <dd>Add <code>announce_on</code> column. The field accepts a date which represents when a new product may be announced to the general public.</dd>
+  <dd>Add <code>preorder_on</code> column. The field accepts a date which represents when a retail ‘preorder’ can be placed in the market, where this is distinct from the public announcement date mentioned above.</dd>
+
+  <dt>Version 13 (March 25, 2018)</dt>
+  <dd>Add <code>brand</code> column. The field accepts a string which represents the <em>marketing brand</em> for the product format.</dd>
+
+  <dt>Version 12 (August 25, 2017)</dt>
+  <dd>Add <code>detail_version</code> column. The field accepts a string which represents the <em>version number</em> for the ebook format. It is not applicable to print formats. It is intended to store the EPUB version number of a given product format (eg, EPUB version <em>3.0</em>).</dd>
+
+  <dt>Version 11 (October 13, 2016)</dt>
+  <dd>Add <code>duration</code> column. The field accepts an integer which represents the <em>runtime</em> for the product format.</dd>
+
+  <dt>Version 10 (August 1, 2016)</dt>
+  <dd>Rename <code>carton_quantity</code> to <code>pack_quantity</code> to match ONIX terms</dd>
+
+  <dt>Version 9 (June 14, 2016)</dt>
+  <dd>Add <code>price_list_alt_user</code> column. Now both alternate List pricing and alternate S/L pricing can be defined. Previously S/L pricing was inferred.</dd>
+</dl>
+
+<h2 id="series">series</h2>
+<dl>
+  <dt>Version 5 (July 15, 2018)</dt>
+  <dd>Add <code>first_announce_on</code> column. The field accepts a date which represents when the given series may be announced to the general public. The value should equal the earliest <code>announce_on</code> value of the associated product formats.</dd>
+  <dd>Rename <code>available_on</code> column to <code>first_release_on</code>. The field accepts a date which represents when a retail ‘order’ can be placed in the market. The value should equal the earliest <code>release_on</code> value of the associated product formats.</dd>
+
+  <dt>Version 4 (September 29, 2016)</dt>
+  <dd>Renamed file from <em>collections</em> to <em>series</em>. The former is the internal term for the latter. We will be hiding the internal term if at all possible.</dd>
+
+  <dt>Version 3 (February 7, 2016)</dt>
+  <dd>Add <code>publisher</code> column</dd>
+</dl>
+
+<h2 id="categories">categories</h2>
+<dl>
+  <dt>Version 2 (April 6, 2018)</dt>
+  <dd>Added <em>proprietary_parent_id</em> column.</dd>
+</dl>
+<dl>
+  <dt>Version 1 (January 1, 2015)</dt>
+  <dd>Initial version</dd>
+</dl>
+
+<h2 id="contributors">contributors</h2>
+<dl>
+  <dt>Version 3 (April 6, 2018)</dt>
+  <dd>Removed <em>website</em> column name.</dd>
+  <dd>Added <em>website1_url</em> column name. The column can be repeated to associate multiple website URLs to the given contributor. Maximum number of 20 websites.</dd>
+  <dd>Added <em>website1_role</em> column name. Other accepted columns are <em>website1_title</em>, <em>website1_description</em>, and <em>website1_proprietary_id</em>.</dd>
+</dl>
+<dl>
+  <dt>Version 2 (March 15, 2018)</dt>
+  <dd>Added <em>proprietary_id</em> column.</dd>
+</dl>
+<dl>
+  <dt>Version 1 (January 1, 2015)</dt>
+  <dd>Initial version</dd>
+</dl>

@@ -1,0 +1,44 @@
+---
+title: Ingest price change data
+layout: guide_simple
+parent: guide
+category: ingestions
+slug: ingest-price-change-data
+---
+
+<p>The <em>Price Change module</em> is used to <em>stage</em> impending price changes. It is most appropriate for clients subscribed to the
+  <a href="/guides/distributions.html">Distribution module</a>. It can be used to notify wholesalers of changes before implementation. If you're not concerned about forewarning wholesalers, you can alter a product format's prices immediately using the
+  <a href="/guides/knowledge-base/how-do-i-update-prices.html">product_formats</a> ingestion template (caveat: using the <em>product_formats</em> template will <em>not</em> update the prices in a user's cart or quotes.).</p>
+
+<p>Note:</p>
+<ul>
+<li>TitleLeaf checks for price changes to distribute on a nightly basis. The day on which a price change notification is distributed prior to the <em>Implement On</em> date is dictated by the <em>Price Change Advance Notice</em> setting (Admin &gt; Management &gt; Settings).</li>
+<li>TitleLeaf implements price changes on a nightly basis as well, assuming records are found with the <em>Implement On</em> date matching the current date.</li>
+</ul>
+
+<p>To create then ingest price change data, follow below:</p>
+
+<ol>
+<li>
+  <p>Create a new Google Doc spreadsheet using the <a href="https://docs.google.com/spreadsheet/ccc?key=0ApnSLzCVc941dHBhcTF3YU92NTM5ZmJlS0N5U05TLXc&amp;usp=sharing">price changes template</a> file (See menu item: File &gt; Make a Copy…). Name the new file as you deem necessary, but omit spaces (e.g., price_changes-YYYYMMDD where YYYYMMDD is today's date).</p>
+  <p><img src="http://guide.titleleaf.com/uploads/google-file-menu-make-a-copy.png" alt="Google Doc: File menu, Make a copy" /></p>
+</li>
+
+<li>
+  <p>When the new file is complete, <a href="/guides/other/download-google-doc-as-csv.html">download the data as a CSV file</a> to your local machine. Follow the same naming convention as in step 1, but add a ".csv" extension (e.g., price_changes-YYYYMMDD.csv).</p>
+</li>
+
+<li>
+  <p>Navigate to the new ingestion form.</p>
+  <p><img src="http://guide.titleleaf.com/uploads/titleleaf-ingestion-menu-new-item.png" alt="Ingestion menu, New item" /></p>
+</li>
+
+<li>
+  <p>Select the appropriate <a href="/guides/ingestions/template-to-ingestion-type-table.html">ingestion type</a> (ie, "Price Change").</p>
+</li>
+
+<li>
+  <p>Choose the local CSV file to ingest, then click the "Create" button.</p>
+  <p><img src="http://guide.titleleaf.com/uploads/titleleaf-ingestion-new.png" alt="New ingestion form" /></p>
+</li>
+</ol>

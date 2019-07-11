@@ -1,0 +1,17 @@
+---
+title: Best sellers
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: best-sellers
+---
+
+<p>The best sellers list presents products sorted by <em>sales rate&#160;</em>in descending order. In other words, the product with the highest <em>sales rate</em> is presented first.</p>
+<p>Aside: Depending on your TitleLeaf setup, it is possible that only Sets are displayed in the best sellers list. This would be the case if your company is a Series publisher.</p>
+<p><img src="/system/images/W1siZiIsIjIwMTQvMDgvMTUvMDJfMDhfMDdfNTQxX2RlbW9fYmVzdHNlbGxlcnMucG5nIl1d/demo-bestsellers.png" title="Demo Bestsellers" alt="Demo Bestsellers" data-rel="225x255" width="1280" height="770" /></p>
+<p>The <em>sales rate</em> of a product is stored in a field name <em>sales_rate</em>. To update the <em>sales_rate</em>&#160;value of specific products, use the <em>bestsellers-products</em> <a href="https://drive.google.com/folderview?id=0B5nSLzCVc941WEZFcmkteUhueFk&amp;usp=sharing#list" title="https://drive.google.com/folderview?id=0B5nSLzCVc941WEZFcmkteUhueFk&amp;usp=sharing#list">template</a>.</p>
+<p><img src="/system/images/W1siZiIsIjIwMTQvMDgvMTUvMDJfMDFfNDZfNzIxX2Jlc3RzZWxsZXJzX3Byb2R1Y3RzX3RlbXBsYXRlLnBuZyJdXQ/bestsellers-products-template.png" title="Bestsellers Products Template" alt="Bestsellers Products Template" data-rel="225x255" width="687" height="416" /></p>
+<p>Note: As shown above, the ingestion file must have 2 columns: <em>isbn</em> and <em>sales_rate</em>. The sales_rate value can be any number. Again, the product with the highest number will be displayed first in the best sellers list.</p>
+
+<p>After entering your data into the template, <a href="/guides/ingestions.html">ingest</a> the resultant file using the <em>Products Only</em> ingestion type.</p>
+<p><img src="/system/images/W1siZiIsIjIwMTQvMDgvMTUvMDJfMTBfNDlfNTM4X3RpdGxlbGVhZl9pbmdlc3Rpb25fbmV3X2Jlc3RzZWxsZXJzLnBuZyJdXQ/titleleaf-ingestion-new-bestsellers.png" title="Titleleaf Ingestion New Bestsellers" alt="Titleleaf Ingestion New Bestsellers" data-rel="225x255" width="1024" height="468" /></p>

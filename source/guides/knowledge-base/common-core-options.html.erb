@@ -1,0 +1,42 @@
+---
+title: Common Core Options
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: common-core-options
+---
+
+<p>TitleLeaf offers 2 options to indicate to consumers that a specific product is aligned to the <a href="http://www.corestandards.org">Common Core State Standards</a>. Both options are found on the <em>Edit Product</em> page of a specific product:</p>
+
+<ol>
+<li>
+  <p><strong>Robust Option</strong>: Correlate products to grade-specific standards (e.g., "CCSS.ELA-Literacy.RI.K.1").</p>
+  <p><img src="http://guide.titleleaf.com/uploads/titleleaf-common-core-standards.png" /></p>
+  <p>To update in bulk, see ingestion template "products_standards".</p>
+</li>
+
+<li>
+<p><strong>Cursory Option</strong>: A free-form field to list related strands (e.g., RI, RF, W, SL, RH, WHST, etc). See column <em>ccss_abbreviations</em> in ingestion template <em>products-default</em> or <em>products-only</em>.</p>
+<p><img src="http://guide.titleleaf.com/uploads/titleleaf-common-core-abbreviations.png" /></p>
+<p>To update in bulk, see column "ccss_abbreviations" in ingestion template "products-default" or "products-only".</p>
+<p>Acceptable values for the free-form field are:</p>
+<ul>
+<li><strong>CC</strong> = CCSS.Math.Content.*.CC.*</li>
+<li><strong>G</strong> = CCSS.Math.Content.*.G.*</li>
+<li><strong>L</strong> = CCSS.ELA-Literacy.L.*</li>
+<li><strong>MD</strong> = CCSS.Math.Content.*.MD.*</li>
+<li><strong>NBT</strong> = CCSS.Math.Content.*.NBT.*</li>
+<li><strong>NF</strong> = CCSS.Math.Content.*.NF.*</li>
+<li><strong>OA</strong> = CCSS.Math.Content.*.OA.*</li>
+<li><strong>RF</strong> = CCSS.ELA-Literacy.RF.*</li>
+<li><strong>RH</strong> = CCSS.ELA-Literacy.RH.*</li>
+<li><strong>RI</strong> = CCSS.ELA-Literacy.RI.*</li>
+<li><strong>RL</strong> = CCSS.ELA-Literacy.RL.*</li>
+<li><strong>RST</strong> = CCSS.ELA-Literacy.RST.*</li>
+<li><strong>SL</strong> = CCSS.ELA-Literacy.SL*</li>
+<li><strong>W</strong> = CCSS.ELA-Literacy.W.*</li>
+<li><strong>WHST</strong> = CCSS.ELA-Literacy.WHST.*</li>
+<li><strong>CCRA</strong> = CCSS.ELA-Literacy.CCRA.*</li>
+</ul>
+</li>
+</ol>

@@ -1,0 +1,21 @@
+---
+title: Implicit creation of series
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: implicit-creation-of-series
+---
+
+<p>To create a new record in the <em>Series</em> module via ingestion, use the <em>series</em> template.</p>
+
+<p>Note:</p>
+<ul>
+  <li>TitleLeaf internally terms a <em>series</em> as a <em>collection</em>. This is a coding issue. We will attempt to utilize the term <em>series</em> in all public documentation.</li>
+  <li>A series record does not have an ISBN. ISBNs are for salable products. There is, however, a proprietary_id column. Sets, on the other hand, are salable and have ISBNs. Both a Title and a Set are subclasses of the <em>Product</em> module. To create a Set, use the <em>products-default</em> template but specify the product <code>type</code> as <em>Set</em>.</li>
+</ul>
+
+<p>To associate a Title/Set with a Series, use the <code>series</code> column on the <em>products-default</em> template. The Series will be created if it doesn't exist prior to the ingestion of the Title/Set. To determine if the Series exists, TitleLeaf will search the <em>Series</em> module by the value in the <code>series</code> column (ie the series name) scoped by publisher to avoid the situation where multiple publishers have Series of the same name.</p>
+
+<p>If you know the Series proprietary_id, then another option to associate a Title with a Series is to add a <code>proprietary_series_id</code> column to the <em>products-default</em> template. In this situation, to determine if the Series exists, TitleLeaf will search the <em>Series</em> module by the value in the <code>proprietary_series_id</code> column. The search is not scoped since the proprietary_id value must be unique for the entire <em>Series</em> module.</p>
+
+<p>To associate a Title with a Set, use the <code>set1</code>, <code>set2</code>, etc columns on the <em>products-default</em> template. The Set must exist prior to the ingestion of the Title. To determine if the Set exists, TitleLeaf will search the <em>Product</em> module by the value in the respective <code>set</code> column (ie the Set name). The search is not scoped by publisher since a Set can contain products from multiple publishers (contrast to Series). It will use the <em>most recently</em> created Set matching the given name. TitleLeaf will not create the Set if it is not found. Instead it will raise a warning.</p>

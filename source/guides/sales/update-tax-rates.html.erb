@@ -1,0 +1,37 @@
+---
+title: Update tax rates
+layout: guide_simple
+parent: guide
+category: sales
+slug: update-tax-rates
+---
+
+<p>Tax rates are defined on a Postal Code basis. To update tax rates, follow the procedure below.</p>
+
+<ol>
+
+  <li>
+    <p>Navigate to Admin &gt; Sales &gt; Postal Codes.</p>
+<p><img src="/system/images/W1siZiIsIjIwMTQvMDcvMjQvMTVfMzdfMjJfMjk1X3RpdGxlbGVhZl9tZW51X3Bvc3RhbF9jb2Rlcy5wbmciXV0/titleleaf-menu-postal_codes.png" title="Titleleaf Menu Postal Codes" alt="Titleleaf Menu Postal Codes" data-rel="225x255" width="172" height="365" /></p>
+
+  </li>
+
+  <li>
+    <p>Export the postal codes that are to be updated. You can export a subset by using the search form at the top of the page. In the example below, only postal codes in the state of Wyoming are selected.</p>
+<p><img src="/system/images/W1siZiIsIjIwMTQvMDcvMjQvMTVfNTBfMjNfNjM1X3RpdGxlbGVhZl9wb3N0YWxfY29kZXNfZmlsdGVyZWQucG5nIl1d/titleleaf-postal_codes-filtered.png" title="Titleleaf Postal Codes Filtered" alt="Titleleaf Postal Codes Filtered" data-rel="225x255" width="1024" height="548" /></p>
+<p><img src="/system/images/W1siZiIsIjIwMTQvMDcvMjQvMTVfNDhfMzlfNDIxX3RpdGxlbGVhZl9wb3N0YWxfY29kZXNfZXhwb3J0LnBuZyJdXQ/titleleaf-postal_codes-export.png" title="Titleleaf Postal Codes Export" alt="Titleleaf Postal Codes Export" data-rel="225x255" width="1024" height="368" /></p>
+  </li>
+
+  <li>
+    <p>Edit the exported postal codes with a spreadsheet application and save (retaining the CSV format).</p>
+<p><img src="/system/images/W1siZiIsIjIwMTQvMDcvMjQvMTVfNDRfNDFfNjQwX2V4Y2VsX3Bvc3RhbF9jb2Rlcy5wbmciXV0/excel-postal_codes.png" title="Excel Postal Codes" alt="Excel Postal Codes" data-rel="225x255" width="1024" height="518" /></p>
+  </li>
+
+  <li>
+    <p><a href="/guides/ingestions.html">Ingest</a> the edited postal codes file specifying <strong>Postal Codes</strong> as the ingestion type.</p>
+<p><img src="/system/images/W1siZiIsIjIwMTQvMDcvMjQvMTVfMzdfMjJfMjFfdGl0bGVsZWFmX2luZ2VzdGlvbnNfbmV3X3Bvc3RhbF9jb2Rlcy5wbmciXV0/titleleaf-ingestions-new-postal_codes.png" title="Titleleaf Ingestions New Postal Codes" alt="Titleleaf Ingestions New Postal Codes" data-rel="225x255" width="1024" height="448" /></p>
+  </li>
+
+</ol>
+
+<p>Note: <a href="http://en.wikipedia.org/wiki/ZIP_code">ZIP Code</a> is a US term. The more generic term, applicable to all countries and used by TitleLeaf, is Postal Code.</p>

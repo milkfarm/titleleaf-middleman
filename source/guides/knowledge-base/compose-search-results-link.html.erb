@@ -1,0 +1,475 @@
+---
+title: Compose search results link
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: compose-search-results-link
+---
+
+<p>It is possible to link directly to search results. The following information outlines the process of composing such a link.</p>
+
+<h3>Base</h3>
+<p>Every search results link starts in the same way:</p>
+
+<pre><code>http://YOUR_DOMAIN/products/search_results?
+</code>
+</pre>
+
+<p>where <strong>YOUR_DOMAIN</strong> would be of form <em>demo.titleleaf.com</em>.</p>
+
+<h3>Field/Value Pairs</h3>
+<p>The guts of the search results link are defined by field/value pairs. A single field/value pair is of form:</p>
+
+<pre><code>search%5BFIELD_NAME%5D=VALUE
+</code>
+</pre>
+
+<h5>Acceptable Fields</h5>
+
+<table>
+<tbody>
+
+  <tr>
+  <th>Field Description</th>
+  <th>Field Name</th>
+  </tr>
+
+  <tr>
+  <td>Keywords</td>
+  <td>q</td>
+  </tr>
+
+  <tr>
+    <td>ISBNs</td>
+    <td>product_formats_isbn_in</td>
+  </tr>
+
+  <tr>
+    <td>Contributors (eg, authors, illustrators)</td>
+    <td>contributors_name_contains</td>
+  </tr>
+
+  <tr>
+    <td>BISAC codes</td>
+    <td>bisac_subjects_code_in</td>
+  </tr>
+
+  <tr>
+    <td>Guided reading levels</td>
+    <td>guided_level_in</td>
+  </tr>
+
+  <tr>
+    <td>Minimum release date</td>
+    <td>product_formats_release_on_from</td>
+  </tr>
+
+  <tr>
+    <td>Maximum release date</td>
+    <td>product_formats_release_on_to</td>
+  </tr>
+
+  <tr>
+    <td>Catalog page number</td>
+    <td>catalog_page_in</td>
+  </tr>
+
+  <tr>
+    <td>Product type</td>
+    <td>type_in</td>
+  </tr>
+
+  <tr>
+    <td>Minimum copyright year</td>
+    <td>product_formats_copyright_from</td>
+  </tr>
+
+  <tr>
+    <td>Maximum copyright year</td>
+    <td>product_formats_copyright_to</td>
+  </tr>
+
+  <tr>
+    <td>Product format</td>
+    <td>product_formats_format_id_in</td>
+  </tr>
+
+  <tr>
+    <td>Product status</td>
+    <td>product_formats_status_in</td>
+  </tr>
+
+  <tr>
+    <td>Dewey value</td>
+    <td>dewey_in</td>
+  </tr>
+
+  <tr>
+    <td>Minimum dewey range</td>
+    <td>dewey_from</td>
+  </tr>
+
+  <tr>
+    <td>Maximum dewey range</td>
+    <td>dewey_to</td>
+  </tr>
+
+  <tr>
+    <td>Minimum interest level</td>
+    <td>interest_level_from</td>
+  </tr>
+
+  <tr>
+    <td>Maximum interest level</td>
+    <td>interest_level_to</td>
+  </tr>
+
+  <tr>
+    <td>Minimum reading level</td>
+    <td>reading_level_from</td>
+  </tr>
+
+  <tr>
+    <td>Maximum reading level</td>
+    <td>reading_level_to</td>
+  </tr>
+
+  <tr>
+    <td>Minimum AR reading level</td>
+    <td>alsreadlevel_from</td>
+  </tr>
+
+  <tr>
+    <td>Maximum AR reading level</td>
+    <td>alsreadlevel_to</td>
+  </tr>
+
+  <tr>
+    <td>Minimum Lexile</td>
+    <td>lexile_from</td>
+  </tr>
+
+  <tr>
+    <td>Maximum Lexile</td>
+    <td>lexile_to</td>
+  </tr>
+
+ <tr>
+    <td>Series name</td>
+    <td>collection_name_contains</td>
+  </tr>
+
+  <tr>
+    <td>Minimum modified date</td>
+    <td>updated_at_from</td>
+  </tr>
+
+  <tr>
+    <td>Maximum modified date</td>
+    <td>updated_at_to</td>
+  </tr>
+
+  <tr>
+    <td>Product ID</td>
+    <td>id_in</td>
+  </tr>
+
+  <tr>
+    <td>Proprietary product ID</td>
+    <td>proprietary_id_in</td>
+  </tr>
+
+  <tr>
+    <td>Product format</td>
+    <td>product_formats_id_in</td>
+  </tr>
+
+  <tr>
+    <td>Publisher</td>
+    <td>publisher_name_equals</td>
+  </tr>
+
+  <tr>
+    <td>Imprint</td>
+    <td>imprint_equals</td>
+  </tr>
+
+  <tr>
+    <td>Subject</td>
+    <td>categories_id_in</td>
+  </tr>
+
+  <tr>
+    <td>Genre</td>
+    <td>genres_contains</td>
+  </tr>
+
+  <tr>
+    <td>Language</td>
+    <td>language_equals</td>
+  </tr>
+
+</tbody>
+</table>
+
+<h5>Example</h5>
+
+<table>
+<tbody>
+
+  <tr>
+    <th>Field Description</th>
+    <th>Intended Value</th>
+  </tr>
+
+  <tr>
+    <td>Genre</td>
+    <td>Beginning reader</td>
+  </tr>
+
+</tbody>
+</table>
+
+<pre><code>search%5Bgenres_contains%5D=beginning_reader
+</code>
+</pre>
+
+<h5>Exception</h5>
+<p>If the FIELD_NAME ends in "_in" or "_notin", use the following notation:</p>
+
+<pre><code>search%5BFIELD_NAME%5D%5B%5D=VALUE
+</code>
+</pre>
+
+<h5>Example of exception</h5>
+
+<table>
+<tbody>
+
+  <tr>
+    <th>Field Description</th>
+    <th>Intended Value</th>
+  </tr>
+
+  <tr>
+    <td>Product status</td>
+    <td>ACT</td>
+  </tr>
+
+</tbody>
+</table>
+
+<pre><code>search%5Bproduct_formats_status_in%5D%5B%5D=ACT
+</code>
+</pre>
+
+<h5>Other examples:</h5>
+
+<table>
+<tbody>
+
+  <tr>
+    <th>Field Description</th>
+    <th>Intended Value</th>
+  </tr>
+
+  <tr>
+    <td>Subject</td>
+    <td>Science</td>
+  </tr>
+
+</tbody>
+</table>
+<p>Note: Assuming the ID associated with the "Science" subject is 4.</p>
+<pre><code>search%5Bcategories_id_in%5D%5B%5D=4
+</code>
+</pre>
+
+<table>
+<tbody>
+
+  <tr>
+    <th>Field Description</th>
+    <th>Intended Value</th>
+  </tr>
+
+  <tr>
+    <td>Minimum reading level</td>
+    <td>Grade 1</td>
+  </tr>
+
+</tbody>
+</table>
+<pre><code>search%5Breading_level_from%5D=1
+</code>
+</pre>
+
+<table>
+<tbody>
+
+  <tr>
+    <th>Field Description</th>
+    <th>Intended Value</th>
+  </tr>
+
+  <tr>
+    <td>Maximum reading level</td>
+    <td>Grade 3</td>
+  </tr>
+
+</tbody>
+</table>
+<pre><code>search%5Breading_level_to%5D=3
+</code>
+</pre>
+
+<table>
+<tbody>
+
+  <tr>
+    <th>Field Description</th>
+    <th>Intended Value</th>
+  </tr>
+
+  <tr>
+    <td>Product type</td>
+    <td>Set</td>
+  </tr>
+
+</tbody>
+</table>
+<p>Note: Internally, a "Set" is referred to as an "Assembly".</p>
+<pre><code>search%5Btype_in%5D=Assembly
+</code>
+</pre>
+
+<table>
+<tbody>
+
+  <tr>
+    <th>Field Description</th>
+    <th>Intended Value</th>
+  </tr>
+
+  <tr>
+    <td>Language</td>
+    <td>Spanish</td>
+  </tr>
+
+</tbody>
+</table>
+<pre><code>search%5Blanguage_equals%5D=Spanish
+</code>
+</pre>
+
+<h3>Combining Multiple Field/Value Pairs</h3>
+<p>Multiple field/value pairs are separated with an ampersand, <strong>&amp;</strong>.</p>
+
+<h5>Example</h5>
+<table>
+<tbody>
+
+  <tr>
+    <th>Field Description</th>
+    <th>Intended Value</th>
+  </tr>
+
+  <tr>
+    <td>Genre</td>
+    <td>Beginning reader</td>
+  </tr>
+
+  <tr>
+    <td>Subject</td>
+    <td>Science</td>
+  </tr>
+
+</tbody>
+</table>
+<pre><code>search%5Bgenres_contains%5D=beginning_reader&amp;search%5Bcategories_id_in%5D%5B%5D=4
+</code>
+</pre>
+
+<h3>Caveat</h3>
+<ul>
+<li>Spaces (and other characters) are not allowed in URLs. Use "+" instead of a space.</li>
+<li>For translation of other characters, refer to <a href="http://www.w3schools.com/tags/ref_urlencode.asp">W3Schools URL Encoding Reference</a>
+</li>
+</ul>
+
+<h3>Sort Order</h3>
+<p>The sort order of the search results is defined by the following form:</p>
+<pre><code>order=CODE
+</code>
+</pre>
+<p>where <strong>CODE</strong> can is limited to the values in the following table. </p>
+
+<table>
+<tbody>
+
+<tr>
+  <th>Description</th>
+  <th>Code</th>
+</tr>
+
+<tr>
+  <td>Name (A to Z)</td>
+  <td>name</td>
+</tr>
+
+<tr>
+  <td>Name (Z to A)</td>
+  <td>name_desc</td>
+</tr>
+
+<tr>
+  <td>Date Available (New to Old)</td>
+  <td>date</td>
+</tr>
+
+<tr>
+  <td>Date Available (Old to New)</td>
+  <td>date_desc</td>
+</tr>
+
+<tr>
+  <td>Series Name (A to Z)</td>
+  <td>collection</td>
+</tr>
+
+<tr>
+  <td>Series Name (Z to A)</td>
+  <td>collection_desc</td>
+</tr>
+
+<tr>
+  <td>Grade (Low to High)</td>
+  <td>grade</td>
+</tr>
+
+<tr>
+  <td>Grade (High to Low)</td>
+  <td>grade_desc</td>
+</tr>
+
+<tr>
+  <td>Popularity (High to Low)</td>
+  <td>rate</td>
+</tr>
+
+<tr>
+  <td>Popularity (Low to High)</td>
+  <td>rate_desc</td>
+</tr>
+
+</tbody>
+</table>
+
+<h3>Conclusion</h3>
+<p>The following link finds all products that are in the genre of "Beginning Reader" and in the subject of "Science". The results are sorted by name in descending order:</p>
+
+<pre><code>http://demo.titleleaf.com/products/search_results?order=name_desc&amp;search%5Bgenres_contains%5D=beginning_reader&amp;search%5Bcategories_id_in%5D%5B%5D=4
+</code>
+</pre>
+
+<p>If you intend to use such a link in an email, it is highly recommended that you employ a URL shortening service such as <a href="https://bitly.com">Bitly</a>.</p>

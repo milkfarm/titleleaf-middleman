@@ -1,0 +1,314 @@
+---
+title: FTP file naming convention
+layout: guide_simple
+parent: guide
+category: ingestions
+slug: ftp-file-naming-convention
+---
+
+<p>
+  Instead of using the admin web interface, you can upload files via FTP for ingestion. The root directory of the FTP account is
+  <a href="/guides/ingestions/ftp-ingestion-schedule.html">processed on regular basis</a>. The files will appear in the
+  <a href="/guides/ingestions/view-ingestions" title="View ingestions.html">ingestion list</a> if properly processed. The file naming convention determines how the file is processed (see table below). If the file does not adhere to the naming convention, the ingestion associated with the file will be marked as <em>failed</em>.</p>
+
+<p>Important:</p>
+<ul>
+<li>Be certain to follow the general <a href="/guides/ingestions/ftp-ingestion-rules.html">FTP ingestion rules</a>.</li>
+<li>Product data must exist in the TitleLeaf database prior to ingestion of assets (eg, covers, spreads, ebooks) to be associated with the products. The assets are named by ISBN or proprietary_id. If TitleLeaf doesn't have the ISBN or proprietary_id in its database, then it will fail to ingest the asset, marking it as "unrecognized".</li>
+</ul>
+
+<p>Contact <a href="mailto:info@titleleaf.com">info@titleleaf.com</a> for FTP account credentials.</p>
+
+<ul>
+  <li>
+    <a href="#data">Data files</a>
+  </li>
+  <li>
+    <a href="#images">Image files</a>
+  </li>
+  <li>
+    <a href="#ebooks">Ebook/Draft files</a>
+  </li>
+  <li>
+    <a href="#layouts">Layout files</a>
+  </li>
+  <li>
+    <a href="#other">Other files</a>
+  </li>
+</ul>
+
+<h2 id="data">Data files</h2>
+<p>Templates for the data files listed below are available via <a href="https://drive.google.com/folderview?id=0B5nSLzCVc941WEZFcmkteUhueFk&amp;usp=sharing#list">Google Docs</a>.</p>
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td valign="top"><strong>File Name</strong>
+</td>
+    <td valign="top"><strong>Ingestion Type</strong>
+</td>
+    <td valign="top" style="width:50%;"><strong>Description</strong>
+</td>
+  </tr>
+  <tr>
+    <td valign="top">default.csv</td>
+    <td valign="top">Default</td>
+    <td valign="top">To create/update products and their associated formats. As indicated by the name, it is the most widely used template.</td>
+  </tr>
+  <tr>
+    <td valign="top">awards.csv</td>
+    <td valign="top">Awards</td>
+    <td valign="top">To create/update awards conferred to products.</td>
+  </tr>
+  <tr>
+    <td valign="top">assembly_assignments.csv</td>
+    <td valign="top">Assembly Assignments</td>
+    <td valign="top">Assembly is the internal TitleLeaf term for Sets. This file associates titles to sets.</td>
+  </tr>
+  <tr>
+    <td valign="top">bestsellers-products.csv</td>
+    <td valign="top">Products Only</td>
+    <td valign="top">To define the sales rate of products. The sales rate is used to compose the best sellers list.</td>
+  </tr>
+  <tr>
+    <td valign="top">bisac_subjects.csv</td>
+    <td valign="top">Bisac Subjects</td>
+    <td valign="top">Internal use only</td>
+  </tr>
+  <tr>
+    <td valign="top">categories.csv</td>
+    <td valign="top">Categories</td>
+    <td valign="top">The internal TitleLeaf term for Subjects.</td>
+  </tr>
+  <tr>
+    <td valign="top">categories_products.csv</td>
+    <td valign="top">Categories to Products</td>
+    <td valign="top">To associate products to categories.</td>
+  </tr>
+  <tr>
+    <td valign="top">collections.csv</td>
+    <td valign="top">Collections</td>
+    <td valign="top">The internal TitleLeaf term for Series.</td>
+  </tr>
+  <tr>
+    <td valign="top">common_core_ela.xml</td>
+    <td valign="top">Common Core ELA</td>
+    <td valign="top">Internal use only</td>
+  </tr>
+  <tr>
+    <td valign="top">common_core_math.xml</td>
+    <td valign="top">Common Core Math</td>
+    <td valign="top">Internal use only</td>
+  </tr>
+  <tr>
+    <td valign="top">contributors.csv</td>
+    <td valign="top">Contributors</td>
+    <td valign="top">To create/update contributors (eg, Authors, Illustrators, Editors, etc).</td>
+  </tr>
+  <tr>
+    <td valign="top">contributor_assignments.csv</td>
+    <td valign="top">Contributor Assignments</td>
+    <td valign="top">To associate products to contributors.</td>
+  </tr>
+  <tr>
+    <td valign="top">editorial_reviews.csv</td>
+    <td valign="top">Editorial Reviews</td>
+    <td valign="top">To create/update editorial reviews.</td>
+  </tr>
+  <tr>
+    <td valign="top">editorial_reviews_products.csv</td>
+    <td valign="top">Editorial Review Products</td>
+    <td valign="top">To associate products to editorial reviews.</td>
+  </tr>
+  <tr>
+    <td valign="top">links.csv</td>
+    <td valign="top">Links</td>
+    <td valign="top">To create/update website links.</td>
+  </tr>
+  <tr>
+    <td valign="top">links_products.csv</td>
+    <td valign="top">Link Products</td>
+    <td valign="top">To associate products to website links.</td>
+  </tr>
+  <tr>
+    <td valign="top">postal_codes.csv</td>
+    <td valign="top">Postal Codes</td>
+    <td valign="top">To create/update postal codes.</td>
+  </tr>
+  <tr>
+    <td valign="top">price_changes.csv</td>
+    <td valign="top">Price Changes</td>
+    <td valign="top">Internal use only.</td>
+  </tr>
+  <tr>
+    <td valign="top">products.csv</td>
+    <td valign="top">Products Only</td>
+    <td valign="top">To update product data only (as opposed to product format data). See also default.csv.</td>
+  </tr>
+  <tr>
+    <td valign="top">product_formats.csv</td>
+    <td valign="top">Product Formats</td>
+    <td valign="top">To update product format data only (as opposed to product data). See also default.csv.</td>
+  </tr>
+  <tr>
+    <td valign="top">products_standards.csv</td>
+    <td valign="top">Product Standards</td>
+    <td valign="top">To associate products to standards such as the Common Core.</td>
+  </tr>
+  <tr>
+    <td valign="top">related_product_assignments.csv</td>
+    <td valign="top">Related Product Assignments</td>
+    <td valign="top">To create a relation between 2 products.</td>
+  </tr>
+  <tr>
+    <td valign="top">testimonials.csv</td>
+    <td valign="top">Testimonials</td>
+    <td valign="top">To create/update testimonials.</td>
+  </tr>
+  </tbody>
+</table>
+
+<h2 id="images">Image files</h2>
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td valign="top"><strong>File Name</strong>
+  </td>
+    <td valign="top"><strong>Ingestion Type</strong>
+  </td>
+  </tr>
+  <tr>
+    <td valign="top">DOE_JOHN_pic.jpg</td>
+    <td valign="top">Contributor Portraits</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN_fc.jpg</td>
+    <td valign="top">Front Covers</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN_bc.jpg</td>
+    <td valign="top">Back Covers</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN_int.jpg</td>
+    <td valign="top">Spreads</td>
+  </tr>
+  <tr>
+    <td valign="top">DESCRIPTION_web.jpg, DESCRIPTION_web.png</td>
+    <td valign="top">Web Images</td>
+  </tr>
+  </tbody>
+</table>
+
+<h2 id="ebooks">Ebook/Draft files</h2>
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td valign="top"><strong>File Name</strong>
+</td>
+    <td valign="top"><strong>Ingestion Type</strong>
+</td>
+    <td valign="top" style="width:50%;"><strong>Description</strong>
+</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN_draft.pdf</td>
+    <td valign="top">Drafts</td>
+    <td valign="top">A draft file in PDF format containing multiple pages of the designated title.</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN.epub</td>
+    <td valign="top">Ebooks</td>
+    <td valign="top">An Epub file to be distributed and sold.</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN.mobi</td>
+    <td valign="top">Ebooks</td>
+    <td valign="top">A Mobi or KF8 file to be distributed and sold.</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN.mp3</td>
+    <td valign="top">Ebooks</td>
+    <td valign="top">A MP3 file to be distributed and sold.</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN.wav</td>
+    <td valign="top">Ebooks</td>
+    <td valign="top">A WAV file to be distributed and sold.</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN_ebook.pdf</td>
+    <td valign="top">Ebooks</td>
+    <td valign="top">A PDF file to be distributed and sold.</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN_ebook_cvr.pdf</td>
+    <td valign="top">Ebook Covers</td>
+    <td valign="top">A one-page PDF file of the front and back cover combined. It should contain crop marks. Along with the interior, it is used to create a final, salable PDF ebook.</td>
+    <td valign="top"></td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN_ebook_int.pdf</td>
+    <td valign="top">Ebook Interiors</td>
+    <td valign="top">A multi-page PDF file of the interior of a book. It should NOT contain crop marks. Along with the cover, it is used to create a final, salable PDF ebook.</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN_excerpt.pdf</td>
+    <td valign="top">Excerpts</td>
+    <td valign="top">An excerpt file in PDF format containing multiple pages of the designated title.</td>
+  </tr>
+  </tbody>
+</table>
+
+<h2 id="layouts">Layout files</h2>
+<p>These are InDesign or Quark Xpress packages. The package directory <em>must be zipped</em>. The cover and interior packaged files can either be zipped together or separately. That choice dictates the following file naming.</p>
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td valign="top"><strong>File Name</strong>
+</td>
+    <td valign="top"><strong>Ingestion Type</strong>
+</td>
+    <td valign="top" style="width:50%;"><strong>Description</strong>
+</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN_layout.zip</td>
+    <td valign="top">Layouts</td>
+    <td valign="top">A zip file containing both the packaged cover and interior of a given title.</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN_layout_cvr.zip</td>
+    <td valign="top">Layout Covers</td>
+    <td valign="top">A zip file containing the <em>packaged cover only</em> of a given title. The interior must also be provided to comprise a complete archive of the given title.</td>
+  </tr>
+  <tr>
+    <td valign="top">ISBN_layout_int.zip</td>
+    <td valign="top">Layout Interiors</td>
+    <td valign="top">A zip file containing the <em>packaged interior only</em> of a given title. The cover must also be provided to comprise a complete archive of the given title.</td>
+  </tr>
+  </tbody>
+</table>
+
+<h2 id="other">Other files</h2>
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td valign="top"><strong>File Name</strong>
+</td>
+    <td valign="top"><strong>Ingestion Type</strong>
+</td>
+    <td valign="top" style="width:50%;"><strong>Description</strong>
+</td>
+  </tr>
+  <tr>
+    <td valign="top">PID_tg.[txt|rtf|pdf|doc|docx|csv|xml|xls|xlsx|xltx|zip]</td>
+    <td valign="top">Teaching Guides</td>
+    <td valign="top">A teaching guide document.</td>
+  </tr>
+  <tr>
+    <td valign="top">PID_ho.[txt|rtf|pdf|doc|docx|csv|xml|xls|xlsx|xltx|zip]</td>
+    <td valign="top">Handouts</td>
+    <td valign="top">A handout document.</td>
+  </tr>
+  </tbody>
+</table>
