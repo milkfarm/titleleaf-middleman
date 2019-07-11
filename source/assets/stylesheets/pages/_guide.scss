@@ -24,6 +24,17 @@ body.guide {
       font-weight: 200;
       color: $medium-gray;
     }
+    p {
+      margin-bottom: 1em;
+    }
+    img {
+      -moz-box-shadow: 0 0 5px 5px #ccc;
+      -webkit-box-shadow: 0 0 5px #ccc;
+      box-shadow: 0 0 5px #ccc;
+      margin: 3px;
+      padding: 0;
+      background-color: #fff;
+    }
   }
 
   .accordion {
