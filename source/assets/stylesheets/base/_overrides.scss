@@ -170,6 +170,19 @@ strong {
   font-weight: 600;
 }
 
+ol,
+ul.basic {
+  margin-left: 1.4em;
+  margin-bottom: 1em;
+  list-style-position: outside;
+}
+ol {
+  list-style-type: decimal;
+}
+ul.basic {
+  list-style-type: disc;
+}
+
 hr {
   display: block;
   position: relative;

@@ -1,3 +1,4 @@
+<% layout = current_page.options[:layout] %>
 <!DOCTYPE html>
 <html lang="<%= I18n.locale %>">
   <head>
@@ -16,13 +17,23 @@
     <!-- Other -->
     <%= partial "partials/analytics" %>
   </head>
-  <body class="<%= body_class %>">
+  <body class="<%= body_class(layout) %>">
     <%= partial "partials/header" %>
     <main>
       <%= yield %>
     </main>
+    <% unless layout == 'legal' %>
+      <%= partial "partials/demonstration" %>
+    <% end %>
     <%= partial "partials/footer" %>
     <%= javascript_include_tag 'application' %>
+    <% if layout == 'guide' %>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          toggleAccordion();
+        }, false);
+      </script>
+    <% end %>
     <script data-jsd-embedded data-key="5e24628a-0ae5-4408-b342-1fce318f76f0" data-base-url="https://jsd-widget.atlassian.com" src="https://jsd-widget.atlassian.com/assets/embed.js"></script>
   </body>
 </html>
