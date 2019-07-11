@@ -22,9 +22,9 @@ module ApplicationHelpers
     parts.compact.reverse.join(options[:join_with])
   end
 
-  def body_class(part = nil)
-    parts = [current_page_name, part]
-    parts.compact.join(' ')
+  def body_class(*args)
+    parts = [current_page_name] + args
+    parts.compact.uniq.join(' ')
   end
 
   def current_page_name

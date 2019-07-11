@@ -1,4 +1,5 @@
 <% layout = current_page.options[:layout] %>
+<% parent = current_page.data.parent %>
 <!DOCTYPE html>
 <html lang="<%= I18n.locale %>">
   <head>
@@ -17,17 +18,17 @@
     <!-- Other -->
     <%= partial "partials/analytics" %>
   </head>
-  <body class="<%= body_class(layout) %>">
+  <body class="<%= body_class(layout, parent) %>">
     <%= partial "partials/header" %>
     <main>
       <%= yield %>
     </main>
-    <% unless layout == 'legal' %>
+    <% unless (%w(legal guide) & [layout, parent]).any? %>
       <%= partial "partials/demonstration" %>
     <% end %>
     <%= partial "partials/footer" %>
     <%= javascript_include_tag 'application' %>
-    <% if layout == 'guide' %>
+    <% if [layout, parent].include? 'guide' %>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
           toggleAccordion();

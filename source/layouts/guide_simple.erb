@@ -1,0 +1,17 @@
+<% wrap_layout :layout do %>
+  <div class="container">
+    <%= partial "partials/sidebar" %>
+    <section id="content">
+      <div class="row">
+        <div class="col-full">
+          <h1><%= current_page.data.title %></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-full">
+          <%= yield %>
+        </div>
+      </div>
+    </section>
+  </div>
+<% end %>
