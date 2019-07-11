@@ -22,12 +22,12 @@ module ApplicationHelpers
     parts.compact.reverse.join(options[:join_with])
   end
 
-  def body_class
-    parts = [current_page_name]
+  def body_class(part = nil)
+    parts = [current_page_name, part]
     parts.compact.join(' ')
   end
 
   def current_page_name
-    current_page.path.sub(/\.html$/, '')
+    current_page.path.sub(/\.html$/, '').gsub(/\//, '-')
   end
 end
