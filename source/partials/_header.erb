@@ -1,6 +1,6 @@
 <header>
   <div class="col-left">
-    <%= link_to image_tag('logo.png', alt: data.config.company_name), '/index.html' %>
+    <%= link_to image_tag('logo.png', alt: data.config.company_name), '/' %>
   </div>
   <div class="col-right">
     <ul id="menu">
@@ -9,10 +9,10 @@
           <i class="fa fa-bars"></i>
         </a>
       </li>
-      <li class="separator"><%= link_to 'Features', '/features.html' %></li>
-      <li><%= link_to 'Pricing', '/pricing.html' %></li>
-      <li><%= link_to 'Guide', '/guide.html' %></li>
-      <li><%= link_to 'Contact', '/contact.html', class: 'button' %></li>
+      <li class="separator"><%= link_to 'Features', '/features' %></li>
+      <li><%= link_to 'Pricing', '/pricing' %></li>
+      <li><%= link_to 'Guide', '/guide' %></li>
+      <li><%= link_to 'Contact', '/contact', class: 'button' %></li>
     </ul>
   </div>
 </header>
