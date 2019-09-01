@@ -30,4 +30,13 @@ module ApplicationHelpers
   def current_page_name
     current_page.path.sub(/\.html$/, '').gsub(/\//, '-')
   end
+
+  def docsearch_enabled
+    required_data = [
+      'DS_APPLICATION_ID',
+      'DS_API_KEY',
+      'DS_INDEX_NAME',
+    ]
+    required_data.all? { |key| ENV[key].presence }
+  end
 end
