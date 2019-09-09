@@ -33,7 +33,6 @@ module ApplicationHelpers
 
   def docsearch_enabled
     required_data = [
-      'DS_APPLICATION_ID',
       'DS_API_KEY',
       'DS_INDEX_NAME',
     ]
