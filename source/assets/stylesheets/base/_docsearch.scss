@@ -1,0 +1,29 @@
+#ds-search-input {
+    padding-left: 26px;
+    padding-right: 32px;
+}
+
+form.searchbox {
+    width: 100%;
+    max-width: 230px;
+    margin-top: 48px;
+}
+
+.searchbox__reset {
+    top: 10px !important;
+    stroke: $light-gray;
+    stroke-width: 2px;
+    &:hover {
+        background-color: $red;
+        stroke: $white;
+    }
+}
+
+.searchbox__submit {
+    top: 2px !important;
+}
+
+/* Large screens (>= 1250px) */
+@include grid-media($large-screen-grid) {
+    form.searchbox { margin-top: 56px; }
+}
