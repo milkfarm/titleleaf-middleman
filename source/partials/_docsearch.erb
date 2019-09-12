@@ -34,6 +34,13 @@
       indexName: '<%= ENV["DS_INDEX_NAME"] %>',
       inputSelector: '#ds-search-input',
       debug: false,
+
+      transformData: function (hits) {
+        for (hit of hits) {
+          delete hit.anchor;
+          hit.url = hit.url.includes("#") ? hit.url.split("#")[0] : hit.url;
+        }
+      }
     });
   </script>
 <% end %>
