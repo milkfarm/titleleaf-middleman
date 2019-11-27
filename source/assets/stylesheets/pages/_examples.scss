@@ -48,8 +48,10 @@ body.examples {
       color: $flip-text-color;
       width: 100%;
       height: 100%;
-      border-radius: 5px;
       padding: 20px;
+      @include border-top-radius(5px);
+      @include border-bottom-radius(5px);
+      @include box-shadow(1px 1px 3px rgba(0,0,0,.5));
     }
     .meta {
       display: none;
