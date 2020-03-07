@@ -6,11 +6,15 @@ category: web-content
 slug: create-a-page
 ---
 
-<p>The <a href="/guides/web-content/pages">pages module</a> allows an administrator to create custom pages. To create a custom page follow the procedure below:</p>
+<p>
+  The <a href="/guides/web-content/pages">pages module</a> allows an
+  administrator to create custom pages. To create a custom page follow
+  the procedure below:
+</p>
 
 <ol>
   <li>
-    <p>Go the index page of Pages module by selecting the respective item in the <strong>Content</strong> menu.</p>
+    <p>Navigate to the Pages module by selecting the respective item in the <strong>Content</strong> menu.</p>
     <p><img src="https://assets.titleleaf.com/guide/titleleaf-content-menu.png" alt="Web content menu" /></p>
   </li>
   <li>
@@ -22,18 +26,45 @@ slug: create-a-page
     <p><img src="https://assets.titleleaf.com/guide/titleleaf-page-new.png" alt="New page form" /></p>
     <p>Note:</p>
     <ul>
-      <li>The <strong>Title</strong> appears at the top of browser window and in the browser history.</li>
-      <li>The <strong>Path</strong> determines the URL of the page.</li>
-      <li>The <strong>Layout</strong> determines the design of the page.</li>
-      <li>Designating a page as <strong>Public</strong> means all visitors can view it. If set to <strong>No</strong>, only admin users can.</li>
-      <li>Entering a <strong>Password</strong> means only users with the password can view the page.</li>
-      <li>Designating a page as <strong>Deletable</strong> means that an admin user can delete the page. Pages that are critical to the structure of the website should be marked as not deletable to avoid mistakes.</li>
-      <li>The <strong>Body</strong> field can contain HTML, 
+      <li>
+        The <strong>Title</strong> appears at the top of browser window and in
+        the browser history. It can also be used in the page body via the
+        <em>page.title</em> page variable.
+      </li>
+      <li>
+        The <strong>Path</strong> determines the URL of the page.
+      </li>
+      <li>
+        The <strong>Layout</strong> determines the design of the page.
+      </li>
+      <li>
+        Designating a page as <strong>Accessible</strong> means that any site
+        visitor can view the page. If you would like to restrict access to only
+        visitors that are logged in, deactivate this option.
+      </li>
+      <li>
+        Entering a <strong>Password</strong> means only users with the password
+        can view the page.
+      </li>
+      <li>
+        Designating a page as <strong>Protected</strong> means that an admin
+        user cannot delete the page. Pages that are critical to the structure of
+        the website should be marked as protected to avoid mistakes.
+      </li>
+      <li>
+        Populate the <strong>Feature Products</strong> field with a
+        comma-separated list of ISBNs. Those products can then be display
+        on the page using <em>page variables</em> (eg <em>products_grid_list</em>).
+      </li>
+      <li>
+        The <strong>Body</strong> field can contain HTML,
         <a href="/guides/other/textile-markup">Textile markup</a>, or plain text.
-        By using HTML, you can create more complex pages, such as embedded videos. For convenience, TitleLeaf supports a limited amount of
-        <a href="/guides/knowledge-base/page-variables">variables</a>. It is also possible to
-        <a href="/guides/knowledge-base/page-feature-products">loop through the feature products</a>.</li>
-  
-</ul>
-</li>
+        By using HTML, you can create more complex pages, such as embedded videos.
+        For convenience, TitleLeaf supports a limited amount of
+        <a href="/guides/knowledge-base/page-variables">variables</a>.
+        It is also possible to
+        <a href="/guides/knowledge-base/page-feature-products">loop through the feature products</a>.
+      </li>
+    </ul>
+  </li>
 </ol>
