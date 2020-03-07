@@ -9,25 +9,45 @@ slug: how-do-i-add-an-image-to-a-page
 <p>Use either the following HTML or Textile markup to add an inline JPG/PNG image to a <a href="/guides/web-content/create-a-page">custom page</a>:</p>
 
 <p>HTML markup:</p>
-<pre><code>&lt;img src="IMAGE_URL" alt="IMAGE_DESCRIPTION" /&gt;
-</code>
+<pre>
+  <code>
+    &lt;img src="IMAGE_URL" alt="IMAGE_DESCRIPTION" /&gt;
+  </code>
 </pre>
 
 <p>Textile markup:</p>
-<pre><code>!IMAGE_URL(IMAGE_DESCRIPTION)!
-</code>
+<pre>
+  <code>
+    !IMAGE_URL(IMAGE_DESCRIPTION)!
+  </code>
 </pre>
 
 <p>Where:</p>
 <ul>
-<li><em>IMAGE_URL<em> is a URL pointing to the image (eg http://domain.com/path/to/image.jpg).</em>
-</em>
-</li>
-<em><em>
-<li><em>IMAGE_DESCRIPTION<em> is text describing the image (eg "A flower in bloom")</em>
-</em>
-</li>
+  <li>
+    <em>IMAGE_URL</em>
+    is a URL pointing to the image (eg http://domain.com/path/to/image.jpg).
+  </li>
+  <li>
+    <em>IMAGE_DESCRIPTION</em>
+    is text describing the image (eg "A flower in bloom").
+  </li>
+</ul>
 
-</em>
-</em>
+<p>
+  If you uploaded your image to TitleLeaf via the <em>Images</em> module,
+  then you can use a <em>page variable</em> shortcut:
+</p>
+<pre>
+  <code>
+    {{ "IMAGE_FILE_NAME" | tl_image_tag }}
+  </code>
+</pre>
+
+<p>Where:</p>
+<ul>
+  <li>
+    <em>IMAGE_FILE_NAME</em>
+    is the name of the file including file extension (eg, "cow.png" or "baby_goats.jpg").
+  </li>
 </ul>
