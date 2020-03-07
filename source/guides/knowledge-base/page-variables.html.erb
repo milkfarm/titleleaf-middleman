@@ -6,15 +6,21 @@ category: knowledge-base
 slug: page-variables
 ---
 
-<p><a href="/guides/web-content/create-a-page">Custom pages</a> can contain variables that are replaced with values when the page is presented to a visitor.</p>
+<p>
+  <a href="/guides/web-content/create-a-page">Custom pages</a> can contain
+  variables that are replaced with values when the page is presented to a visitor.
+</p>
 
 <p>Variables are designated in the page body using the following syntax:</p>
 
-<pre><code class="language-html" data-lang="html">{{ VARIABLE_NAME }}
+<pre>
+<code class="language-html" data-lang="html">
+  {{ VARIABLE_NAME }}
 </code>
 </pre>
 
 <p>The table below lists all acceptable variables names:</p>
+
 <table>
 <tbody>
 <tr>
@@ -130,15 +136,15 @@ slug: page-variables
   <td>The email address of the person to contact regarding ONIX</td>
 </tr>
 <tr>
-  <td>products_compact_list</td>
+  <td>page.products_compact_list</td>
   <td>Outputs a compact list of the featured products</td>
 </tr>
 <tr>
-  <td>products_extended_list</td>
+  <td>page.products_extended_list</td>
   <td>Outputs a extended list of the featured products</td>
 </tr>
 <tr>
-  <td>products_grid_list</td>
+  <td>page.products_grid_list</td>
   <td>Outputs a grid list of the featured products</td>
 </tr>
 </tbody>
@@ -148,14 +154,25 @@ slug: page-variables
 
 <h3>Example</h3>
 
-<p>To display the company name defined in <a href="/guides/settings">Admin Settings</a>, use the following code:</p>
+<p>
+  To display the company name defined in
+  <a href="/guides/settings">Admin Settings</a>,
+  use the following code:
+</p>
 
-<pre><code class="language-html" data-lang="html">Welcome to the {{ company_name }} website!
+<pre>
+<code class="language-html" data-lang="html">
+  Welcome to the {{ company_name }} website!
 </code>
 </pre>
 
-<p>Assuming <em>company_name</em> is defined as "Acme, Inc.", a visitor will be presented with the following:</p>
+<p>
+  Assuming <em>company_name</em> is defined as "Acme, Inc.", a visitor will be
+  presented with the following:
+</p>
 
-<pre><code>Welcome to the Acme, Inc. website!
+<pre>
+<code>
+  Welcome to the Acme, Inc. website!
 </code>
 </pre>
