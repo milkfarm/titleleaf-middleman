@@ -8,12 +8,12 @@ slug: channel-rule-file-formula
 
 <p>The File Formula field of a Channel Rule supports a variety of variables depending on the asset type.</p>
 
-<p>For data files that group multiple products together (eg, CSV, XLSX, ONIX), the following variables are supported:</p>
+<p id="data-variables">For data files that group multiple products together (eg, CSV, XLSX, ONIX), the following variables are supported. NB: The variable must be enclosed in single curly brackets within the File Formula field (example: <code>{BASENAME}-{TIMESTAMP}</code>).</p>
 
-<table id="data-variables">
+<table>
   <tbody>
     <tr>
-      <th style="width: 45%;">Variable</th>
+      <th style="width: 45%;">Variable Name</th>
       <th>Description</th>
     </tr>
     <tr>
@@ -35,12 +35,12 @@ slug: channel-rule-file-formula
   </tbody>
 </table>
 
-<p>For an individual asset file that is assigned to a specific Product or Product Format (eg, a cover or spread), the following additional variables are supported:</p>
+<p id="product-variables">For an individual asset file that is assigned to a specific Product or Product Format (eg, a cover or spread), the following additional variables are supported. NB: The variable must be enclosed in single curly brackets within the File Formula field (example: <code>{name_by_isbn}</code>).</p>
 
-<table id="product-variables">
+<table>
   <tbody>
     <tr>
-      <th style="width: 45%;">Variable</th>
+      <th style="width: 45%;">Variable Name</th>
       <th>Description</th>
     </tr>
     <tr>
