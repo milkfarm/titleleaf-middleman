@@ -1,6 +1,7 @@
 body.combined-pricing,
 body.distribution-pricing,
 body.pricing,
+body.custom-pricing,
 body.more-pricing,
 body.service-level-agreements,
 body.setup {
@@ -70,6 +71,23 @@ body.setup {
       font-size: 0.8em;
       font-weight: normal;
       border-bottom: dotted 1px #ddd;
+    }
+  }
+
+  div.subscription-plans {
+    min-width: 600px;
+    overflow-x: auto;
+    table {
+      th.plans, td.plans {
+        padding-left: 1em;
+        width: 35%;
+      }
+      th.prices, td.prices {
+        min-width: 50px;
+      }
+      tr.even, th.even, td.even {
+        background-color: $lighter-gray;
+      }
     }
   }
 
