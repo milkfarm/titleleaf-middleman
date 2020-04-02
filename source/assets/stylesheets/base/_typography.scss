@@ -36,6 +36,12 @@ a {
     outline: $focus-outline;
     outline-offset: $focus-outline-offset;
   }
+
+}
+
+.subdue-text {
+  color: $medium-gray;
+  font-size: 82%;
 }
 
 hr {
