@@ -45,3 +45,13 @@ hr {
   border-top: 0;
   margin: $base-spacing 0;
 }
+
+code {
+  font-size: 90%;
+}
+
+pre {
+  padding: 6px 10px;
+  background-color: $off-gray;
+  border-radius: $base-border-radius;
+}
