@@ -17,3 +17,25 @@ dt {
 dd {
   margin: 0;
 }
+
+ul.columned {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  li {
+    float: none;
+    display: inline-block;
+    width: 100%;
+    &:after {
+      content: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $screen-md-min) {
+  ul.columned {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+  }
+}
