@@ -214,6 +214,28 @@ ul#menu li.toggler {
   display: block;
 }
 
+.block-error, .block-notice, .block-warning {
+  position: relative;
+  padding: .5em .9em .6em;
+  font-style: italic;
+  @include border-radius($base-border-radius);
+}
+.block-error {
+  background: $error-color;
+  color: darken($error-color, 70%);
+  border: 1px solid darken($error-color, 10%);
+}
+.block-notice {
+  background: $notice-color;
+  color: darken($notice-color, 70%);
+  border: 1px solid darken($notice-color, 10%);
+}
+.block-warning {
+  background: $warning-color;
+  color: darken($warning-color, 70%);
+  border: 1px solid darken($warning-color, 10%);
+}
+
 // Responsive
 
 /* Small screens (default) */
