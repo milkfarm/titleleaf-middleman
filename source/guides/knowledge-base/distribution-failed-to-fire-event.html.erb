@@ -1,0 +1,15 @@
+---
+title: Distribution failed to fire event
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: distribution-failed-to-upload
+---
+
+<p>If you attempt a distribution and receive a "can't fire event" message, it means TitleLeaf failed to upload all the files before the connection closed. This most offer occurs when distributing large amounts of data (5GB or more). To remedy, we recommend splitting the distribution into multiple parts.</p>
+
+<div class="block-error" style="margin-bottom: 1em;">
+  Can't fire event `started` in current state `processing` for `Distribution` with ID 9
+</div>
+
+<p><img src="https://assets.titleleaf.com/guide/titleleaf-distribution-failed-to-fire-event.png" alt="Distribution failed to fire event" /></p>
