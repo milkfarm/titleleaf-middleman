@@ -1,0 +1,17 @@
+---
+title: Ingestion failed to fire event
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: ingestion-failed-to-upload
+---
+
+<p>If you attempt an ingestion and receive a "can't fire event" message, it means TitleLeaf failed to process the entire file within the alotted time (~6 hours). TitleLeaf limits all processing jobs to avoid overloading the server.</p>
+
+<div class="block-error" style="margin-bottom: 1em;">
+  Can't fire event `started` in current state `processing` for `Ingestion` with ID 9
+</div>
+
+<p>This error is most often associated with large ingestion files (> 25MB). If you’re ingesting such a file, we recommend splitting it into multiple parts to speed processing.</p>
+
+<p><img src="https://assets.titleleaf.com/guide/titleleaf-ingestion-failed-to-fire-event.png" alt="Ingestion failed to fire event" /></p>
