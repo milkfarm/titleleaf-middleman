@@ -1,0 +1,44 @@
+---
+title: Tag Restrictions
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: tag-restrictions
+---
+
+<p>Tags cannot contain uppercase characters, spaces, punctuation or other non-ascii characters. If found, TitleLeaf will remove or transform as follows:</p>
+
+<ul>
+  <li>Uppercase => Will be replaced by lowercase</li>
+  <li>Spaces => Will be replaced by hyphen</li>
+  <li>Punctation => Will be removed</li>
+  <li>Non-ascii => Will be removed</li>
+</ul>
+
+<p>Examples:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Before</th>
+      <th>After</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Our “AMAZING” Products!</td>
+      <td>our-amazing-products</td>
+    </tr>
+    <tr>
+      <td>1, 2, 3… Let’s Go!</td>
+      <td>1-2-3-lets-go</td>
+    </tr>
+    <tr>
+      <td>Special Promotion: 50% OFF</td>
+      <td>special-promotion-50-off</td>
+    </tr>
+    <tr>
+      <td>JUST, testing: `~!@#$%^&*()[]{}|;<>? -- stuff</td>
+      <td>just-testing-stuff</td>
+    </tr>
+</table>
