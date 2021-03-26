@@ -39,6 +39,11 @@ module ApplicationHelpers
     required_data.all? { |key| ENV[key].presence }
   end
 
+  def cdn_image(name, options = {})
+    src = "https://assets.titleleaf.com/guide/#{name}"
+    image_tag src, options
+  end
+
   def templates_link(name, options = {})
     url = "https://drive.google.com/drive/folders/0B5nSLzCVc941WEZFcmkteUhueFk"
     external_link name, url, options

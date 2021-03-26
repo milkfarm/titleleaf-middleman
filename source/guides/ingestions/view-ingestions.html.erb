@@ -8,14 +8,14 @@ slug: view-ingestions
 
 <p>To know what's recently been imported, navigate to the Ingestions page.</p>
 
-<p><img src="https://assets.titleleaf.com/guide/titleleaf-ingestion-menu.png" alt="Ingestion menu" /></p>
+<p><%= cdn_image "titleleaf-ingestion-menu.png", alt: "Ingestion menu" %></p>
 
 <p>The ingestions are listed in reverse-chronological order. Use the search form at the top of the page to filter the list. Clicking on the ingestion ID will provide more information regarding the respective ingestion.</p>
 
-<p><img src="https://assets.titleleaf.com/guide/titleleaf-ingestions.png" alt="Ingestion list" /></p>
+<p><%= cdn_image "titleleaf-ingestions.png", alt: "Ingestion list" %></p>
 
 <p>The following image is an example of an ingestion that failed. Note the <em>ingested count</em> vs the <em>failed count</em>. For more information about the failed records, download the <em>log file</em>.</p>
 
-<p><img src="https://assets.titleleaf.com/guide/titleleaf-ingestion-details.png" alt="Ingestion detail" /></p>
+<p><%= cdn_image "titleleaf-ingestion-details.png", alt: "Ingestion detail" %></p>
 
 <p>The log file contains a row for each failed record. The first 3 columns have details regarding the error: <em>message_type</em>, <em>message</em>, and <em>location</em>. The <em>message</em> column will be most helpful. The <em>location</em> column is specifies the line in the original ingestion file relevant to the message.</p>

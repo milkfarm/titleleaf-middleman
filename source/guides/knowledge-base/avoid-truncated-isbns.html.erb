@@ -8,9 +8,9 @@ slug: avoid-truncated-isbns
 
 <p>Before exporting data from Excel, confirm that the ISBN data is formatted properly.</p>
 
-<p>Properly formatted ISBNs:<br /><img src="https://assets.titleleaf.com/guide/csv-good-isbns-small.png" alt="Properly formatted ISBNs" /></p>
+<p>Properly formatted ISBNs:<br /><%= cdn_image "csv-good-isbns-small.png", alt: "Properly formatted ISBNs" %></p>
 
-<p>Improperly formatted ISBNs:<br /><img src="https://assets.titleleaf.com/guide/csv-bad-isbns-small.png" alt="Improperly formatted ISBNs" /></p>
+<p>Improperly formatted ISBNs:<br /><%= cdn_image "csv-bad-isbns-small.png", alt: "Improperly formatted ISBNs" %></p>
 
 <p>In the case of the improperly formatted ISBNs, Excel thinks the values are very large numbers. So, it formats them in scientific notation (e.g., 9.78E+12). Unfortunately, when you export this data from Excel to CSV file, the values are truncated, resulting in something like "9780000000000". Obviously, this will cause problems in TitleLeaf.</p>
 
@@ -20,20 +20,20 @@ slug: avoid-truncated-isbns
 
 <li>
 <p>Select the appropriate columns:</p>
-<p><img src="https://assets.titleleaf.com/guide/excel-select-columns.png" alt="Excel: Select columns" /></p>
+<p><%= cdn_image "excel-select-columns.png", alt: "Excel: Select columns" %></p>
 </li>
 
 <li>
 <p>Change the format using the <em>Format</em> menu in the toolbar:</p>
-<p><img src="https://assets.titleleaf.com/guide/excel-format-menu.png" alt="Excel: Format menu" /></p>
-<p><img src="https://assets.titleleaf.com/guide/excel-format-menu-active.png" alt="Excel: Format menu active" /></p>
+<p><%= cdn_image "excel-format-menu.png", alt: "Excel: Format menu" %></p>
+<p><%= cdn_image "excel-format-menu-active.png", alt: "Excel: Format menu active" %></p>
 <p><em>Note: The correct format selection depends on your version of Excel and the type of computer that you use. We've found the <strong>Special</strong> selection to work for our computer setup.</em>
 </p>
 </li>
 
 <li>
 <p>Confirm the results:</p>
-<p><img src="https://assets.titleleaf.com/guide/excel-good-format.png" alt="Excel: Properly formatted ISBNs" /></p>
+<p><%= cdn_image "excel-good-format.png", alt: "Excel: Properly formatted ISBNs" %></p>
 </li>
 
 </ol>
