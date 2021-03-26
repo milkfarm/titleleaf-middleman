@@ -38,4 +38,20 @@ module ApplicationHelpers
     ]
     required_data.all? { |key| ENV[key].presence }
   end
+
+  def templates_link(name, options = {})
+    url = "https://drive.google.com/drive/folders/0B5nSLzCVc941WEZFcmkteUhueFk"
+    external_link name, url, options
+  end
+
+  def other_link(name, options = {})
+    url = "https://drive.google.com/drive/folders/0B5nSLzCVc941cmJiUUp2UUdZeGc"
+    external_link name, url, options
+  end
+
+  def external_link(name, url, options)
+    default_options = { target: "_blank" }
+    options.reverse_merge!(default_options)
+    link_to name, url, options
+  end
 end
