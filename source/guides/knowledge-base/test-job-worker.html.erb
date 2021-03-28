@@ -12,17 +12,17 @@ slug: test-job-worker
 
   <li>
     <p>Jobs are processed by a <em>job worker</em>. Intermittently, the job worker may stop running. To test if it is running, click the <em>Test Job Worker</em> link in the sidebar.</p>
-    <p><img src="https://www.evernote.com/l/AAYqvq6Bh-pJw6Ns1ZI82BdDJ1YikatsOfQB/image.png" alt="Test job worker" /></p>
+    <p><%= cdn_image 'test-job-worker.png', alt: 'Test job worker' %></p>
   </li>
 
   <li>
     <p>If the worker is running, the message will appear in green. No action is required.</p>
-    <p><img src="https://www.evernote.com/l/AAaHEmDsxAFH1KodobX6hhOsiEEwiZTj6fEB/image.png" alt="Job worker running" /></p>
+    <p><%= cdn_image 'job-worker-running.png', alt: 'Job worker running' %></p>
   </li>
 
   <li>
     <p>If the worker is not running, the message will appear in red. Click the <em>Start</em> link in the message to start the job worker.</p>
-    <p><img src="https://www.evernote.com/l/AAbQh7gXu25FW40Znyq3qLa65oG16OEo_BUB/image.png" alt="Job worker not running" /></p>
+    <p><%= cdn_image 'job-worker-not-running.png', alt: 'Job worker not running' %></p>
   </li>
 
 </ul>

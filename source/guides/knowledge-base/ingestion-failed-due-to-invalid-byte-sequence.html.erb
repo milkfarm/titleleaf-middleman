@@ -13,7 +13,7 @@ slug: ingestion-failed-due-to-invalid-byte-sequence
 </pre>
 
 
-<p><img src="https://www.evernote.com/l/AAaBI0nvyftM1qPnNZYZfJ7PAhFN2e-WnNsB/image.png" alt="CSV file not readable: invalid byte sequence in UTF-8" /></p>
+<p><%= cdn_image 'csv-file-not-readable-invalid-byte-sequence-in-utf-8.png', alt: 'CSV file not readable: invalid byte sequence in UTF-8' %></p>
 
 <p>The error is caused by non-standard handling of UTF-8 characters. It is <a href="http://stackoverflow.com/questions/4221176/excel-to-csv-with-utf8-encoding">commonly associated with Microsoft Excel</a>.</p>
 
@@ -23,17 +23,17 @@ slug: ingestion-failed-due-to-invalid-byte-sequence
 
   <li>
     <p><a href="/guides/knowledge-base/uploading-files-to-google-drive">Upload your file to Google Drive</a> with settings to <em>convert uploads</em> checked.</p>
-    <p><img src="https://www.evernote.com/l/AAZlnb8NRttH67hBz0ijLkglzGPIYaUfC_IB/image.png" alt="Google Drive: File upload" /></p>
+    <p><%= cdn_image 'google-drive-file-upload.png', alt: 'Google Drive: File upload' %></p>
   </li>
 
   <li>
     <p><a href="/guides/knowledge-base/download-google-doc-as-csv">Download the new Google Spreadsheet as CSV</a>.</p>
-    <p><img src="https://www.evernote.com/l/AAbRK32GvStPuaKorJ64172tjAmf7oVNsggB/image.png" alt="Google Drive: Download as CSV" /></p>
+    <p><%= cdn_image 'google-drive-download-as-csv.png', alt: 'Google Drive: Download as CSV' %></p>
   </li>
 
   <li>
     <p>Create a new ingestion using the CSV file downloaded from Google Drive.</p>
-    <p><img src="https://www.evernote.com/l/AAbuEm1IJRpD3IzOYHp9qCVc-7hr7vfdWn8B/image.png" alt="TitleLeaf: Create a new ingestion" /></p>
+    <p><%= cdn_image 'titleleaf-create-a-new-ingestion.png', alt: 'TitleLeaf: Create a new ingestion' %></p>
   </li>
 
 </ol>
