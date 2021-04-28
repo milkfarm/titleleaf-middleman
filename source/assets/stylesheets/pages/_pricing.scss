@@ -108,6 +108,11 @@ body.setup {
         @include grid-column(4);
       }
     }
+    section#content {
+      .item-alt {
+        @include grid-column(3);
+      }
+    }
   }
 
 }
