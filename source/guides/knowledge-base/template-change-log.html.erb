@@ -26,16 +26,13 @@ slug: template-change-log
 
 <ul>
   <li>
-    <a href="#products-default">products-default</a>
+    <a href="#products">products</a>
   </li>
   <li>
-    <a href="#products-default-with-multiple-formats">products-default-with-multiple-formats</a>
+    <a href="#products-with-one-format">products-with-one-format</a>
   </li>
   <li>
-    <a href="#products-only">products-only</a>
-  </li>
-  <li>
-    <a href="#product-formats">product-formats</a>
+    <a href="#product_formats">product_formats</a>
   </li>
   <li>
     <a href="#series">series (previously termed <em>collections</em>)</a>
@@ -48,8 +45,11 @@ slug: template-change-log
   </li>
 </ul>
 
-<h2 id="products-default">products-default</h2>
+<h2 id="products">products</h2>
 <dl>
+
+  <dt>Version 28 (April 30, 2021)</dt>
+  <dd>Rename from "products-default" to "products-with-one-format".</dd>
 
   <dt>Version 26 (July 15, 2018)</dt>
   <dd>Add <code>announce_on</code> column. The field accepts a date which represents when a new product may be announced to the general public.</dd>
@@ -103,8 +103,11 @@ slug: template-change-log
   <dd>Add <code>srcpoints</code> and <code>srcreadlevel</code> columns</dd>
 </dl>
 
-<h2 id="products-default-with-multiple-formats">products-default-with-multiple-formats</h2>
+<h2 id="products">products-default-with-multiple-formats</h2>
 <dl>
+
+  <dt>DEPRECATED (April 30, 2021)</dt>
+  <dd>Use "products" template, then "products_formats" template instead.</dd>
 
   <dt>Version 26 (July 15, 2018)</dt>
   <dd>Add <code>announce_on</code> column. The field accepts a date which represents when a new product may be announced to the general public.</dd>
@@ -161,6 +164,9 @@ slug: template-change-log
 <h2 id="products-only">products-only</h2>
 <dl>
 
+  <dt>DEPRECATED (April 30, 2021)</dt>
+  <dd>Use "products" template instead.</dd>
+
   <dt>Version 18 (March 25, 2018)</dt>
   <dd>Add <code>recovery_level</code> column. The field accepts an integer which represents the <em>Reading Recovery Level</em> for the product.</dd>
   <dd>Add <code>sample_front_pages</code> column. The field accepts an integer which represents the number of front pages to extract from the PDF ebook in order to create a sample excerpt for the product.</dd>
@@ -200,8 +206,12 @@ slug: template-change-log
   <dd>Add <code>srcpoints</code> and <code>srcreadlevel</code> columns</dd>
 </dl>
 
-<h2 id="product-formats">product-formats</h2>
+<h2 id="product_formats">product_formats</h2>
 <dl>
+
+  <dt>Version 16 (April 30, 2021)</dt>
+  <dd>Rename from "product_formats-with-proprietary-product-id" to "product_formats".</dd>
+  <dd>Rename from "product_formats" to "product_formats-with-associated-isbn".</dd>
 
   <dt>Version 15 (March 10, 2019)</dt>
   <dd>Add <code>skip_distribution</code> column. The field accepts a boolean which represents if a product format should be distributed or not. This attribute is applicable to subscribers of the TitleLeaf Distribution module.</dd>
