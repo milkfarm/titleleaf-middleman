@@ -24,7 +24,7 @@ After you have cloned this repo, follow these steps to run the app:
 
 ## Credits
 
-Thank you to [thoughtbot, inc](http://thoughtbot.com) for funding and maintaining Middleman.
+Thank you to [thoughtbot, inc](https://thoughtbot.com) for funding and maintaining Middleman.
 
 ## License
 
