@@ -235,6 +235,11 @@ ul#menu li.toggler {
   color: darken($warning-color, 70%);
   border: 1px solid darken($warning-color, 10%);
 }
+.inline-icon {
+  font-size:.87em;
+  padding: 0 .2em;
+  color: $blue;
+}
 
 // Responsive
 

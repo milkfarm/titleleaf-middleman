@@ -44,6 +44,14 @@ module ApplicationHelpers
     image_tag src, options
   end
 
+  def titleleaf_perform_icon
+    fa_icon "far fa-arrow-to-right inline-icon"
+  end
+
+  def fa_icon(klass = "")
+    "<i class=\"#{klass}\"></i>"
+  end
+
   def templates_link(name, options = {})
     url = "https://drive.google.com/drive/folders/0B5nSLzCVc941WEZFcmkteUhueFk"
     external_link name, url, options
