@@ -8,7 +8,7 @@ slug: ingest-price-change-data
 
 <p>The <em>Price Change module</em> is used to <em>stage</em> impending price changes. It is most appropriate for clients subscribed to the
   <a href="/guides/distributions">Distribution module</a>. It can be used to notify wholesalers of changes before implementation. If you're not concerned about forewarning wholesalers, you can alter a product format's prices immediately using the
-  <a href="/guides/knowledge-base/how-do-i-update-prices">product_formats</a> ingestion template (caveat: using the <em>product_formats</em> template will <em>not</em> update the prices in a user's cart or quotes.).</p>
+  <em>product_formats</em> ingestion template (caveat: using the <em>product_formats</em> template will <em>not</em> update the prices in a user's cart or quotes.).</p>
 
 <p>Note:</p>
 <ul>
@@ -20,7 +20,7 @@ slug: ingest-price-change-data
 
 <ol>
 <li>
-  <p>Create a new Google Doc spreadsheet using the <a href="https://docs.google.com/spreadsheet/ccc?key=0ApnSLzCVc941dHBhcTF3YU92NTM5ZmJlS0N5U05TLXc&amp;usp=sharing">price changes template</a> file (See menu item: File &gt; Make a Copy…). Name the new file as you deem necessary, but omit spaces (e.g., price_changes-YYYYMMDD where YYYYMMDD is today's date).</p>
+  <p>Create a new Google Doc spreadsheet using the <em>price_changes</em> <%= templates_link 'template' %> (See menu item: File &gt; Make a Copy…). Name the new file as you deem necessary, but omit spaces (e.g., price_changes-YYYYMMDD where YYYYMMDD is today's date).</p>
   <p><%= cdn_image "google-file-menu-make-a-copy.png", alt: "Google Doc: File menu, Make a copy" %></p>
 </li>
 
