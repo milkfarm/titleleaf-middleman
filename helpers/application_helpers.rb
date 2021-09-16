@@ -67,4 +67,16 @@ module ApplicationHelpers
     options.reverse_merge!(default_options)
     link_to name, url, options
   end
+
+  def support_link(options = {})
+    name = options.delete(:name) || "TitleLeaf Client Support Site"
+    url = data.config.support_url
+    link_to name, url, options
+  end
+
+  def status_link(options = {})
+    name = options.delete(:name) || "TitleLeaf Status Page"
+    url = data.config.status_url
+    link_to name, url, options
+  end
 end
