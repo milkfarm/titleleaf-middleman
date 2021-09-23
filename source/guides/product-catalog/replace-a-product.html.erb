@@ -11,40 +11,45 @@ slug: replace-a-product
 <p>Prerequisite:</p>
 
 <ul>
-<li>Both the old set and the new set must exist in the database prior to beginning this procedure. In the following procedure, I will use the two pre-existing sets of "Exploring Our Oceans" as shown below. The set with 16 titles is to replace the set with 8 titles.</li>
+  <li>Both the old set and the new set must exist in the database prior to beginning this procedure. In the following procedure, I will use the two pre-existing sets of "Exploring Our Oceans" as shown below. The set with 16 titles is to replace the set with 8 titles.</li>
 </ul>
 
-<p><%= cdn_image "titleleaf-products-related.png", alt: "" %></p>
+<p><%= cdn_image "titleleaf-products-related.png", alt: "TitleLeaf: Admin list of products with same name" %></p>
 
 <ol>
-<li>
-<p>Find the old product using your method of choice (e.g. the advanced search form).</p>
-</li>
-<li>
-<p>Go to the Edit Product page of the old product.</p>
-<p><%= cdn_image "titleleaf-product-edit-old.png", alt: "TitleLeaf: Edit product, old set" %></p>
-</li>
-<li>
-<p>Click the Product Formats link in the sidebar to view a list of formats for the old product.</p>
-<p><%= cdn_image "titleleaf-product-formats-old.png", alt: "TitleLeaf: Product formats list, old set" %></p>
-</li>
-<li>
-<p>Set the status of each format to "Replaced". Doing so means that the product will not be purchasable on the public website.</p>
-<p><%= cdn_image "titleleaf-product-formats-edit-replaced.png", alt: "" %></p>
-</li>
-<li>
-<p>Return to the Edit Product page of the old product by clicking the product name in the formats list.</p>
-</li>
-<li>
-<p>Near the bottom of the edit page is a section entitled "Related Products". Add the new product to the related product list. Define the relation as "Replaced". Doing so means that there will be a link on the product page of the old product indicating that it has been replaced. In effect, we're pushing the user to buy the new product.</p>
-<p><%= cdn_image "titleleaf-product-edit-related-2.png", alt: "" %></p>
-<p><%= cdn_image "titleleaf-product-edit-related.png", alt: "" %></p>
-</li>
-<li>
-<p>Click the "Save" button.</p>
-</li>
-<li>
-<p>Verify the product page of the old product on the public website.</p>
-<p><%= cdn_image "cherrylake-product-replaced.png", alt: "" %></p>
-</li>
+  <li>
+    <p>Find the old product using your method of choice (e.g. the advanced search form).</p>
+  </li>
+  <li>
+    <p>Go to the Edit Product page of the old product.</p>
+    <p><%= cdn_image "titleleaf-product-edit-old-jump.png", alt: "TitleLeaf: Edit product, old set, jump to menu" %></p>
+  </li>
+  <li>
+    <p>Click the Product Formats link in the sidebar to view a list of formats for the old product.</p>
+    <p><%= cdn_image "titleleaf-product-formats-old.png", alt: "TitleLeaf: Product formats list, old set" %></p>
+  </li>
+  <li>
+    <p>Set the status of each format to "Replaced". Doing so means that the product will not be purchasable on the public website.</p>
+    <p><%= cdn_image "titleleaf-product-formats-edit-replaced.png", alt: "TitleLeaf: Edit product format, status" %></p>
+  </li>
+  <li>
+    <p>Return to the Edit Product page of the old product by clicking the product name in the formats list.</p>
+  </li>
+  <li>
+    <p>Near the bottom of the edit page is a section entitled "Related Products". Add the new product to the related product list. Define the relation as "Replaced". Doing so means that the site visitor will be redirected to the new product page.</p>
+    <p><%= cdn_image "titleleaf-product-edit-related-0.png", alt: "TitleLeaf: Related products" %></p>
+    <p><%= cdn_image "titleleaf-product-edit-related-1.png", alt: "TitleLeaf: Related products, dropdown" %></p>
+    <p><%= cdn_image "titleleaf-product-edit-related-2.png", alt: "TitleLeaf: Related products, item added" %></p>
+  </li>
+  <li>
+    <p>Click the "Save" button.</p>
+  </li>
+  <li>
+    <p>Verify the product page of the old product redirects to the new product on the public website.</p>
+    <p><%= cdn_image "cherrylake-product-replaced.png", alt: "" %></p>
+  </li>
 </ol>
+
+<p class="block-notice">
+  The "replacement" procedure can also be achieved via the <em>related_product_assignments</em> ingestion template.
+</p>
