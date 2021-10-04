@@ -25,7 +25,7 @@ slug: template-notes
   <li>Do not put fractions in the dimensions column. Use decimals instead (8 1/4 =&gt; 8.25)</li>
   <li>Format dates as YYYY-MM-DD. For example, August 1 2015 should be formatted by your spreadsheet application as "2015-08-01".</li>
   <li>Do not put "-" or "N/A" in fields (simply leave blank)</li>
-  <li>proprietary_id is for the product (not the product format)</li>
+  <li>The <em>proprietary_id</em> is for the product (not the product format)</li>
   <li>unacceptable interest_level_min values: PK (use either P or K, for Preschool and Kindergarten respectively)</li>
   <li>release_on is mandatory. it is the release date of the product format.</li>
   <li>If release_on is in the future, then the status must be set to NYP.</li>
@@ -40,4 +40,13 @@ slug: template-notes
   <li>Avoid carriage returns in description and annotation.</li>
   <li>Interest level max must be greater than or equal to interest level min</li>
   <li>Unacceptable interest/reading level: 0</li>
+</ul>
+
+<h4>Template: product_formats</h4>
+
+<ul>
+  <li>The <em>proprietary_product_id</em> is mandatory <em>if creating a new product format</em>. The value represents the proprietary_id of a pre-existing <strong>product</strong>. It is used to associate the product format record to the product record.</li>
+  <li>The <em>proprietary_id</em> is for the product format (not the product).</li>
+  <li>Format dates as YYYY-MM-DD. For example, August 1 2015 should be formatted by your spreadsheet application as "2015-08-01".</li>
+  <li>The <em>format_name</em> overrides the default format for the given product format row only. Refer to the <%= link_to 'Override Format Name guide', '/guides/knowledge-base/override-format-name/' %> for more information.</li>
 </ul>
