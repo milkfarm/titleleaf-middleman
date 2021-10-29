@@ -53,12 +53,12 @@ module ApplicationHelpers
   end
 
   def templates_link(name, options = {})
-    url = "https://drive.google.com/drive/folders/0B5nSLzCVc941WEZFcmkteUhueFk"
+    url = "https://drive.google.com/drive/folders/0B5nSLzCVc941WEZFcmkteUhueFk?resourcekey=0-uVCkAZEunfLxPTEzCG3wGg&usp=sharing"
     external_link name, url, options
   end
 
   def other_link(name, options = {})
-    url = "https://drive.google.com/drive/folders/0B5nSLzCVc941cmJiUUp2UUdZeGc"
+    url = "https://drive.google.com/drive/folders/0B5nSLzCVc941cmJiUUp2UUdZeGc?resourcekey=0-0jLOnSX_H2AlC5shQD2k0Q&usp=sharing"
     external_link name, url, options
   end
 
