@@ -4,11 +4,13 @@ body.guide_simple {
       margin-top: 0;
       margin-bottom: 20px;
     }
+    ul, dd {
+      margin-left: 1.5em;
+      list-style-type: circle;
+    }
     ul {
-      margin-left: 1.4em;
       margin-bottom: 1em;
       list-style-position: outside;
-      list-style-type: disc;
     }
   }
 }
