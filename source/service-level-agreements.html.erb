@@ -19,7 +19,7 @@ layout: legal
       <li>Support via help desk</li>
       <li>Training available on appointment</li>
       <li>Scheduled development slots available on first-come, first-served basis; One slot is available per month; A slot cannot exceed 10 hours of development time</li>
-      <li>Support, training and development charged at $150 per hour</li>
+      <li>Support, training and development charged at <%= data.config.hourly_rate %> per hour</li>
     </ul>
 
     <h4 style="margin-top:2em;">Optional Extended Service</h4>
@@ -105,7 +105,7 @@ layout: legal
     <p>Basic Service requests are addressed in the order that they are received. Response time varies significantly. Anticipate a 7-day average.</p>
 
     <h4>How much does the Basic Service cost?</h4>
-    <p>Basic Service support, training and development is charged at $150 per hour. Access to the knowledge base is free.</p>
+    <p>Basic Service support, training and development is charged at <%= data.config.hourly_rate %> per hour. Access to the knowledge base is free.</p>
 
     <h4>What is the payment schedule for Basic Service?</h4>
     <p>Basic Service is invoiced quarterly (starting January 15) if total service hours exceed 10 hours or the service was performed more than 9 months prior.</p>
