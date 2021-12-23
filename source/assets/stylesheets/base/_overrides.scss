@@ -219,6 +219,7 @@ ul#menu li.toggler {
   padding: .5em .9em .6em;
   font-style: italic;
   @include border-radius($base-border-radius);
+  ul { margin-bottom: 0 !important; }
 }
 .block-error {
   background: $error-color;
