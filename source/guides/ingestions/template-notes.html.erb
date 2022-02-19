@@ -11,6 +11,13 @@ slug: template-notes
 <ul>
   <li>Column names must be as specified in the templates. If TitleLeaf does not recognize a column name, then the data will not be ingested.</li>
   <li>The column order does not affect ingestion.</li>
+  <li>A column header with a red background is a required field. The row will not be successfully ingested without it.</li>
+  <li>Hover the cursor over the column header for column details.</li>
+  <li>Remove blank columns from the right end of the spreadsheet (i.e., columns without a header).</li>
+  <li>Remove blank rows rows from the bottom of the spreadsheet.</li>
+  <li>Avoid carriage returns in fields (eg, in <em>description</em> and <em>annotation</em>.</li>
+  <li>Be careful of non-ascii characters. Verify when copying from Excel to Google Doc.</li>
+  <li>Do not put "-" or "N/A" in fields (simply leave blank).</li>
 </ul>
 
 <h4>Template: products</h4>
@@ -20,25 +27,13 @@ slug: template-notes
   <li>A <em>Set</em> (see type column) cannot be assigned to other sets</li>
   <li>To assign a <em>Title</em> to a <em>Set</em>, the set row must precede the title row. In other words, the set must be defined (or it must pre-exist in the database) before it's used in columns set1, set2, set3</li>
   <li>Both titles and sets can be assigned to a series/subseries</li>
-  <li>Be careful of non-ascii characters. Verify when copying from Excel to Google Doc.</li>
-  <li>Do not include " in dimensions</li>
-  <li>Do not put fractions in the dimensions column. Use decimals instead (8 1/4 =&gt; 8.25)</li>
   <li>Format dates as YYYY-MM-DD. For example, August 1 2015 should be formatted by your spreadsheet application as "2015-08-01".</li>
-  <li>Do not put "-" or "N/A" in fields (simply leave blank)</li>
   <li>The <em>proprietary_id</em> is for the product (not the product format)</li>
-  <li>unacceptable interest_level_min values: PK (use either P or K, for Preschool and Kindergarten respectively)</li>
-  <li>release_on is mandatory. it is the release date of the product format.</li>
-  <li>If release_on is in the future, then the status must be set to NYP.</li>
-  <li>available_on is optional. it is the earliest release date of all associated product formats.</li>
-  <li>unacceptable copyright: 0</li>
-  <li>unacceptable pages: 0</li>
-  <li>No need for title column if subtitle not included as well</li>
+  <li>Unacceptable <em>interest_level_min</em> values: PK (use either P or K, for Preschool and Kindergarten respectively)</li>
+  <li>The <em>first_release_on</em> is optional, but recommended. It is the earliest release date of all associated product formats.</li>
+  <li>No need for <em>title</em> column if <em>subtitle</em> not included as well</li>
   <li>Avoid duplicate categories (e.g., "Art" and "Arts")</li>
-  <li>Isbn columns (e.g., reinforced_book_isbn, pdf_isbn, etc) can be added or deleted. At least one isbn column is required. For each isbn column, a product format will be created if it doesn't already exist in the database. The format is dictated by the column name. The remaining product format values are the same for all formats as defined in the product template (e.g., each format will have the same price, copyright, pages, etc). To override these values, you must use the "product_formats-template" google doc.</li>
-  <li>Delete blank columns from the right end of the spreadsheet (i.e., columns without a header).</li>
-  <li>Delete blank rows rows from the bottom of the spreadsheet.</li>
-  <li>Avoid carriage returns in description and annotation.</li>
-  <li>Interest level max must be greater than or equal to interest level min</li>
+  <li>The <em>interest_level_max</em> value must be greater than or equal to <em>interest_level_min</em> value</li>
   <li>Unacceptable interest/reading level: 0</li>
 </ul>
 
@@ -47,6 +42,12 @@ slug: template-notes
 <ul>
   <li>The <em>proprietary_product_id</em> is mandatory <em>if creating a new product format</em>. The value represents the proprietary_id of a pre-existing <strong>product</strong>. It is used to associate the product format record to the product record.</li>
   <li>The <em>proprietary_id</em> is for the product format (not the product).</li>
-  <li>Format dates as YYYY-MM-DD. For example, August 1 2015 should be formatted by your spreadsheet application as "2015-08-01".</li>
   <li>The <em>format_name</em> overrides the default format for the given product format row only. Refer to the <%= link_to 'Override Format Name guide', '/guides/knowledge-base/override-format-name/' %> for more information.</li>
+  <li>The <em>release_on</em> is mandatory. It is the release date of the product format.</li>
+  <li>If the release date is in the future, then the status must be set to <em>NYP</em></li>
+  <li>Format dates as YYYY-MM-DD. For example, August 1 2015 should be formatted by your spreadsheet application as "2015-08-01".</li>
+  <li>Unacceptable <em>copyright</em> value: 0</li>
+  <li>Unacceptable <em>pages</em> value: 0</li>
+  <li>Do not include single or double quotes in the <em>dimensions</em> column. The value is assumed to be in inches.</li>
+  <li>Do not put fractions in the <em>dimensions</em> column. Use decimals instead (8 1/4 =&gt; 8.25).</li>
 </ul>

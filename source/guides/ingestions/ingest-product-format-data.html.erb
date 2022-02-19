@@ -8,27 +8,39 @@ slug: ingest-product-format-data
 
 <ol>
   <li>
-    <p>Create a new Google Doc spreadsheet using the <em>product_formats</em> <%= templates_link 'template' %> (See menu item: File &gt; Make a Copy…). Name the new file as you deem necessary, but omit spaces (e.g., product_formats-YYYYMMDD where YYYYMMDD is today's date).</p>
+    <p>
+      Create a new Google Doc spreadsheet using the <em>product_formats</em>
+      <%= templates_link 'template' %> (See menu item: File &gt; Make a Copy…).
+      Name the new file as you deem necessary, but omit spaces
+      (e.g., product_formats-YYYYMMDD where YYYYMMDD is today's date).
+    </p>
     <p><%= cdn_image "google-file-menu-make-a-copy.png", alt: "Google Doc: File menu, Make a copy" %></p>
   </li>
 
   <li>
-    <p>Populate the template. Note:  </p>
-    <ul style="margin-bottom:20px">
-      <li>The column headers in red are required fields</li>
-      <li>If the release date is in the future, then the status must be set to <em>NYP</em></li>
-      <li>Remove blank rows from the bottom of the file</li>
-      <li>Avoid carriage returns in description and annotation fields</li>
-    </ul>
+    <p>
+      When the spreadsheet is complete
+      (see <%= link_to "template notes", "/guides/ingestions/template-notes" %>),
+      <a href="/guides/knowledge-base/download-google-doc-as-csv">download the data as a CSV file</a>
+      to your local machine. Follow the same naming convention as in step 1,
+      but add a ".csv" extension (e.g., products-YYYYMMDD.csv).
+    </p>
   </li>
 
   <li>
-    <p>When the new file is complete, <a href="/guides/knowledge-base/download-google-doc-as-csv">download the data as a CSV file</a> to your local machine. Follow the same naming convention as in step 1, but add a ".csv" extension (e.g., product_formats-YYYYMMDD.csv).</p>
+    <p>Navigate to the new ingestion form.</p>
+    <p><%= cdn_image "titleleaf-ingestion-menu.png", alt: "Ingestion menu" %></p>
   </li>
 
   <li>
-    <p>Create a new ingestion through the website admin. Be certain to select <strong>Product Formats</strong> from the "Type" drop-down menu.</p>
-    <p><%= cdn_image "titleleaf-ingestion-new-select-type.png", alt: "New ingestion, select type" %></p>
+    <p>Select <strong>Product Formats</strong> as the <a href="/guides/ingestions/template-to-ingestion-type-table">ingestion type</a>.</p>
   </li>
 
+  <li>
+    <p>Choose the local CSV file from step 2 to ingest.</p>
+  </li>
+
+  <li>
+    <p>Click the "Create" button.</p>
+  </li>
 </ol>
