@@ -1,3 +1,6 @@
 ---
 company_name:
 support_url:
+status_url:
+hourly_rate:
+service_path: /service-level-agreements

@@ -74,6 +74,12 @@ module ApplicationHelpers
     link_to name, url, options
   end
 
+  def service_link(options = {})
+    name = options.delete(:name) || "TitleLeaf Service Level Agreements"
+    url = data.config.service_path
+    link_to name, url, options
+  end
+
   def status_link(options = {})
     name = options.delete(:name) || "TitleLeaf Status Page"
     url = data.config.status_url
