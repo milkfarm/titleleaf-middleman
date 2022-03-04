@@ -3,5 +3,7 @@ company_name:
 support_url:
 status_url:
 hourly_rate:
+buy_path: /contact
+contact_path: /contact
 service_path: /service-level-agreements
 signup_path: /contact

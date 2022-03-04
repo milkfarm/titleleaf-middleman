@@ -86,6 +86,18 @@ module ApplicationHelpers
     link_to name, url, options
   end
 
+  def buy_link(options = {})
+    name = options.delete(:name) || "Buy Now"
+    url = data.config.buy_path
+    link_to name, url, options
+  end
+
+  def contact_link(options = {})
+    name = options.delete(:name) || "Contact"
+    url = data.config.contact_path
+    link_to name, url, options
+  end
+
   def status_link(options = {})
     name = options.delete(:name) || "TitleLeaf Status Page"
     url = data.config.status_url
