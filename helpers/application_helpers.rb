@@ -80,6 +80,12 @@ module ApplicationHelpers
     link_to name, url, options
   end
 
+  def signup_link(options = {})
+    name = options.delete(:name) || "Sign Up"
+    url = data.config.signup_path
+    link_to name, url, options
+  end
+
   def status_link(options = {})
     name = options.delete(:name) || "TitleLeaf Status Page"
     url = data.config.status_url
