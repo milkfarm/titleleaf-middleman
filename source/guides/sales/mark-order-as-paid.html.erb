@@ -9,24 +9,22 @@ slug: mark-order-as-paid
 <p>TitleLeaf allows admin users to manually apply a status to an order. The status can be useful for your customer service team to track the progress of orders through the fulfillment and payment process. A status value of “Paid” is one such state.</p>
 
 <ol>
+  <li>
+    <p>Find the order from the list that appears on the Order page (Menu Sales &gt; Orders).</p>
+    <p><%= cdn_image "titleleaf-sales-menu-orders-highlighted.png", alt: "TitleLeaf: Sales menu, orders highlighted" %></p>
+    <p>Order page:</p>
+    <p><%= cdn_image "titleleaf-order-submitted.png", alt: "Order not yet released" %></p>
+  </li>
 
-<li>
-<p>Find the order from the list that appears on the Order page (Menu Sales &gt; Orders).</p>
-<p><%= cdn_image "titleleaf-sales-menu-orders-highlighted.png", alt: "TitleLeaf: Sales menu, orders highlighted" %></p>
-<p>Order page:</p>
-<p><%= cdn_image "titleleaf-order-submitted.png", alt: "Order not yet released" %></p>
-</li>
+  <li>
+    <p>Notice the "Paid" link is active.</p>
+    <p><%= cdn_image "titleleaf-order-status-links-submitted.png", alt: "Order status links" %></p>
+  </li>
 
-<li>
-<p>Notice the "Paid" link is active.</p>
-<p><%= cdn_image "titleleaf-order-status-links-submitted.png", alt: "Order status links" %></p>
-</li>
-
-<li>
-<p>Click the "Paid" link. Now the link is no longer active and a message appears at the top of the page indicating that the order status has been updated.</p>
-<p><%= cdn_image "titleleaf-order-paid.png", alt: "Order paid" %></p>
-</li>
-
+  <li>
+    <p>Click the "Paid" link. Now the link is no longer active and a message appears at the top of the page indicating that the order status has been updated.</p>
+    <p><%= cdn_image "titleleaf-order-paid.png", alt: "Order paid" %></p>
+  </li>
 </ol>
 
-<p>Note: TitleLeaf has an internal setting to control if marking an order as Paid captures the credit card authorization amount or not (assuming the order was placed using a credit card payment method). By default, this setting is off. In this default state, capturing payment must be performed manually through your merchant website. If you would like TitleLeaf to capture the amount authorized, open a support request.</p>
+<p class="block-notice">TitleLeaf has an internal setting to control if marking an order as Paid captures the credit card authorization amount or not (assuming the order was placed using a credit card payment method). By default, this setting is off. In this default state, capturing payment must be performed manually through your merchant website. If you would like TitleLeaf to capture the amount authorized, open a support request.</p>
