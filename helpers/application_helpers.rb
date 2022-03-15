@@ -48,6 +48,10 @@ module ApplicationHelpers
     fa_icon "far fa-arrow-to-right inline-icon"
   end
 
+  def titleleaf_download_icon
+    fa_icon "far fa-arrow-from-top inline-icon"
+  end
+
   def fa_icon(klass = "")
     "<i class=\"#{klass}\"></i>"
   end
