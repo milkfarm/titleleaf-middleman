@@ -52,6 +52,10 @@ module ApplicationHelpers
     fa_icon "far fa-arrow-from-top inline-icon"
   end
 
+  def check_icon
+    fa_icon "fas fa-check"
+  end
+
   def fa_icon(klass = "")
     "<i class=\"#{klass}\"></i>"
   end
