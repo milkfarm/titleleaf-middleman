@@ -6,25 +6,70 @@ category: distributions
 slug: view-ebook-distributions
 ---
 
-<p>A distribution represents the event of sending a group of assets to a specific wholesaler/distributor.</p>
+<p>
+  A benefit of the <%= link_to 'Distribution Groups', '/guides/distributions/distribution-groups' %>
+  module is the ability to review the history of distributions performed through a given group.
+  The entirety of this functionality can be accessed from the Distribution Group page.
+</p>
+
+<p>
+  To access the "pdf ebooks" distribution page:
+</p>
 
 <ol>
-
-<li>
-<p>Visit the distribution list by selecting the respective item from the Distribution menu.</p>
-<p><%= cdn_image "titleleaf-distribution-menu.png", alt: "Admin: Distribution menu" %></p>
-</li>
-
-<li>
-<p>Filter the list by selecting "Product Format Ebook" in "Asset Type" dropdown, then click "Search" button.</p>
-<p><%= cdn_image "titleleaf-distribution-list-product-format-ebook-search.png", alt: "Admin: Filtered distribution list by ebook" %></p>
-</li>
-
-<li>
-<p>Click the "View" icon to see details of a respective distribution.</p>
-<p><%= cdn_image "titleleaf-distribution-list-closeup.png", alt: "Admin: Distribution list, closeup" %></p>
-<p>Distribution details page:</p>
-<p><%= cdn_image "titleleaf-distribution-view.png", alt: "Admin: Distribution details page" %></p>
-</li>
-
+  <li>
+    <p>
+      Navigate to the <em>Distribution Groups</em> module (Admin > Distribution > Groups).
+    </p>
+  </li>
+  <li>
+    <p>
+      Optionally, filter the list by populating the "Name" field with "pdf ebooks", then click the "Search" button.
+    </p>
+    <p>
+      <%= cdn_image "titleleaf-distribution-groups-search-pdf-ebooks.png",
+        alt: "TitleLeaf: Search distribution groups for 'pdfs ebooks' name" %>
+    </p>
+  </li>
+  <li>
+    <p>
+      Click the "view" icon of the "pdf ebooks" group.
+    </p>
+    <p>
+      <%= cdn_image "titleleaf-distribution-groups-show-pdf-ebooks.png",
+        alt: "TitleLeaf: Distribution group page for 'pdf ebooks'" %>
+    </p>
+  </li>
 </ol>
+
+<h3>
+  Highlights of the Distribution Group page
+</h3>
+
+<ul>
+  <li>
+    <p>
+      Click the "Show All" link in the "Distribution Templates" section to
+      view a list of all distribution templates created via the current group.
+    </p>
+    <p>
+      <%= cdn_image "titleleaf-distribution-templates-search-pdf-ebooks.png",
+        alt: "Admin: Distribution templates created via 'pdf ebooks' group" %>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Click the "Distributions" item in the "Jump to" menu to
+      view a list of all individual distributions created via the current group.
+    </p>
+    <p>
+      <%= cdn_image "titleleaf-distribution-groups-show-jump-to.png",
+        alt: "Admin: Distribution jump to menu" %>
+    </p>
+    <p>
+      <%= cdn_image "titleleaf-distributions-search-pdf-ebooks.png",
+        alt: "Admin: Individual distributions created via 'pdf ebooks' group" %>
+    </p>
+  </li>
+</ul>
