@@ -1,8 +1,16 @@
 body.contact {
 
   section#splash {
-    background-color: #f2ac52;
+    background-color: $orange;
     border-bottom: 1px solid lighten(#ae84a7, 30%);
+    a {
+      display: inline-block;
+      border-bottom: 4px solid darken($orange, 10%);
+      color: #000;
+      &:hover {
+        border-color: darken($orange, 20%);
+      }
+    }
   }
   section#content {
     .item {
