@@ -106,6 +106,12 @@ module ApplicationHelpers
     link_to name, url, options
   end
 
+  def setup_link(options = {})
+    name = options.delete(:name) || "setup"
+    url = data.config.signup_path
+    link_to name, url, options
+  end
+
   def buy_link(options = {})
     name = options.delete(:name) || "Buy Now"
     url = data.config.buy_path
