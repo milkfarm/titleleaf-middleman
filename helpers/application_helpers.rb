@@ -108,7 +108,7 @@ module ApplicationHelpers
 
   def setup_link(options = {})
     name = options.delete(:name) || "setup"
-    url = data.config.signup_path
+    url = data.config.setup_path
     link_to name, url, options
   end
 
