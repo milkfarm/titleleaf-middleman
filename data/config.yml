@@ -2,6 +2,8 @@
 company_name: TitleLeaf
 support_url: https://support.titleleaf.com
 status_url: https://titleleaf.statuspage.io
+guide_url: https://titleleaf.com/guide
+wiki_url: https://titleleaf.atlassian.net/wiki/spaces/TSU/overview
 hourly_rate: $199
 buy_path: /contact
 contact_path: /contact

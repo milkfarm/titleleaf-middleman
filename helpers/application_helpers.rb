@@ -76,6 +76,18 @@ module ApplicationHelpers
     link_to name, url, options
   end
 
+  def guide_link(options = {})
+    name = options.delete(:name) || "TitleLeaf Guide"
+    url = data.config.guide_url
+    link_to name, url, options
+  end
+
+  def wiki_link(options = {})
+    name = options.delete(:name) || "TitleLeaf Support Articles"
+    url = data.config.wiki_url
+    link_to name, url, options
+  end
+
   def support_link(options = {})
     name = options.delete(:name) || "TitleLeaf Client Support Site"
     url = data.config.support_url
