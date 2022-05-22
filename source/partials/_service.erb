@@ -10,9 +10,7 @@
     <li class="bullet-item"><%= pluralize(calls, "scheduled call") %> per month (optional)</li>
     <li class="bullet-item">Initial ticket response in <%= pluralize(days, "business day") %></li>
     <li class="subscribe">
-      <%= service_mail class: "button small",
-        subject: "TitleLeaf: #{time}-Hour Service Plan Request",
-        body: "Please send me a payment link to subscribe to TitleLeaf's #{time}-hour per month service plan (no commitment)" %>
+      <%= link_to "Request Now", "/contact-service", class: "button small" %>
     </li>
   </ul>
 </div>

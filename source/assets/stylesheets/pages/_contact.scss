@@ -1,4 +1,5 @@
-body.contact {
+body.contact,
+body.contact-service {
 
   section#splash {
     background-color: $orange;
@@ -17,6 +18,9 @@ body.contact {
       text-align: left;
     }
     .required:after { content: " *"; }
+  }
+  div.actions {
+    margin-top: 1em;
   }
 
 

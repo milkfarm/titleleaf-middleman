@@ -1,0 +1,70 @@
+---
+title: Contact
+---
+
+<section id="splash">
+  <div class="row">
+    <div class="col-left">
+      <h1>Service</h1>
+      <p>
+        If your in-house team is overloaded, lean on the TitleLeaf team to maintain your site.
+      </p>
+    </div>
+    <div class="col-right" style="line-height: 0;">
+      <%= image_tag 'splash-service.png' %>
+    </div>
+  </div>
+</section>
+
+<section id="content">
+  <div class="row">
+    <div class="col-left">
+
+      <p>
+        Submit the following form to schedule to a TitleLeaf service plan.
+      </p>
+
+      <form name="service" method="POST" data-netlify="true">
+
+        <div class="field">
+          <label for="contact_name" class="required">Name</label>
+          <input class="text" id="contact_name" name="name" placeholder="Name" required="required" size="30" type="text">
+        </div>
+
+        <div class="field">
+          <label for="contact_email" class="required">Email</label>
+          <input class="text email" id="contact_email" name="email" placeholder="Email" required="required" size="30" type="email">
+        </div>
+
+        <div class="field">
+          <label for="contact_service_plan" class="required">Service Plan</label>
+          <select id="contact_service_plan" name="service_plan" required="required">
+            <option value="">-- Select --</option>
+            <option value="1-hr">1 Hour per month</option>
+            <option value="2.5-hrs">2.5 Hours per month</option>
+            <option value="5-hrs">5 Hours per month</option>
+            <option value="7.5-hrs">7.5 Hours per month</option>
+            <option value="10-hrs">10 Hours per month</option>
+            <option value="15-hrs">15 Hours per month</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="contact_service_term" class="required">Service Term</label>
+          <select id="contact_service_term" name="service_term" required="required">
+            <option value="">-- Select --</option>
+            <option value="1-month">1 Month</option>
+            <option value="1-year">1 Year (Save 15%)</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Send request</button>
+          <a href="/privacy-policy" style="padding-left: 1em; font-size: 80%;">We value your privacy</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</section>
