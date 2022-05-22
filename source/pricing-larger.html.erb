@@ -7,7 +7,7 @@ title: Pricing (Larger)
     <div class="col-left">
       <h1>Pricing</h1>
       <p>
-        To launch your online business with TitleLeaf,
+        To launch your online e-commerce business with TitleLeaf,
         you will need to select a one-time setup arrangement
         and a monthly subscription plan.
       </p>
@@ -31,41 +31,15 @@ title: Pricing (Larger)
 
   <div class="row" style="margin-bottom:0;">
 
-    <div class="item">
-      <ul class="pricing-table">
-        <li class="title">100 GB</li>
-        <li class="price">$399 <small>/month</small></li>
-        <li class="description">Sufficient space for 3750+ titles with multiple downloadable digital products per title.</li>
-        <li class="bullet-item"><strong>100 GB</strong> of file storage</li>
-        <li class="subscribe">
-          <%= signup_link class: "button small" %>
-        </li>
-      </ul>
-    </div>
-
-    <div class="item">
-      <ul class="pricing-table">
-        <li class="title">200 GB</li>
-        <li class="price">$499 <small>/month</small></li>
-        <li class="description">Sufficient space for 7500+ titles with multiple downloadable digital products per title.</li>
-        <li class="bullet-item"><strong>200 GB</strong> of file storage</li>
-        <li class="subscribe">
-          <%= signup_link class: "button small" %>
-        </li>
-      </ul>
-    </div>
-
-    <div class="item">
-      <ul class="pricing-table">
-        <li class="title">300 GB</li>
-        <li class="price">$599 <small>/month</small></li>
-        <li class="description">Sufficient space for 12500+ titles with multiple downloadable digital products per title.</li>
-        <li class="bullet-item"><strong>300 GB</strong> of file storage</li>
-        <li class="subscribe">
-          <%= signup_link class: "button small" %>
-        </li>
-      </ul>
-    </div>
+    <%
+      [
+        { size: "100", price: "$399", products: "3750+ titles" },
+        { size: "200", price: "$499", products: "7500+ titles" },
+        { size: "300", price: "$599", products: "12500+ titles" },
+      ].each do |plan|
+    %>
+      <%= partial 'partials/pricing', locals: plan %>
+    <% end %>
 
   </div>
 

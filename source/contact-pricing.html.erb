@@ -1,0 +1,63 @@
+---
+title: Contact
+---
+
+<section id="splash">
+  <div class="row">
+    <div class="col-left">
+      <h1>Pricing</h1>
+      <p>
+        To launch your online e-commerce business with TitleLeaf,
+        you will need to select a one-time setup arrangement
+        and a monthly subscription plan.
+      </p>
+    </div>
+    <div class="col-right" style="line-height: 0;">
+      <%= image_tag 'splash-pricing.png' %>
+    </div>
+  </div>
+</section>
+
+<section id="content">
+  <div class="row">
+    <div class="col-left">
+
+      <p>
+        Submit the following form to select a TitleLeaf subscription plan.
+      </p>
+
+      <form name="subscription" method="POST" data-netlify="true">
+
+        <div class="field">
+          <label for="contact_name" class="required">Name</label>
+          <input class="text" id="contact_name" name="name" placeholder="Name" required="required" size="30" type="text">
+        </div>
+
+        <div class="field">
+          <label for="contact_email" class="required">Email</label>
+          <input class="text email" id="contact_email" name="email" placeholder="Email" required="required" size="30" type="email">
+        </div>
+
+        <div class="field">
+          <label for="contact_subscription_plan" class="required">Subscription Plan</label>
+          <select id="contact_subscription_plan" name="subscription_plan" required="required">
+            <option value="">-- Select --</option>
+            <option value="15-gb">15 GB</option>
+            <option value="30-gb">30 GB</option>
+            <option value="60-gb">60 GB</option>
+            <option value="100-gb">100 GB</option>
+            <option value="200-gb">200 GB</option>
+            <option value="300-gb">300 GB</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Send request</button>
+          <a href="/privacy-policy" style="padding-left: 1em; font-size: 80%;">We value your privacy</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</section>

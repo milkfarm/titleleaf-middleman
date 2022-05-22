@@ -29,41 +29,15 @@ title: Pricing
 
   <div class="row" style="margin-bottom:0;">
 
-    <div class="item">
-      <ul class="pricing-table">
-        <li class="title">15 GB</li>
-        <li class="price">$99 <small>/month</small></li>
-        <li class="description">Sufficient space for up to 500 titles with multiple downloadable digital products per title.</li>
-        <li class="bullet-item"><strong>15 GB</strong> of file storage</li>
-        <li class="subscribe">
-          <%= signup_link class: "button small" %>
-        </li>
-      </ul>
-    </div>
-
-    <div class="item">
-      <ul class="pricing-table">
-        <li class="title">30 GB</li>
-        <li class="price">$199 <small>/month</small></li>
-        <li class="description">Sufficient space for 1000+ titles with multiple downloadable digital products per title.</li>
-        <li class="bullet-item"><strong>30 GB</strong> of file storage</li>
-        <li class="subscribe">
-          <%= signup_link class: "button small" %>
-        </li>
-      </ul>
-    </div>
-
-    <div class="item">
-      <ul class="pricing-table">
-        <li class="title">60 GB</li>
-        <li class="price">$299 <small>/month</small></li>
-        <li class="description">Sufficient space for 2500+ titles with multiple downloadable digital products per title.</li>
-        <li class="bullet-item"><strong>60 GB</strong> of file storage</li>
-        <li class="subscribe">
-          <%= signup_link class: "button small" %>
-        </li>
-      </ul>
-    </div>
+    <%
+      [
+        { size: "15", price: "$99", products: "up to 500 titles" },
+        { size: "30", price: "$199", products: "1000+ titles" },
+        { size: "60", price: "$299", products: "2500+ titles" },
+      ].each do |plan|
+    %>
+      <%= partial 'partials/pricing', locals: plan %>
+    <% end %>
 
   </div>
 
