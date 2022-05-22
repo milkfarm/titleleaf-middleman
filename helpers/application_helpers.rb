@@ -139,4 +139,10 @@ module ApplicationHelpers
     url = data.config.status_url
     link_to name, url, options
   end
+
+  def titleize(word)
+    word.gsub(/\b(?<!\w['â`])[a-z]/) do |match|
+      match.capitalize
+    end
+  end
 end
