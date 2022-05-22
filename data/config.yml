@@ -10,3 +10,4 @@ contact_path: /contact
 service_path: /service-level-agreements
 signup_path: /contact
 setup_path: /setup
+sales_mail: "sales@titleleaf.com"

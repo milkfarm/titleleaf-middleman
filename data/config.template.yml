@@ -2,8 +2,12 @@
 company_name:
 support_url:
 status_url:
+guide_url:
+wiki_url:
 hourly_rate:
 buy_path: /contact
 contact_path: /contact
 service_path: /service-level-agreements
 signup_path: /contact
+setup_path: /setup
+sales_mail: "sales@domain.com"

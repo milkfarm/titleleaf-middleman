@@ -106,6 +106,16 @@ module ApplicationHelpers
     link_to name, url, options
   end
 
+  def service_mail(options = {})
+    name = options.delete(:name) || "Request Now"
+    email = data.config.sales_mail
+    options = {
+      subject: "TitleLeaf: Service Plan Request",
+      body: "Please send me a payment link to subscribe to TitleLeaf's service plan"
+    }.merge(options)
+    mail_to email, name, options
+  end
+
   def setup_link(options = {})
     name = options.delete(:name) || "setup"
     url = data.config.setup_path

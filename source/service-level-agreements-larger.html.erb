@@ -17,7 +17,7 @@ title: Service Level Agreements (Larger)
 </section>
 
 <section id="content">
-  <div class="row">
+  <div class="row" style="margin-bottom:0;">
     <div class="col-full">
       <p>
         The following table lists the biggest TitleLeaf service plans
@@ -28,57 +28,24 @@ title: Service Level Agreements (Larger)
   </div>
 
   <div class="row" style="margin-bottom:0;">
-
-    <div class="item">
-      <ul class="pricing-table">
-        <li class="title">7.5 Hours</li>
-        <li class="price">
-          $1499
-          <small>/month</small>
-        </li>
-        <li class="bullet-item">Up to <strong>7.5 hours</strong> of service per month</li>
-        <li class="bullet-item">Access to the TitleLeaf Client Support Site</li>
-        <li class="bullet-item">2 scheduled calls per month (optional)</li>
-        <li class="bullet-item">Initial ticket response time 3 business days</li>
-        <li class="subscribe">
-          <%= signup_link class: "button small" %>
-        </li>
-      </ul>
+    <div class="col-full">
+      <p class="block-notice" style="display: block; width: auto; text-align: center;">
+        Save 15% by committing to a 1-year term, yet still pay monthly
+      </p>
     </div>
+  </div>
 
-    <div class="item">
-      <ul class="pricing-table">
-        <li class="title">10 Hours</li>
-        <li class="price">
-          $1999
-          <small>/month</small>
-        </li>
-        <li class="bullet-item">Up to <strong>10 hours</strong> of service per month</li>
-        <li class="bullet-item">Access to the TitleLeaf Client Support Site</li>
-        <li class="bullet-item">2 scheduled calls per month (optional)</li>
-        <li class="bullet-item">Initial ticket response in 2 business days</li>
-        <li class="subscribe">
-          <%= signup_link class: "button small" %>
-        </li>
-      </ul>
-    </div>
+  <div class="row" style="margin-bottom:0;">
 
-    <div class="item">
-      <ul class="pricing-table">
-        <li class="title">15 Hours</li>
-        <li class="price">
-          $2999
-          <small>/month</small>
-        </li>
-        <li class="bullet-item">Up to <strong>15 hours</strong> of service per month</li>
-        <li class="bullet-item">Access to the TitleLeaf Client Support Site</li>
-        <li class="bullet-item">2 scheduled calls per month (optional)</li>
-        <li class="bullet-item">Initial ticket response in 2 business days</li>
-        <li class="subscribe">
-          <%= signup_link class: "button small" %>
-        </li>
-      </ul>
-    </div>
+    <%
+      [
+        { time: "7.5", price: "$1499", calls: "2", days: "2" },
+        { time: "10", price: "$1999", calls: "2", days: "2" },
+        { time: "15", price: "$2999", calls: "2", days: "2" },
+      ].each do |plan|
+    %>
+      <%= partial 'partials/service', locals: plan %>
+    <% end %>
 
   </div>
 

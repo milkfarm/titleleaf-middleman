@@ -24,57 +24,24 @@ title: Service Level Agreements
   </div>
 
   <div class="row" style="margin-bottom:0;">
-
-    <div class="item">
-      <ul class="pricing-table">
-        <li class="title">1 Hour</li>
-        <li class="price">
-          $199
-          <small>/month</small>
-        </li>
-        <li class="bullet-item">Up to <strong>1 hour</strong> of service per month</li>
-        <li class="bullet-item">Access to the TitleLeaf Client Support Site</li>
-        <li class="bullet-item">1 scheduled call per month (optional)</li>
-        <li class="bullet-item">Initial ticket response in 3 business days</li>
-        <li class="subscribe">
-          <%= signup_link class: "button small" %>
-        </li>
-      </ul>
+    <div class="col-full">
+      <p class="block-notice" style="display: block; width: auto; text-align: center;">
+        Save 15% by committing to a 1-year term, yet still pay monthly
+      </p>
     </div>
+  </div>
 
-    <div class="item">
-      <ul class="pricing-table">
-        <li class="title">2.5 Hours</li>
-        <li class="price">
-          $499
-          <small>/month</small>
-        </li>
-        <li class="bullet-item">Up to <strong>2.5 hours</strong> of service per month</li>
-        <li class="bullet-item">Access to the TitleLeaf Client Support Site</li>
-        <li class="bullet-item">1 scheduled call per month (optional)</li>
-        <li class="bullet-item">Initial ticket response in 3 business days</li>
-        <li class="subscribe">
-          <%= signup_link class: "button small" %>
-        </li>
-      </ul>
-    </div>
+  <div class="row" style="margin-bottom:0;">
 
-    <div class="item">
-      <ul class="pricing-table">
-        <li class="title">5 Hours</li>
-        <li class="price">
-          $999
-          <small>/month</small>
-        </li>
-        <li class="bullet-item">Up to <strong>5 hours</strong> of service per month</li>
-        <li class="bullet-item">Access to the TitleLeaf Client Support Site</li>
-        <li class="bullet-item">1 scheduled call per month (optional)</li>
-        <li class="bullet-item">Initial ticket response in 3 business days</li>
-        <li class="subscribe">
-          <%= signup_link class: "button small" %>
-        </li>
-      </ul>
-    </div>
+    <%
+      [
+        { time: "1", price: "$199", calls: "1", days: "3" },
+        { time: "2.5", price: "$499", calls: "1", days: "3" },
+        { time: "5", price: "$999", calls: "1", days: "3" },
+      ].each do |plan|
+    %>
+      <%= partial 'partials/service', locals: plan %>
+    <% end %>
 
   </div>
 
