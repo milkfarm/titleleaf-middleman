@@ -23,7 +23,7 @@ title: Contact
     <div class="col-left">
 
       <p>
-        Submit the following form to select a TitleLeaf subscription plan.
+        Submit the following form to select a TitleLeaf setup and subscription plan.
       </p>
 
       <form name="subscription" method="POST" data-netlify="true">
@@ -36,6 +36,17 @@ title: Contact
         <div class="field">
           <label for="contact_email" class="required">Email</label>
           <input class="text email" id="contact_email" name="email" placeholder="Email" required="required" size="30" type="email">
+        </div>
+
+        <div class="field">
+          <label for="contact_setup_plan" class="required">Setup Plan</label>
+          <select id="contact_setup_plan" name="setup_plan" required="required">
+            <option value="">-- Select --</option>
+            <option value="cost-cutter">Cost-Cutter ($4800)</option>
+            <option value="self-starter">Self-Starter ($9600)</option>
+            <option value="collaborative">Collaborative ($14400)</option>
+            <option value="full-service">Full-Service ($19200)</option>
+          </select>
         </div>
 
         <div class="field">

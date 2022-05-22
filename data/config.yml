@@ -5,9 +5,9 @@ status_url: https://titleleaf.statuspage.io
 guide_url: https://titleleaf.com/guide
 wiki_url: https://titleleaf.atlassian.net/wiki/spaces/TSU/overview
 hourly_rate: $199
-buy_path: /contact
+buy_path: /contact-pricing
 contact_path: /contact
 service_path: /service-level-agreements
-signup_path: /contact
+signup_path: /contact-pricing
 setup_path: /setup
 sales_mail: "sales@titleleaf.com"
