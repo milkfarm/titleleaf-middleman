@@ -5,6 +5,7 @@ status_url:
 guide_url:
 wiki_url:
 hourly_rate:
+service_discount:
 buy_path: /contact-pricing
 contact_path: /contact
 pricing_path: /pricing
