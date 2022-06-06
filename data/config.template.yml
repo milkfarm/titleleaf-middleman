@@ -2,12 +2,12 @@
 company_name:
 support_url:
 status_url:
-guide_url:
 wiki_url:
 hourly_rate:
 service_discount:
 buy_path: /contact-pricing
 contact_path: /contact
+guide_path: /guide
 pricing_path: /pricing
 service_path: /service
 signup_path: /contact-pricing

@@ -78,7 +78,7 @@ module ApplicationHelpers
 
   def guide_link(options = {})
     name = options.delete(:name) || "TitleLeaf Guide"
-    url = data.config.guide_url
+    url = data.config.guide_path
     link_to name, url, options
   end
 
