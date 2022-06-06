@@ -29,3 +29,6 @@ configure :production do
   activate :minify_html
   activate :minify_javascript
 end
+
+redirect "service-level-agreements.html", to: "/service.html"
+redirect "service-level-agreements-larger.html", to: "/service-larger.html"
