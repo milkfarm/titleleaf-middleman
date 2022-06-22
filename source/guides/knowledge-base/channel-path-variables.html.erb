@@ -1,0 +1,36 @@
+---
+title: Channel Path Variables
+layout: guide_simple
+parent: guide
+category: knowledge-base
+slug: channel-path-variables
+---
+
+<p>The <em>Path</em> field of a Channel supports a variety of variables.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <th style="width: 45%;">Variable Name</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>BASENAME</td>
+      <td>The simplified name of your TitleLeaf instance. Example: <em>moopress</em></td>
+    </tr>
+    <tr>
+      <td>DATESTAMP</td>
+      <td>The date in YYYYMMDD format. Example: <em>20191231</em></td>
+    </tr>
+    <tr>
+      <td>DISTRIBUTION_ID</td>
+      <td>The TitleLeaf ID for the given distribution. Example: <em>9999</em></td>
+    </tr>
+    <tr>
+      <td>TIMESTAMP</td>
+      <td>The date and time in YYYYMMDD-hhmm format. The time is in 24-hour format. Example: <em>20191231-0915</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="block-notice">NB: The variable must be enclosed in single curly brackets within the Path field (example: <code>{BASENAME}-{TIMESTAMP}</code>).</p>
