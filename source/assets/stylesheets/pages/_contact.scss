@@ -4,7 +4,7 @@ body.contact-service {
 
   section#splash {
     background-color: $orange;
-    border-bottom: 1px solid lighten(#ae84a7, 30%);
+    border-bottom: 1px solid lighten($purple, 30%);
     a {
       display: inline-block;
       border-bottom: 4px solid darken($orange, 10%);
