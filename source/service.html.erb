@@ -35,9 +35,9 @@ title: Service Level Agreements
 
     <%
       [
-        { time: "1", price: "$199", calls: "1", days: "3" },
-        { time: "2.5", price: "$499", calls: "1", days: "3" },
-        { time: "5", price: "$999", calls: "1", days: "3" },
+        { time: "1", price: "$199", calls: "1", priority: "medium" },
+        { time: "2.5", price: "$499", calls: "1", priority: "medium" },
+        { time: "5", price: "$999", calls: "1", priority: "high" },
       ].each do |plan|
     %>
       <%= partial 'partials/service', locals: plan %>
