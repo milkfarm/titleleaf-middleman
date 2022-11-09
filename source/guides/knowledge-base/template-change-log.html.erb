@@ -40,10 +40,16 @@ slug: template-change-log
   <li>
     <a href="#contributors">contributors</a>
   </li>
+  <li>
+    <a href="#postal_codes">postal_codes</a>
+  </li>
 </ul>
 
 <h2 id="products">products</h2>
 <dl>
+
+  <dt>Version 29 (September 30, 2022)</dt>
+  <dd>Add <code>series_number</code> column. The field accepts a string which represents the distinctive enumeration of a product within a series (eg, "Volume 2").</dd>
 
   <dt>Version 28 (April 30, 2021)</dt>
   <dd>Rename from "products-default" to "products-with-one-format".</dd>
@@ -285,6 +291,20 @@ slug: template-change-log
 <dl>
   <dt>Version 2 (March 15, 2018)</dt>
   <dd>Added <em>proprietary_id</em> column.</dd>
+</dl>
+<dl>
+  <dt>Version 1 (January 1, 2015)</dt>
+  <dd>Initial version</dd>
+</dl>
+
+<h2 id="postal_codes">postal_codes</h2>
+<dl>
+  <dt>Version 3 (October 29, 2022)</dt>
+  <dd>Added <em>tax_shipping</em> column. A boolean determining if shipping is taxed or not for the given postal code.</dd>
+</dl>
+<dl>
+  <dt>Version 2 (August 10, 2019)</dt>
+  <dd>Added <em>tax_rate</em> column. A decimal number from 0 to 1 representing the tax rate for the given postal code.</dd>
 </dl>
 <dl>
   <dt>Version 1 (January 1, 2015)</dt>
