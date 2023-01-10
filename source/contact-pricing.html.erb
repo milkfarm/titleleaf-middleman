@@ -7,9 +7,7 @@ title: Contact
     <div class="col-left">
       <h1>Pricing</h1>
       <p>
-        To launch your online e-commerce business with TitleLeaf,
-        you will need to select a one-time setup arrangement
-        and a monthly subscription plan.
+        <%= partial 'partials/launch_lede' %>
       </p>
     </div>
     <div class="col-right" style="line-height: 0;">
@@ -24,8 +22,7 @@ title: Contact
 
       <p>
         Submit the following form to select a TitleLeaf
-        <%= setup_link name: "setup" %> and
-        <%= pricing_link name: "subscription plan" %>.
+        <%= setup_link %> arrangement and a <%= pricing_link %> plan.
       </p>
 
       <form name="subscription" method="POST" data-netlify="true">

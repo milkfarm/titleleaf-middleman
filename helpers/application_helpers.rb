@@ -117,13 +117,13 @@ module ApplicationHelpers
   end
 
   def pricing_link(options = {})
-    name = options.delete(:name) || "subscription plan"
+    name = options.delete(:name) || "monthly subscription"
     url = data.config.pricing_path
     link_to name, url, options
   end
 
   def setup_link(options = {})
-    name = options.delete(:name) || "setup"
+    name = options.delete(:name) || "one-time setup"
     url = data.config.setup_path
     link_to name, url, options
   end
