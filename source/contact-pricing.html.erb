@@ -44,10 +44,10 @@ title: Contact
           <label for="contact_setup_plan" class="required">One-Time Setup Plan</label>
           <select id="contact_setup_plan" name="setup_plan" required="required">
             <option value="">-- Select --</option>
-            <option value="cost-cutter">Cost-Cutter ($9900)</option>
-            <option value="self-starter">Self-Starter ($14900)</option>
-            <option value="collaborative">Collaborative ($19900)</option>
-            <option value="full-service">Full-Service ($29900)</option>
+            <option value="cost-cutter">Cost-Cutter (<%= data.config.setup_cost_tier_1 %>)</option>
+            <option value="self-starter">Self-Starter (<%= data.config.setup_cost_tier_2 %>)</option>
+            <option value="collaborative">Collaborative (<%= data.config.setup_cost_tier_3 %>)</option>
+            <option value="full-service">Full-Service (<%= data.config.setup_cost_tier_4 %>)</option>
           </select>
         </div>
 

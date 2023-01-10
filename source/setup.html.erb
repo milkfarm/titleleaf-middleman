@@ -36,7 +36,7 @@ title: Setup
     <div class="item-alt">
       <ul class="pricing-table">
         <li class="title">Cost-Cutter</li>
-        <li class="price">$9900</li>
+        <li class="price"><%= data.config.setup_cost_tier_1 %></li>
         <li class="description">We apply your corporate identity to the default TitleLeaf theme directly. The design mockup phase is skipped.</li>
         <li class="bullet-item">TitleLeaf Theme</li>
         <li class="bullet-item">No Design Mockups</li>
@@ -49,7 +49,7 @@ title: Setup
     <div class="item-alt">
       <ul class="pricing-table">
         <li class="title">Self-Starter</li>
-        <li class="price">$14900</li>
+        <li class="price"><%= data.config.setup_cost_tier_2 %></li>
         <li class="description">We provide design mockups of your corporate identity applied to the default TitleLeaf theme, we implement.</li>
         <li class="bullet-item">TitleLeaf Theme</li>
         <li class="bullet-item">Our Design Mockups</li>
@@ -62,7 +62,7 @@ title: Setup
     <div class="item-alt">
       <ul class="pricing-table">
         <li class="title">Collaborative</li>
-        <li class="price">$19900</li>
+        <li class="price"><%= data.config.setup_cost_tier_3 %></li>
         <li class="description">You provide design mockups of a custom theme, we work together to ensure the design can be implemented, we implement.</li>
         <li class="bullet-item">Custom Theme</li>
         <li class="bullet-item">Your Design Mockups</li>
@@ -75,7 +75,7 @@ title: Setup
     <div class="item-alt">
       <ul class="pricing-table">
         <li class="title">Full-Service</li>
-        <li class="price">$29900</li>
+        <li class="price"><%= data.config.setup_cost_tier_4 %></li>
         <li class="description">We provide design mockups of a custom theme based on your corporate identity and input, we implement.</li>
         <li class="bullet-item">Custom Theme</li>
         <li class="bullet-item">Our Design Mockups</li>
@@ -99,7 +99,9 @@ title: Setup
       <ul class="checked">
         <li>
           <b>Data setup.</b>
-          You supply data in CSV, Excel, or ONIX format. We import into TitleLeaf. Add $4900.
+          You supply data in CSV, Excel, or ONIX format.
+          We import into TitleLeaf.
+          Add <%= data.config.setup_cost_data %>.
         </li>
       </ul>
     </div>
