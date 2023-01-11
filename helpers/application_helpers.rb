@@ -146,6 +146,12 @@ module ApplicationHelpers
     link_to name, url, options
   end
 
+  def meeting_link(options = {})
+    name = options.delete(:name) || "meet.goto.com/titleleaf"
+    url = data.config.meeting_url
+    link_to name, url, options
+  end
+
   def titleize(word)
     word.gsub(/\b(?<!\w['â`])[a-z]/) do |match|
       match.capitalize
