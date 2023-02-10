@@ -6,7 +6,7 @@ category: knowledge-base
 slug: channel-rule-file-formula
 ---
 
-<p>The File Formula field of a Channel Rule supports a variety of variables depending on the asset type.</p>
+<p>The File Formula field of a Channel Rule or Package supports a variety of variables depending on the asset type.</p>
 
 <p id="data-variables">For data files that group multiple products together (eg, CSV, XLSX, ONIX), the following variables are supported. NB: The variable must be enclosed in single curly brackets within the File Formula field (example: <code>{BASENAME}-{TIMESTAMP}</code>).</p>
 
@@ -17,23 +17,23 @@ slug: channel-rule-file-formula
       <th>Description</th>
     </tr>
     <tr>
-      <td>BASENAME</td>
+      <td>{BASENAME}</td>
       <td>The simplified name of your TitleLeaf instance. Example: <em>moopress</em></td>
     </tr>
     <tr>
-      <td>DATESTAMP</td>
+      <td>{DATESTAMP}</td>
       <td>The date in YYYYMMDD format. Example: <em>20191231</em></td>
     </tr>
     <tr>
-      <td>DISTRIBUTION_ID</td>
+      <td>{DISTRIBUTION_ID}</td>
       <td>The TitleLeaf ID for the given distribution. Example: <em>9999</em></td>
     </tr>
     <tr>
-      <td>PACKAGE_TYPE</td>
+      <td>{PACKAGE_TYPE}</td>
       <td>The simplifed name of the package asset type. Example: <em>onix</em></td>
     </tr>
     <tr>
-      <td>TIMESTAMP</td>
+      <td>{TIMESTAMP}</td>
       <td>The date and time in YYYYMMDD-hhmm format. The time is in 24-hour format. Example: <em>20191231-0915</em></td>
     </tr>
   </tbody>
@@ -48,39 +48,39 @@ slug: channel-rule-file-formula
       <th>Description</th>
     </tr>
     <tr>
-      <td>name_by_author_and_product_name</td>
+      <td>{name_by_author_and_product_name}</td>
       <td>A combination of both the author’s name and the product’s name. Example: <em>CynthiaAmoroso-Cows</em></td>
     </tr>
     <tr>
-      <td>name_by_collection_name_and_isbn_code</td>
+      <td>{name_by_collection_name_and_isbn_code}</td>
       <td>A combination of both the collection/series name and the ISBN code (ie, the last 5 digits of the ISBN). Example: <em>InTheBarnYard-08256</em></td>
     </tr>
     <tr>
-      <td>name_by_collection_name_and_product_name</td>
+      <td>{name_by_collection_name_and_product_name}</td>
       <td>A combination of both the collection/series name and the product’s name. Example: <em>InTheBarnYard-Cows</em></td>
     </tr>
     <tr>
-      <td>name_by_isbn</td>
+      <td>{name_by_isbn}</td>
       <td>The full ISBN. Example: <em>9781503808256</em></td>
     </tr>
     <tr>
-      <td>name_by_isbn_and_product_name</td>
+      <td>{name_by_isbn_and_product_name}</td>
       <td>A combination of both the full ISBN and the product’s name. Example: <em>9781503808256-Cows</em></td>
     </tr>
     <tr>
-      <td>name_by_product_id</td>
+      <td>name_by_product_id}</td>
       <td>The TitleLeaf ID for the product. Example: <em>6501</em></td>
     </tr>
     <tr>
-      <td>name_by_product_name</td>
+      <td>{name_by_product_name}</td>
       <td>The product’s name. Example: <em>Cows</em></td>
     </tr>
     <tr>
-      <td>name_by_product_name_and_isbn_code</td>
+      <td>{name_by_product_name_and_isbn_code}</td>
       <td>A combination of both the product’s name and the ISBN code (ie, the last 5 digits of the ISBN). Example: <em>Cows-08256</em></td>
     </tr>
     <tr>
-      <td>name_by_proprietary_product_id</td>
+      <td>{name_by_proprietary_product_id}</td>
       <td>The proprietary ID for the product (ie, your internal ID for the product). Example: <em>PA15486</em></td>
     </tr>
   </tbody>
