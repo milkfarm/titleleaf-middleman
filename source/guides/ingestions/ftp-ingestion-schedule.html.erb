@@ -6,5 +6,25 @@ category: ingestions
 slug: ftp-ingestion-schedule
 ---
 
-<p>The root directory of the FTP account is processed every half hour on the half hour (e.g., 8:30, 9:00, 9:30, etc). You can consult the ingestion list after thirty minutes to determine if your uploaded files were properly processed. Keep in mind that the file name dictates how the file is processed. <em>If the file name does not adhere to the naming convention, then the file will fail to be processed and will be placed in the <strong>failed</strong> directory of your FTP account.</em>
+<p>
+  The root directory of the FTP account is processed every hour on the hour
+  (e.g., 8:00, 9:00, 10:00, etc). You can consult the ingestion list after
+  thirty minutes to determine if your uploaded files were properly processed.
+  Keep in mind that the file name dictates how the file is processed.
+  <em>
+    If the file name does not adhere to the naming convention, then the file
+    will fail to be processed and will be placed in the <strong>failed</strong>
+    directory of your FTP account.
+  </em>
+</p>
+
+<p class="block-notice">
+  Outside the ingestion schedule, you can submit a request for TitleLeaf to
+  process your ingestion directory on demand. Click the
+  "Process Your Ingestion Account" link in the sidebar of the Ingestion module.
+</p>
+
+<p>
+  <%= cdn_image "titleleaf-ingestions-process.png",
+    alt: "TitleLeaf: Ingestions: Process Your Ingestion Account" %>
 </p>
