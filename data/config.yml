@@ -17,5 +17,6 @@ setup_cost_tier_2: $14900
 setup_cost_tier_3: $19900
 setup_cost_tier_4: $29900
 setup_cost_data: $4900
+setup_cost_storefront: $4900
 sales_mail: "sales@titleleaf.com"
 meeting_url: "https://meet.goto.com/titleleaf"
