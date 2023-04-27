@@ -18,5 +18,8 @@ setup_cost_tier_3: $19900
 setup_cost_tier_4: $29900
 setup_cost_data: $4900
 setup_cost_storefront: $4900
+subscription_backup_service: $19/month
+subscription_distribution_module: $399/month
+subscription_multistore_module: $29/month
 sales_mail: "sales@titleleaf.com"
 meeting_url: "https://meet.goto.com/titleleaf"
