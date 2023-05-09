@@ -6,7 +6,11 @@ category: knowledge-base
 slug: cleanup-package
 ---
 
-<p>Packages can consume a lot of disk space. TitleLeaf automatically removes the files associated with a package after a month. If your <a href="/guides/knowledge-base/disk-usage">disk usage is high</a>, you should do so manually. The TitleLeaf term for deleting a package files is <em>cleanup</em>. For detailed information, follow the procedure below:</p>
+<p>TitleLeaf automatically removes the files associated with a package after a specified number of days defined by the "Package Cleanup Span" setting (Admin > Management > Settings > Package):</p>
+
+<p><%= cdn_image "titleleaf-settings-package-cleanup-span.png", alt: "TitleLeaf: Package Cleanup Span Setting" %></p>
+
+<p>If your <a href="/guides/knowledge-base/disk-usage">disk usage is high</a>, you can consider removing package files manually. The TitleLeaf term for deleting a package files is <em>cleanup</em>. For detailed information, follow the procedure below:</p>
 
 <ol>
 
@@ -26,8 +30,9 @@ slug: cleanup-package
  </li>
 
   <li>
-    <p>Click the <em>Cleanup Package</em> link in the sidebar to delete the associated package files.</p>
+    <p>Click the <em>Cleanup Package</em> link in the sidebar to delete the associated package files, then confirm the action.</p>
     <p><%= cdn_image "titleleaf-package-cleanup.png", alt: "TitleLeaf: Package cleanup" %></p>
+    <p><%= cdn_image "titleleaf-package-cleanup-confirm.png", alt: "TitleLeaf: Package cleanup confirm" %></p>
   </li>
 
   <li>
