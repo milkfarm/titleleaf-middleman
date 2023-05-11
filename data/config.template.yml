@@ -12,6 +12,16 @@ pricing_path: /pricing
 service_path: /service
 signup_path: /contact-pricing
 setup_path: /setup
+setup_cost_tier_1:
+setup_cost_tier_2:
+setup_cost_tier_3:
+setup_cost_tier_4:
+setup_cost_data:
+setup_cost_storefront:
+subscription_backup_service:
+subscription_distribution_module:
+subscription_multistore_module:
 sales_mail: "sales@domain.com"
+meeting_url: "https://meet.goto.com/titleleaf"
 templates_url: "https://drive.google.com/drive/folders/ABC123"
 other_url: "https://drive.google.com/drive/folders/XYZ987"
