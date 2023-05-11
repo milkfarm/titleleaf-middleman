@@ -13,3 +13,5 @@ service_path: /service
 signup_path: /contact-pricing
 setup_path: /setup
 sales_mail: "sales@domain.com"
+templates_url: "https://drive.google.com/drive/folders/ABC123"
+other_url: "https://drive.google.com/drive/folders/XYZ987"

@@ -61,13 +61,11 @@ module ApplicationHelpers
   end
 
   def templates_link(name, options = {})
-    url = "https://drive.google.com/drive/folders/0B5nSLzCVc941WEZFcmkteUhueFk?resourcekey=0-uVCkAZEunfLxPTEzCG3wGg&usp=sharing"
-    external_link name, url, options
+    external_link name, data.config.templates_url, options
   end
 
   def other_link(name, options = {})
-    url = "https://drive.google.com/drive/folders/0B5nSLzCVc941cmJiUUp2UUdZeGc?resourcekey=0-0jLOnSX_H2AlC5shQD2k0Q&usp=sharing"
-    external_link name, url, options
+    external_link name, data.config.other_url, options
   end
 
   def external_link(name, url, options)
