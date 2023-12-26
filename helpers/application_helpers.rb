@@ -40,7 +40,7 @@ module ApplicationHelpers
   end
 
   def cdn_image(name, options = {})
-    src = "https://assets.titleleaf.com/guide/#{name}"
+    src = "https://static.titleleaf.com/guide/#{name}"
     image_tag src, options
   end
 
