@@ -6,7 +6,7 @@ category: knowledge-base
 slug: channel-path-variables
 ---
 
-<p>The <em>Path</em> field of a Channel supports a variety of variables.</p>
+<p>The <em>Path</em> field of a Channel supports the following variables.</p>
 
 <table>
   <tbody>
@@ -23,14 +23,45 @@ slug: channel-path-variables
       <td>The date in YYYYMMDD format. Example: <em>20191231</em></td>
     </tr>
     <tr>
+      <td>TIMESTAMP</td>
+      <td>The date and time in YYYYMMDD-hhmmss format. The time is in 24-hour format. Example: <em>20191231-091502</em></td>
+    </tr>
+    <tr>
       <td>DISTRIBUTION_ID</td>
       <td>The TitleLeaf ID for the given distribution. Example: <em>9999</em></td>
     </tr>
     <tr>
-      <td>TIMESTAMP</td>
-      <td>The date and time in YYYYMMDD-hhmmss format. The time is in 24-hour format. Example: <em>20191231-091502</em></td>
+      <td>NEW_SEASON</td>
+      <td>Replaced with the current season plus the year. Example: <em>Spring-2020</em></td>
+    </tr>
+    <tr>
+      <td>UPCOMING_SEASON</td>
+      <td>Replaced with the upcoming season plus the year. Example: <em>Fall-2020</em></td>
+    </tr>
+    <tr>
+      <td>ROOT</td>
+      <td>Replaced with blank (to allow override of default path). Example: <em></em></td>
     </tr>
   </tbody>
 </table>
 
-<p class="block-notice">NB: The variable must be enclosed in single curly brackets within the Path field (example: <code>{BASENAME}-{TIMESTAMP}</code>).</p>
+<p class="block-notice">NB: Each variable must be enclosed in single curly brackets within the Path field.</p>
+<p class="block-notice">NB: Do not use spaces in the Path field.</p>
+
+<h3>Examples</h3>
+
+<pre><code>{BASENAME}-{TIMESTAMP}
+=> demo-20190217-043210
+</code></pre>
+
+<pre><code>{BASENAME}/{DISTRIBUTION_ID}/{DATESTAMP}
+=> demo/145/20190217
+</code></pre>
+
+<pre><code>path/to/{BASENAME}/{UPCOMING_SEASON}/{DATESTAMP}
+=> path/to/demo/Spring-2020/20190217
+</code></pre>
+
+<pre><code>{ROOT}
+=> 
+</code></pre>
