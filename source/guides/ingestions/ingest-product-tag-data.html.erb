@@ -1,0 +1,37 @@
+---
+title: Ingest product tag data
+layout: guide_simple
+parent: guide
+category: ingestions
+slug: ingest-product-tag-data
+---
+
+<p class="block-warning">
+  Tags should not contain uppercase letters. Such characters will be converted
+  to lowercase on ingestion. It's recommended to separate words with a hyphen.
+</p>
+
+<p>To assign tags to products in bulk, follow the procedure below:</p>
+
+<ol>
+
+  <li>
+    <p>Populate the <em>product_tags</em> template.</p>
+    <p><%= cdn_image "google-template-product-tags.png", alt: "Google: product_tags template" %></p>
+  </li>
+
+  <li>
+    <p>Create a new ingestion of type <em>Product Tags</em> to assign tags to products.</p>
+    <p><%= cdn_image "titleleaf-ingestion-new-product-tags.png", alt: "" %></p>
+  </li>
+
+</ol>
+
+<p>The ingested tags are added to the given product's current tags. In other words, pre-existing tags are not replaced.</p>
+
+<p class="block-notice">
+  The root directory of the FTP account is
+  <a href="/guides/ingestions/ftp-ingestion-schedule">processed on regular basis</a>.
+  If your files do not appear in the ingestion list after a processing cycle,
+  check the <em>failed</em> directory of the FTP account.
+</p>
