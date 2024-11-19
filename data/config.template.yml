@@ -23,5 +23,6 @@ subscription_distribution_module:
 subscription_multistore_module:
 sales_mail: "sales@domain.com"
 meeting_url: "https://meet.goto.com/titleleaf"
+schedule_url: "https://calendly.com/titleleaf"
 templates_url: "https://drive.google.com/drive/folders/ABC123"
 other_url: "https://drive.google.com/drive/folders/XYZ987"

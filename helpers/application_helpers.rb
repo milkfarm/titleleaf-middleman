@@ -150,6 +150,12 @@ module ApplicationHelpers
     link_to name, url, options
   end
 
+  def schedule_link(options = {})
+    name = options.delete(:name) || "scheduling a meeting"
+    url = data.config.schedule_url
+    link_to name, '', options.merge(onclick: "Calendly.initPopupWidget({url: '#{url}'});return false;")
+  end
+
   def titleize(word)
     word.gsub(/\b(?<!\w['â`])[a-z]/) do |match|
       match.capitalize
