@@ -144,8 +144,8 @@ slug: page-variables
   <td>URL to a page containing the current embedded flip catalog</td>
 </tr>
 <tr>
-  <td>"FILENAME" | tl_image_tag</td>
-  <td>Outputs an image record</td>
+  <td>"FILENAME" | tl_image</td>
+  <td>Outputs the image stored in the Images module matching the given file name</td>
 </tr>
 <tr>
   <td>"TAG" | tl_tagged_faqs</td>
@@ -186,6 +186,18 @@ slug: page-variables
 <tr>
   <td>page.clearance_grid_list</td>
   <td>Outputs a grid list of the featured products tagged with the term <em>clearance</em></td>
+</tr>
+<tr>
+  <td>"ISBN" | tl_product_link</td>
+  <td>Outputs an HTML link to the product page matching the given ISBN</td>
+</tr>
+<tr>
+  <td>"ISBN" | tl_product_cover</td>
+  <td>Outputs the cover image of the product matching the given ISBN</td>
+</tr>
+<tr>
+  <td>"ISBN" | tl_product_spread</td>
+  <td>Outputs the spread image of the product matching the given ISBN</td>
 </tr>
 </tbody>
 </table>
