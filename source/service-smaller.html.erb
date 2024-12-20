@@ -1,0 +1,60 @@
+---
+title: Service Level Agreements (Smaller)
+---
+
+<section id="splash">
+  <div class="row">
+    <div class="col-left">
+      <h1>Service</h1>
+      <p>
+        If your in-house team is overloaded, lean on the TitleLeaf team to maintain your site.
+      </p>
+    </div>
+    <div class="col-right" style="line-height: 0;">
+      <%= image_tag 'splash-service.png' %>
+    </div>
+  </div>
+</section>
+
+<section id="content">
+  <div class="row" style="margin-bottom:0;">
+    <div class="col-full">
+      <p>
+        The following table lists the biggest TitleLeaf service plans
+        currently offered. If your needs are more modest, please see our
+        <%= service_link name: 'standard service plans' %>.
+      </p>
+    </div>
+  </div>
+
+  <div class="row" style="margin-bottom:0;">
+    <div class="col-full">
+      <p class="block-notice" style="text-align: center;">
+        <%= partial '/partials/service_discount' %>
+      </p>
+    </div>
+  </div>
+
+  <div class="row" style="margin-bottom:0;">
+
+    <%
+      [
+        { time: "0.25", price: "$49", calls: nil, priority: "low" },
+        { time: "0.5", price: "$99", calls: nil, priority: "low" },
+        { time: "1", price: "$199", calls: nil, priority: "medium" },
+      ].each do |plan|
+    %>
+      <%= partial 'partials/service', locals: plan %>
+    <% end %>
+
+  </div>
+
+  <div class="row" style="margin:0;">
+    <div class="col-full" style="text-align:right;">
+      <%= service_link name: 'Need More Time? →', class: 'button secondary small' %>
+    </div>
+  </div>
+
+  <%= partial 'partials/faqs_link-service' %>
+
+</section>

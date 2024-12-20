@@ -32,3 +32,4 @@ end
 
 redirect "service-level-agreements.html", to: "/service.html"
 redirect "service-level-agreements-larger.html", to: "/service-larger.html"
+redirect "service-level-agreements-smaller.html", to: "/service-smaller.html"
