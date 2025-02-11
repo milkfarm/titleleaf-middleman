@@ -12,6 +12,7 @@ pricing_path: /pricing
 service_path: /service
 signup_path: /contact-pricing
 setup_path: /setup
+setup_cost_tier_0:
 setup_cost_tier_1:
 setup_cost_tier_2:
 setup_cost_tier_3:
