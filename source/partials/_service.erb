@@ -1,12 +1,19 @@
 <div class="item">
   <ul class="pricing-table">
-    <li class="title"><%= pluralize(time, "Hour") %></li>
+    <li class="title">
+      <%= pluralize(time, "Hour") %>
+    </li>
     <li class="price">
       <%= price %>
       <small>/month</small>
     </li>
-    <li class="bullet-item">Up to <strong><%= pluralize(time, "hour") %></strong> of service per month</li>
-    <li class="bullet-item">Access to the TitleLeaf Client Support Site</li>
+    <li class="bullet-item">
+      <strong><%= pluralize(time, "hour") %></strong>
+      of service per month for 1 year
+    </li>
+    <li class="bullet-item">
+      Access to the TitleLeaf Client Support Site
+    </li>
     <li class="bullet-item">
       <% if calls.to_i > 0 %>
         <%= pluralize(calls, "scheduled call") %> per month (optional)
@@ -14,7 +21,10 @@
         No monthly call
       <% end %>
     </li>
-    <li class="bullet-item">Ticket priority: <strong><%= priority.titlecase %></strong></li>
+    <li class="bullet-item">
+      Ticket priority:
+      <strong><%= priority.titlecase %></strong>
+    </li>
     <li class="subscribe">
       <%= link_to "Request Now", "/contact-service", class: "button small" %>
     </li>
