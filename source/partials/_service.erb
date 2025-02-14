@@ -3,13 +3,21 @@
     <li class="title">
       <%= pluralize(time, "Hour") %>
     </li>
-    <li class="price">
-      <%= price %>
+    <li class="price yearly">
+      <%= price_yearly %>
       <small>/month</small>
     </li>
-    <li class="bullet-item">
+    <li class="price monthly hide">
+      <%= price_monthly %>
+      <small>/month</small>
+    </li>
+    <li class="description yearly bullet-item">
       <strong><%= pluralize(time, "hour") %></strong>
       of service per month for 1 year
+    </li>
+    <li class="description monthly bullet-item hide">
+      <strong><%= pluralize(time, "hour") %></strong>
+      of service for 1 month
     </li>
     <li class="bullet-item">
       Access to the TitleLeaf Client Support Site

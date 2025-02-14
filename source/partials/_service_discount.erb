@@ -1,1 +1,17 @@
-Prices below reflect a <%= data.config.service_discount %> discount for committing to a 1-year term
+<div class="row" style="margin-bottom:0;">
+  <div class="col-full">
+    <p class="block-notice" style="text-align: center;">
+      Receive a <%= data.config.service_discount %> discount for committing to a 1-year term
+    </p>
+  </div>
+</div>
+
+<div class="row" style="margin-top:0; margin-bottom:0;">
+  <div class="switch-wrapper">
+    <input id="yearly" type="radio" name="switch" checked>
+    <input id="monthly" type="radio" name="switch">
+    <label for="yearly">Yearly (-20%)</label>
+    <label for="monthly">Monthly</label>
+    <span class="highlighter"></span>
+  </div>
+</div>

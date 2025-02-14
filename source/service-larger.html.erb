@@ -27,26 +27,22 @@ title: Service Level Agreements (Larger)
     </div>
   </div>
 
+  <%= partial '/partials/service_discount' %>
+
   <div class="row" style="margin-bottom:0;">
-    <div class="col-full">
-      <p class="block-notice" style="text-align: center;">
-        <%= partial '/partials/service_discount' %>
-      </p>
+    <div class="table-wrapper">
+
+      <%
+        [
+          { time: "7.5", price_yearly: "$1499", price_monthly: "$1874", calls: "2", priority: "high" },
+          { time: "10", price_yearly: "$1999", price_monthly: "$2499", calls: "2", priority: "highest" },
+          { time: "15", price_yearly: "$2999", price_monthly: "$3749", calls: "2", priority: "highest" },
+        ].each do |plan|
+      %>
+        <%= partial 'partials/service', locals: plan %>
+      <% end %>
+
     </div>
-  </div>
-
-  <div class="row" style="margin-bottom:0;">
-
-    <%
-      [
-        { time: "7.5", price: "$1499", calls: "2", priority: "high" },
-        { time: "10", price: "$1999", calls: "2", priority: "highest" },
-        { time: "15", price: "$2999", calls: "2", priority: "highest" },
-      ].each do |plan|
-    %>
-      <%= partial 'partials/service', locals: plan %>
-    <% end %>
-
   </div>
 
   <div class="row" style="margin:0;">
@@ -58,3 +54,5 @@ title: Service Level Agreements (Larger)
   <%= partial 'partials/faqs_link-service' %>
 
 </section>
+
+<%= javascript_include_tag 'prices' %>

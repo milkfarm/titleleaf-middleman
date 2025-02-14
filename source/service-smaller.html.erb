@@ -20,33 +20,29 @@ title: Service Level Agreements (Smaller)
   <div class="row" style="margin-bottom:0;">
     <div class="col-full">
       <p>
-        The following table lists the biggest TitleLeaf service plans
-        currently offered. If your needs are more modest, please see our
+        The following table lists the smallest TitleLeaf service plans
+        currently offered. If your needs are more significant, please see our
         <%= service_link name: 'standard service plans' %>.
       </p>
     </div>
   </div>
 
+  <%= partial '/partials/service_discount' %>
+
   <div class="row" style="margin-bottom:0;">
-    <div class="col-full">
-      <p class="block-notice" style="text-align: center;">
-        <%= partial '/partials/service_discount' %>
-      </p>
+    <div class="table-wrapper">
+
+      <%
+        [
+          { time: "0.25", price_yearly: "$49", price_monthly: "$62", calls: nil, priority: "low" },
+          { time: "0.5", price_yearly: "$99", price_monthly: "$124", calls: nil, priority: "low" },
+          { time: "1", price_yearly: "$199", price_monthly: "$249", calls: nil, priority: "medium" },
+        ].each do |plan|
+      %>
+        <%= partial 'partials/service', locals: plan %>
+      <% end %>
+
     </div>
-  </div>
-
-  <div class="row" style="margin-bottom:0;">
-
-    <%
-      [
-        { time: "0.25", price: "$49", calls: nil, priority: "low" },
-        { time: "0.5", price: "$99", calls: nil, priority: "low" },
-        { time: "1", price: "$199", calls: nil, priority: "medium" },
-      ].each do |plan|
-    %>
-      <%= partial 'partials/service', locals: plan %>
-    <% end %>
-
   </div>
 
   <div class="row" style="margin:0;">
@@ -58,3 +54,5 @@ title: Service Level Agreements (Smaller)
   <%= partial 'partials/faqs_link-service' %>
 
 </section>
+
+<%= javascript_include_tag 'prices' %>
