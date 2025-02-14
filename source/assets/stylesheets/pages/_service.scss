@@ -77,7 +77,7 @@ body.service-smaller {
     position: relative;
     display: inline-flex;
     padding: 4px;
-    border: 1px solid $light-gray;
+    border: 1px solid darken($success-color, 10%);
     border-radius: $base-border-radius;
     background: $white;
   }
@@ -108,15 +108,16 @@ body.service-smaller {
   .switch-wrapper label {
     font-size: 16px;
     z-index: 1;
-    min-width: 200px;
+    min-width: 180px;
     cursor: pointer;
     border-radius: $base-border-radius;
     transition: color 0.25s ease-in-out;
     margin: 0;
     padding: 0.3em 1em 0.4em 1em;
+    color: darken($green, 2%);
   }
   .switch-wrapper label:hover {
-    background: $lighter-gray;
+    background: $success-color;
   }
   .switch-wrapper .highlighter {
     position: absolute;
@@ -125,7 +126,7 @@ body.service-smaller {
     width: calc(50% - 4px);
     height: calc(100% - 8px);
     border-radius: $base-border-radius;
-    background: $dark-gray;
+    background: darken($green, 2%);
     transition: transform 0.25s ease-in-out;
   }
   .table-wrapper .hide {
