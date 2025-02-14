@@ -1,31 +1,5 @@
-// const tableWrapper = document.querySelector(".table-wrapper");
-// const switchInputs = document.querySelectorAll(".switch-wrapper input");
-// const prices = tableWrapper.querySelectorAll(".price");
-// const descriptions = tableWrapper.querySelectorAll(".description");
-// const toggleClass = "hide";
-//
-// for (const switchInput of switchInputs) {
-//   switchInput.addEventListener("input", function () {
-//     for (const price of prices) {
-//       price.classList.add(toggleClass);
-//     }
-//     const activePrices = tableWrapper.querySelectorAll(
-//       `.price.${switchInput.id}`
-//     );
-//     for (const activePrice of activePrices) {
-//       activePrice.classList.remove(toggleClass);
-//     }
-//     for (const description of descriptions) {
-//       description.classList.add(toggleClass);
-//     }
-//     const activeDescriptions = tableWrapper.querySelectorAll(
-//       `.description.${switchInput.id}`
-//     );
-//     for (const activeDescription of activeDescriptions) {
-//       activeDescription.classList.remove(toggleClass);
-//     }
-//   });
-// }
+// Converted to vanilla JS
+// For original ES6 code, see: https://codepen.io/tutsplus/pen/BaVyNaw
 "use strict";
 
 function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
