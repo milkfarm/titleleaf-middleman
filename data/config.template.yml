@@ -22,6 +22,7 @@ setup_cost_storefront:
 subscription_backup_service:
 subscription_distribution_module:
 subscription_multistore_module:
+subscription_preview_module:
 sales_mail: "sales@domain.com"
 meeting_url: "https://meet.goto.com/titleleaf"
 schedule_url: "https://calendly.com/titleleaf"
