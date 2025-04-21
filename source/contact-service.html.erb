@@ -41,7 +41,7 @@ title: Contact
           <label for="contact_service_plan" class="required">Service Plan</label>
           <select id="contact_service_plan" name="service_plan" required="required">
             <option value="">-- Select --</option>
-            <% [1, 2.5, 5, 7.5, 10, 15].each do |time| %>
+            <% [0.25, 0.5, 1, 2.5, 5, 7.5, 10, 15].each do |time| %>
               <option value="<%= pluralize(time, "hr").sub(/ /, "-") %>"><%= pluralize(time, "Hour") %> per month</option>
             <% end %>
           </select>
