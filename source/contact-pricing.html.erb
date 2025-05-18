@@ -41,10 +41,12 @@ title: Contact
           <label for="contact_setup_plan" class="required">One-Time Setup Arrangement</label>
           <select id="contact_setup_plan" name="setup_plan" required="required">
             <option value="">-- Select --</option>
-            <option value="cost-cutter">Cost-Cutter (<%= data.config.setup_cost_tier_1 %>)</option>
-            <option value="self-starter">Self-Starter (<%= data.config.setup_cost_tier_2 %>)</option>
-            <option value="collaborative">Collaborative (<%= data.config.setup_cost_tier_3 %>)</option>
-            <option value="full-service">Full-Service (<%= data.config.setup_cost_tier_4 %>)</option>
+            <option value="tier-0"><%= data.config.setup_label_tier_0 %> (<%= data.config.setup_cost_tier_0 %>)</option>
+            <option value="tier-1"><%= data.config.setup_label_tier_1 %> (<%= data.config.setup_cost_tier_1 %>)</option>
+            <option value="tier-2"><%= data.config.setup_label_tier_2 %> (<%= data.config.setup_cost_tier_2 %>)</option>
+            <option value="tier-3"><%= data.config.setup_label_tier_3 %> (<%= data.config.setup_cost_tier_3 %>)</option>
+            <option value="tier-4"><%= data.config.setup_label_tier_4 %> (<%= data.config.setup_cost_tier_4 %>)</option>
+            <option value="tier-5"><%= data.config.setup_label_tier_5 %> (<%= data.config.setup_cost_tier_5 %>)</option>
           </select>
         </div>
 

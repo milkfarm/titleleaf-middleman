@@ -12,11 +12,18 @@ pricing_path: /pricing
 service_path: /service
 signup_path: /contact-pricing
 setup_path: /setup
+setup_label_tier_0: Tier 0
+setup_label_tier_1: Tier 1
+setup_label_tier_2: Tier 2
+setup_label_tier_3: Tier 3
+setup_label_tier_4: Tier 4
+setup_label_tier_5: Tier 5
 setup_cost_tier_0:
 setup_cost_tier_1:
 setup_cost_tier_2:
 setup_cost_tier_3:
 setup_cost_tier_4:
+setup_cost_tier_5:
 setup_cost_data:
 setup_cost_storefront:
 subscription_backup_service:
