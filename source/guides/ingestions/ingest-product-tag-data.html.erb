@@ -29,9 +29,4 @@ slug: ingest-product-tag-data
 
 <p>The ingested tags are added to the given product's current tags. In other words, pre-existing tags are not replaced.</p>
 
-<p class="block-notice">
-  The root directory of the FTP account is
-  <a href="/guides/ingestions/ftp-ingestion-schedule">processed on regular basis</a>.
-  If your files do not appear in the ingestion list after a processing cycle,
-  check the <em>failed</em> directory of the FTP account.
-</p>
+<%= partial "partials/ftp_directories" %>

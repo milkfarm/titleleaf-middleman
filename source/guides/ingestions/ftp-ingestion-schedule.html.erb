@@ -7,14 +7,19 @@ slug: ftp-ingestion-schedule
 ---
 
 <p>
-  The root directory of the FTP account is processed every hour on the hour
-  (e.g., 8:00, 9:00, 10:00, etc). You can consult the ingestion list after
-  thirty minutes to determine if your uploaded files were properly processed.
+  The <em>ingest</em> directory of the FTP account is processed every hour on
+  the hour (e.g., 8:00, 9:00, 10:00, etc). If files are encountered, the
+  modification time is checked. If the file has not been modified within the
+  last fifteen minutes, then the file is processed. If the file has been
+  modified within the last fifteen minutes, then it is ignored until the next
+  scan.
+</p>
+
+<p>
   Keep in mind that the file name dictates how the file is processed.
   <em>
     If the file name does not adhere to the naming convention, then the file
-    will fail to be processed and will be placed in the <strong>failed</strong>
-    directory of your FTP account.
+    will fail to be ingested.
   </em>
 </p>
 

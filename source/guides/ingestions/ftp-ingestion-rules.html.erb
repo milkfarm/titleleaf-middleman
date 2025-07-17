@@ -7,12 +7,20 @@ slug: ftp-ingestion-rules
 ---
 
 <p>General FTP rules for the ingestion account:</p>
+
 <ul>
-<li>Do not create directories</li>
-<li>Do not compress files (eg, no zips, tars, gzips, etc) except for layout files</li>
-<li>Do not upload more than 4 GB of files per ingestion</li>
-<li>Follow the <a href="/guides/ingestions/ftp-file-naming-convention">naming conventions</a>
-</li>
+  <li>Upload to the ingest directory</li>
+  <li>Do not create or upload directories</li>
+  <li>Do not compress files (eg, no zips, tars, gzips, etc) except for layout files</li>
+  <li>Do not upload more files than disk space available</li>
+  <li>Do not upload more than 4 GB of files per ingestion</li>
+  <li>Follow the <a href="/guides/ingestions/ftp-file-naming-convention">naming conventions</a></li>
 </ul>
 
-<p>Note: The root directory of the FTP account is <a href="/guides/ingestions/ftp-ingestion-schedule">processed on regular basis</a>. If your files do not appear in the ingestion list after a processing cycle, check the <em>hold</em> directory of the FTP account. Files are moved to the “hold” directory if the ISBN in the file name is not present in the database. When new product formats are created, TitleLeaf will check for matching files in the hold directory for ingestion.</p>
+<%= partial "partials/ftp_directories" %>
+
+<p>
+  Files are moved to the <em>hold</em> directory if the ISBN in the file name is
+  not present in the database. When new product formats are created, TitleLeaf
+  will automatically ingest matching files in the <em>hold</em> directory.
+</p>
